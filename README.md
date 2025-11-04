@@ -23,4 +23,5 @@
 
 # DPE-Audit - Migration
 
-Migration des données DPE-Audit vers le nouveau modèle de données.
+Migration des données DPE-Audit vers le [schéma de données publiques](https://github.com/dpe-audit/schemas).
+

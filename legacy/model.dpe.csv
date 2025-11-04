@@ -1,0 +1,757 @@
+﻿Nom table;Identifiant BDD;Donnée obligatoire;Type de donnée;Table de références;Table de référence à appeler pour ce champ;Champ récupéré;Modèle concerné;Description
+dpe;ancien_dpe_id; ; ;dpe; ; ;tous;N° du DPE remplacé le cas échéant
+dpe;anonymise;X;Booléen; ; ; ;tous;Indique si les données du DPE ont été anonymisées
+dpe;date_etablissement_dpe; ;Date; ; ; ;tous;Date d'établissement du DPE
+dpe;date_reception_dpe;X;Date; ; ; ;tous;Date de réception du DPE
+dpe;desactive; ;Booléen; ; ; ;tous;Indique si le DPE est actif (desactive=false) ou non (desactive=true)
+dpe;dpe_remplacant_id; ; ;dpe; ; ;tous;Indique si le DPE a été remplacé et par quel autre DPE
+dpe;dpe_xml_path; ;Texte; ; ; ;tous;Chemin du répertoire de stockage du XML
+dpe;enum_type_energie_chauffage_principal_id; ; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;tous;type d'énergie consommée par le chauffage principal
+dpe;enum_type_energie_ecs_principal_id; ; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;logement + logement neuf;type d'énergie consommée par le type d'ecs principal
+dpe;generateur_chauffage_principal_id; ; ;dpe_generateur_chauffage;dpe_enum_type_generateur_ch (via dpe_generateur_chauffage_id --> enum_type_generateur_ch_id);lib;tous;Type de générateur de chauffage principal
+dpe;generateur_ecs_principal_id; ; ;dpe_generateur_ecs;dpe_enum_type_generateur_ecs (via dpe_generateur_ecs_id --> enum_type_generateur_esc_id); ;tous;Identifiant technique du générateur d'ecs principal calculé à l'insertion
+dpe;hashkey; ;Texte; ; ; ;tous;Clé de hachage
+dpe;id;X; ; ; ; ;tous;Identifiant technique du DPE
+dpe;identifiant_dpe; ;Texte; ; ; ;tous;Numéro du DPE
+dpe;is_dpe_2012;X;Booléen; ; ; ;tous;Indique si le DPE a été reçu sur l'observatoire version 2012
+dpe;statut; ;Texte; ; ; ;tous;Statut du DPE
+dpe;suppression_en_cours; ;Booléen; ; ; ;tous;Indique si le DPE fait l'objet d'une demande de suppression
+dpe;version;X;Texte; ; ; ;tous;Version du logiciel utilisé dans la transmission du DPE
+dpe;version_moteur_used; ;Texte; ; ; ;tous;Version du moteur de calcul 
+dpe;version_xsd_used; ;Texte; ; ; ;tous;Version du XSD 
+dpe;xml_hash; ; ; ; ; ;tous;Hash de la chaine de caractère modélisant le xml
+dpe;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_administratif;date_etablissement_dpe;X;Date; ; ; ;tous;date de l'établissement du dpe
+dpe_administratif;date_fin_validite_dpe;X;Date; ; ; ;tous;Date de fin de validité du DPE
+dpe_administratif;date_visite_diagnostiqueur;X;Date; ; ; ;tous;date de visite du diagnostiqueur
+dpe_administratif;dpe_a_remplacer; ;Texte; ; ; ;tous;numéro du DPE à remplacer dans le cas d'une opération de remplacement du DPE
+dpe_administratif;dpe_id;X; ;dpe; ; ;tous;Identifiant technique du DPE
+dpe_administratif;dpe_immeuble_associe; ;Texte; ; ; ;tous;numéro du DPE immeuble associé au DPE logement utilisant la méthode de génération des DPE à l'appartement à partir du DPE immeuble
+dpe_administratif;enum_modele_dpe_id;X; ;dpe_enum_modele_dpe;dpe_enum_modele_dpe;lib;tous;modèle de dpe (3CL logement / tertiaire ou neuf)
+dpe_administratif;enum_version_id;X; ;dpe_enum_version; ; ;tous;version du DPE. Pour gérer toute future évolution du dispositif et du modèle de données sous jacent (ex. modification des tv reseau de chaleur)
+dpe_administratif;motif_remplacement; ;Texte; ; ; ;tous;motif du remplacement du DPE
+dpe_administratif;reference_interne_projet; ;Texte; ; ; ;tous;motif du remplacement du DPE : texte libre
+dpe_administratif;migre_en_utc;X;Booléen; ; ; ;tous;Indique si les dates de la table ont été migrées au format UTC
+dpe_administratif;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_apport_et_besoin;apport_interne_ch;X;Numérique; ; ; ;logement;apports internes totaux durant la saison de chauffe Ai (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;apport_interne_fr;X;Numérique; ; ; ;logement;apports internes totaux durant la saison de froid Ai (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;apport_solaire_ch;X;Numérique; ; ; ;logement;apports solaires totaux durant la saison de chauffe As (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;apport_solaire_fr;X;Numérique; ; ; ;logement;apports solaires totaux durant la saison de froid As (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;besoin_ch;X;Numérique; ; ; ;logement + logement neuf;besoin de chauffage annuel total du logement ou immeuble (kWh) . Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;besoin_ch_depensier;X;Numérique; ; ; ;logement;besoin de chauffage total du bâtiment  pour le scénario dépensier  (kWh) (DH21). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;besoin_ecs;X;Numérique; ; ; ;logement + logement neuf;besoin d'ecs annuel total du bâtiment (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;besoin_ecs_depensier;X;Numérique; ; ; ;logement;besoin d'ecs total du bâtiment  pour le scénario dépensier  (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;besoin_fr;X;Numérique; ; ; ;logement + logement neuf;besoin de refroidissement annuel (kWh).Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;besoin_fr_depensier;X;Numérique; ; ; ;logement;besoin de refroidissement annuel pour le scénario dépensier (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_apport_et_besoin;fraction_apport_gratuit_ch;X;Numérique; ; ; ;logement;fraction des apports gratuits sur la saison de chauffe F. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;fraction_apport_gratuit_depensier_ch;X;Numérique; ; ; ;logement;fraction des apports gratuits sur la saison de chauffe F pour le scénario dépensier (DH21). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;nadeq;X;Numérique; ; ; ;logement;nombre d'adulte équivalent calculés pour le besoin d'ECS. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;pertes_distribution_ecs_recup;X;Numérique; ; ; ;logement;pertes de distribution d'ECS récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;pertes_distribution_ecs_recup_depensier;X;Numérique; ; ; ;logement;pertes de distribution d'ECS récupérées(kWh) pour le scénario dépensier. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;pertes_generateur_ch_recup;X;Numérique; ; ; ;logement;pertes des générateurs de chauffage récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;pertes_generateur_ch_recup_depensier;X;Numérique; ; ; ;logement;pertes des générateurs de chauffage récupérées(kWh) pour le scénario dépensier. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;pertes_stockage_ecs_recup;X;Numérique; ; ; ;logement;pertes de stockage d'ECS récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;surface_sud_equivalente;X;Numérique; ; ; ;logement;surface sud équivalente. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_apport_et_besoin;v40_ecs_journalier;X;Numérique; ; ; ;logement;consommation en l d'ecs à 40°C sur une journée. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;v40_ecs_journalier_depensier;X;Numérique; ; ; ;logement;consommation en l d'ecs à 40°C sur une journée scénario dépensier. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+dpe_apport_et_besoin;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_baie_ets;description;Parfois;Texte; ; ; ;logement;description textuelle de l'objet
+dpe_baie_ets;enum_inclinaison_vitrage_id;X; ;dpe_enum_inclinaison_vitrage; ; ;logement;inclinaison du vitrage
+dpe_baie_ets;enum_orientation_id;X; ;dpe_enum_orientation; ; ;logement;orientation de la baie
+dpe_baie_ets;ets_id;X; ;dpe_ets; ; ;logement;Identifiant technique de l'espace tampon solarisé
+dpe_baie_ets;id;X; ; ; ; ;logement;Identifiant technique de la baie de l'espace tampon solarisé
+dpe_baie_ets;nb_baie;X;Numérique; ; ; ;logement;nombre de baies
+dpe_baie_ets;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_baie_ets;surface_totale_baie;X;Numérique; ; ; ;logement;surface totale de paroi vitrée pour  ce type de vitrage et sur cette orientation (nombre de baies x surface unitaire). La surface est la surface de la baie dans son ensemble. (vitrage + menuiserie inclus)
+dpe_baie_ets;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_baie_vitree;b;X;Numérique; ; ; ;logement + logement neuf;coefficient de réduction des déperditions de la baie vitrée
+dpe_baie_vitree;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_baie_vitree;double_fenetre;X;Numérique; ; ; ;logement;est ce qu'il s'agit d'une double fenetre. DANS LE CAS D'UNE DOUBLE FENETRE LES DONNEES DU MODELE SONT FOURNIES POUR LE VITRAGE LE PLUS PERFORMANT OU POUR LA BAIE DANS SON ENSEMBLE A L'EXCEPTION DE Uw2 ET Sw2 QUI SONT LES CARACTERISTIQUES DU DEUXIEME VITRAGE (le moins performant) 0
+dpe_baie_vitree;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_baie_vitree;enum_cfg_isolation_lnc_id; ; ;dpe_enum_cfg_isolation_lnc; ; ;logement + logement neuf;configuration de l'adjacence avec local non chauffé
+dpe_baie_vitree;enum_inclinaison_vitrage_id;X; ;dpe_enum_inclinaison_vitrage; ; ;logement + logement neuf;inclinaison du vitrage
+dpe_baie_vitree;enum_methode_saisie_perf_vitrage_id;X; ;dpe_enum_methode_saisie_perf_vitrage; ; ;logement + logement neuf;methode de saisie des caractéristiques thermiques des vitrage (valeurs forfaitaires ou saisies en direct lorsque issu d'un justificatif)
+dpe_baie_vitree;enum_orientation_id;X; ;dpe_enum_orientation; ; ;logement + logement neuf;orientation de la baie
+dpe_baie_vitree;enum_type_adjacence_id;X; ;dpe_enum_type_adjacence; ; ;logement + logement neuf;type d'adjacence de la paroi
+dpe_baie_vitree;enum_type_baie_id;X; ;dpe_enum_type_baie; ; ;logement;type de baie
+dpe_baie_vitree;enum_type_fermeture_id;X; ;dpe_enum_type_fermeture; ; ;logement;type de fermeture associé à la baie (volets/persiennes etc..)
+dpe_baie_vitree;enum_type_gaz_lame_id; ; ;dpe_enum_type_gaz_lame; ; ;logement + logement neuf;type de gaz présent dans la lame
+dpe_baie_vitree;enum_type_materiaux_menuiserie_id;X; ;dpe_enum_type_materiaux_menuiserie; ; ;logement + logement neuf;type de matériaux des menuiseries
+dpe_baie_vitree;enum_type_pose_id;X; ;dpe_enum_type_pose; ; ;logement + logement neuf;type de pose de la baie
+dpe_baie_vitree;enum_type_vitrage_id;X; ;dpe_enum_type_vitrage; ; ;logement + logement neuf;type de vitrage
+dpe_baie_vitree;epaisseur_lame; ;Numérique; ; ; ;logement + logement neuf;epaisseur de la lame
+dpe_baie_vitree;fe1;X;Numérique; ; ; ;logement;fe1 facteur d'ensoleillement  calculé à partir de la table sur les masques proches
+dpe_baie_vitree;fe2;X;Numérique; ; ; ;logement;fe2 facteur d'ensoleillement calculé soit à l'aide de la méthode masque lointain homogène ou méthode des masques lointains proches
+dpe_baie_vitree;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de la baie vitrée
+dpe_baie_vitree;largeur_dormant;X;Numérique; ; ; ;logement;largeur du dormant de la baie (cm)
+dpe_baie_vitree;nb_baie;X;Numérique; ; ; ;logement + logement neuf;nombre de baies
+dpe_baie_vitree;presence_joint;X; ; ; ; ;logement;y a-t-il présence de joints sur la baie (utilisé pour le calcul de la perméabilité) 0 : non 1 : oui
+dpe_baie_vitree;presence_protection_solaire_hors_fermeture;X; ; ; ; ;logement;y a-t-il présence de protections solaires hors fermeture 0 : non 1 : oui
+dpe_baie_vitree;presence_retour_isolation;X;Numérique; ; ; ;logement;y a-t-il un retour d'isolant de la paroi opaque sur la baie 0
+dpe_baie_vitree;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_baie_vitree;reference_lnc; ; ; ; ; ;logement;reference projet de l'objet  local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+dpe_baie_vitree;reference_paroi; ;Texte; ; ; ;logement + logement neuf;reference projet de l'objet paroi qui est associé à l'objet baie vitrée. La codification et utilisation des références peut différer entre logiciels mais il devrait être attendu que reference_paroi est la référence d'une paroi de type mur,plancher_haut ou plancher_bas
+dpe_baie_vitree;surface_aiu; ;Numérique; ; ; ;logement + logement neuf;surface aiu
+dpe_baie_vitree;surface_aue; ;Numérique; ; ; ;logement + logement neuf;surface aue
+dpe_baie_vitree;surface_totale_baie;X;Numérique; ; ; ;logement + logement neuf;surface totale de paroi vitrée pour  ce type de vitrage et sur cette orientation (nombre de baies x surface unitaire). La surface est la surface de la baie dans son ensemble. (vitrage + menuiserie inclus)
+dpe_baie_vitree;sw;X;Numérique; ; ; ;logement + logement neuf;sw final de la baie
+dpe_baie_vitree;sw_1; ;Numérique; ; ; ;logement;Sw de la première fenêtre dans le cas d'une double fenêtre (par défaut la première fenêtre est toujours celle avec le Uw le plus élevé -> plus performante)
+dpe_baie_vitree;sw_2; ;Numérique; ; ; ;logement;Sw de la deuxième fenêtre dans le cas d'une double fenêtre (par défaut la deuxième fenêtre est toujours celle avec le Uw le plus faible -> moins performante)
+dpe_baie_vitree;sw_saisi; ;Numérique; ; ; ;logement;facteur solaire de la baie saisi directement (nécessite une justification)
+dpe_baie_vitree;tv_coef_masque_lointain_homogene_id; ; ;dpe_tv_coef_masque_lointain_homogene; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de masque homogène lointain
+dpe_baie_vitree;tv_coef_masque_proche_id;X; ;dpe_tv_coef_masque_proche; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficent de masque proche
+dpe_baie_vitree;tv_coef_orientation_id; ; ;dpe_tv_coef_orientation; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_baie_vitree;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_baie_vitree;tv_deltar_id; ; ;dpe_tv_deltar; ; ;logement;id de la ligne de la table utilisée pour le calcul du delta de resistance de la protection mobile. (volets persienne etc..)
+dpe_baie_vitree;tv_sw_id; ; ;dpe_tv_sw; ; ;logement;id de la ligne de la table utilisée pour le calcul du facteur solaire de la baie sw
+dpe_baie_vitree;tv_ug_id; ; ;dpe_tv_ug; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique du vitrage ug
+dpe_baie_vitree;tv_ujn_id; ; ;dpe_tv_ujn; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmissiion de la baie jour/nuit Ujn. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+dpe_baie_vitree;tv_uw_id; ; ;dpe_tv_uw; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique de la baie uw. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+dpe_baie_vitree;u_menuiserie;X;Numérique; ; ; ;logement + logement neuf;U final de la menuiserie utilisé dans le calcul
+dpe_baie_vitree;ug; ;Numérique; ; ; ;logement + logement neuf;Ug final de la baie
+dpe_baie_vitree;ug_saisi; ;Numérique; ; ; ;logement;coefficient de transmission thermique du vitrage saisi directement (nécessite une justification)
+dpe_baie_vitree;ujn; ;Numérique; ; ; ;logement + logement neuf;Ujn final de la baie
+dpe_baie_vitree;ujn_saisi; ;Numérique; ; ; ;logement;coefficient de transmission thermique de la baie avec ses protection solaires saisi directement (nécessite une justification)
+dpe_baie_vitree;uw;X;Numérique; ; ; ;logement + logement neuf;Uw final de la baie
+dpe_baie_vitree;uw_1; ;Numérique; ; ; ;logement;Uw de la première fenêtre dans le cas d'une double fenêtre (par défaut la première fenêtre est toujours celle avec le Uw le plus élevé -> plus performante)
+dpe_baie_vitree;uw_2; ;Numérique; ; ; ;logement;Uw de la deuxième fenêtre dans le cas d'une double fenêtre (par défaut la deuxième fenêtre est toujours celle avec le Uw le plus faible -> moins performante)
+dpe_baie_vitree;uw_saisi; ;Numérique; ; ; ;logement;coefficient de transmission thermique de la baie saisi directement (nécessite une justification)
+dpe_baie_vitree;vitrage_vir; ;Numérique; ; ; ;logement + logement neuf;est ce que le vitrage est  à isolation renforcée 0
+dpe_baie_vitree;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_baie_vitree_double_fenetre;baie_vitree_id; ; ;dpe_baie_vitree; ; ;logement;Identifiant technique de la baie_vitree concernée
+dpe_baie_vitree_double_fenetre;enum_inclinaison_vitrage_id;X; ;dpe_enum_inclinaison_vitrage; ; ;logement;id de l'enum de l'inclinaison du vitrage
+dpe_baie_vitree_double_fenetre;enum_methode_saisie_perf_vitrage_id;X; ;dpe_enum_methode_saisie_perf_vitrage; ; ;logement;methode de saisie des caractéristiques thermiques des vitrage (valeurs forfaitaires ou saisies en direct lorsque issu d'un justificatif)
+dpe_baie_vitree_double_fenetre;enum_type_baie_id;X; ;dpe_enum_type_baie; ; ;logement;id de l'enum type de baie
+dpe_baie_vitree_double_fenetre;enum_type_gaz_lame_id; ; ;dpe_enum_type_gaz_lame; ; ;logement;id de l'enum du type de gaz présent dans la lame
+dpe_baie_vitree_double_fenetre;enum_type_materiaux_menuiserie_id;X; ;dpe_enum_type_materiaux_menuiserie; ; ;logement;id de l'enum type de matériaux des menuiseries
+dpe_baie_vitree_double_fenetre;enum_type_pose_id;X; ;dpe_enum_type_pose; ; ;logement;id de l'enum type de pose
+dpe_baie_vitree_double_fenetre;enum_type_vitrage_id;X; ;dpe_enum_type_vitrage; ; ;logement;id de l'enum du type de vitrage
+dpe_baie_vitree_double_fenetre;epaisseur_lame; ; ; ; ; ;logement;epaisseur de la lame
+dpe_baie_vitree_double_fenetre;sw;X; ; ; ; ;logement;sw final de la baie: soit saisi directement soit issu des tables forfaitaires
+dpe_baie_vitree_double_fenetre;sw_saisi; ; ; ; ; ;logement;facteur solaire de la baie saisi directement (nécessite une justification)
+dpe_baie_vitree_double_fenetre;tv_sw_id; ; ;dpe_tv_sw; ; ;logement;id de la ligne de la table utilisée pour le calcul du facteur solaire de la baie sw
+dpe_baie_vitree_double_fenetre;tv_ug_id; ; ;dpe_tv_ug; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique du vitrage ug
+dpe_baie_vitree_double_fenetre;tv_uw_id; ; ;dpe_tv_uw; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique de la baie uw. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+dpe_baie_vitree_double_fenetre;ug; ; ; ; ; ;logement;Ug final de la baie : soit saisi directement soit issu des tables forfaitaires
+dpe_baie_vitree_double_fenetre;ug_saisi; ; ; ; ; ;logement;coefficient de transmission thermique du vitrage saisi directement (nécessite une justification)
+dpe_baie_vitree_double_fenetre;uw;X; ; ; ; ;logement;Uw final de la baie : soit saisi directement soit issu des tables forfaitaires
+dpe_baie_vitree_double_fenetre;uw_saisi; ; ; ; ; ;logement;coefficient de transmission thermique de la baie saisi directement (nécessite une justification)
+dpe_baie_vitree_double_fenetre;vitrage_vir; ; ; ; ; ;logement;Est-ce que le vitrage est à isolation renforcée
+dpe_baie_vitree_double_fenetre;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_baie_vitree_masque;baie_vitree_id;X; ;dpe_baie_vitree; ; ;logement;Identifiant technique baie vitrée
+dpe_baie_vitree_masque;masque_id;X; ;dpe_masque; ; ;logement;Identifiant technique masque
+dpe_baie_vitree_masque;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_bilan_consommation;classe_conso_energie;X;Texte; ; ; ;tertiaire;classe de consommation d'energie suivant le referentiel DPE 2006 (energie primaire)
+dpe_bilan_consommation;classe_emission_ges;X;Texte; ; ; ;tertiaire;classe d'estimation ges suivant le referentiel DPE 2006
+dpe_bilan_consommation;conso_energie_primaire;X;Numérique; ; ; ;tertiaire;consommation d'énergie primaire totale rapportée à la surface (kWhep/m²/an)
+dpe_bilan_consommation;dpe_id;X; ;dpe; ; ;tertiaire;Identifiant technique du DPE
+dpe_bilan_consommation;emission_ges;X;Numérique; ; ; ;tertiaire;estimation ges totale rapportée à la surface  (kgCO2/m²/an)
+dpe_bilan_consommation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_caracteristique_generale;annee_construction;X pour les logements neufs;Numérique; ; ; ;tous;Année de construction du bien
+dpe_caracteristique_generale;appartement_non_visite; ;Numérique; ; ; ;logement + logement neuf;est ce que l'appartement est un appartement non visité dans le cas d'un DPE appartement généré à partir d'un immeuble. (application de système individuel les moins performants de l'immeuble)
+dpe_caracteristique_generale;dpe_id;X; ;dpe; ; ;tous;Identifiant technique du DPE
+dpe_caracteristique_generale;enum_calcul_echantillonnage_id; ; ;dpe_enum_calcul_echantillonnage; ; ;logement + logement neuf;id de l'enum du type d'échantillonnage appliqué pour le calcul du DPE immeuble (dans le cas d'un DPE immeuble)
+dpe_caracteristique_generale;enum_categorie_erp_id; ; ;dpe_enum_categorie_erp;dpe_enum_categorie_erp;lib;tertiaire;categorie d'ERP
+dpe_caracteristique_generale;enum_methode_application_dpe_log_id;X; ;dpe_enum_methode_application_dpe_log; ; ;logement + logement neuf;méthode d'application du DPE logement
+dpe_caracteristique_generale;enum_methode_application_dpe_log_id;X; ;dpe_enum_methode_application_dpe_log;dpe_enum_methode_application_dpe_log;methode_application_dpe;logement + logement neuf;méthode d'application du DPE logement
+dpe_caracteristique_generale;enum_methode_application_dpe_log_id;X; ;dpe_enum_methode_application_dpe_log;dpe_enum_methode_application_dpe_log;type_batiment;logement + logement neuf;Type de bâtiment (Appartement/immeuble/maison individuelle)
+dpe_caracteristique_generale;enum_methode_application_dpe_log_id;X; ;dpe_enum_methode_application_dpe_log;dpe_enum_methode_application_dpe_log;type_installation_chauffage;logement + logement neuf;Type d'installation de chauffage (collective ou individuelle ou mixte)
+dpe_caracteristique_generale;enum_methode_application_dpe_log_id;X; ;dpe_enum_methode_application_dpe_log;dpe_enum_methode_application_dpe_log;type_installation_ecs;logement + logement neuf;Type d'installation d'ECS (collective, individuelle ou mixte)
+dpe_caracteristique_generale;enum_methode_application_dpe_ter_id;X; ;dpe_enum_methode_application_dpe_ter;dpe_enum_methode_application_dpe_ter;lib;tertiaire;methode d'application du DPE tertiaire (facture, vierge ou neuf)
+dpe_caracteristique_generale;enum_periode_construction_id;X; ;dpe_enum_periode_construction;dpe_enum_periode_construction;lib;tous;Période de construction du bien
+dpe_caracteristique_generale;enum_usage_fonctionnel_batiment_id;X; ;dpe_enum_usage_fonctionnel_batiment;dpe_enum_usage_fonctionnel_batiment;lib;tertiaire;type d'usage fonctionnel du batiment tertiaire ou batiment recevant du public
+dpe_caracteristique_generale;hsp;X;Numérique; ; ; ;logement + logement neuf;hauteur sous plafond moyenne du logement/de l'immeuble
+dpe_caracteristique_generale;nombre_appartement; ;Numérique; ; ; ;logement + logement neuf;nombre d'appartements de l'immeuble dans le cas d'un DPE appartement avec usage collectif ou d'un DPE immeuble.
+dpe_caracteristique_generale;nombre_niveau_immeuble; ;Numérique; ; ; ;logement + logement neuf;nombre de niveaux total de l'immeuble
+dpe_caracteristique_generale;nombre_niveau_logement; ;Numérique; ; ; ;logement + logement neuf;nombre de niveaux du logement (maison ou appartement)
+dpe_caracteristique_generale;nombre_occupant; ;Numérique; ; ; ;tertiaire;nombre d'occupants du bâtiment tertiaire
+dpe_caracteristique_generale;shon; ;Numérique; ; ; ;tertiaire;surface hors œuvre nette du bâtiment
+dpe_caracteristique_generale;surface_habitable_immeuble; ;Numérique; ; ; ;logement + logement neuf;surface habitable totale de l'immeuble  dans le cas d'un DPE appartement avec usage collectif ou d'un DPE immeuble.
+dpe_caracteristique_generale;surface_habitable_logement; ;Numérique; ; ; ;logement + logement neuf;surface habitable du logement renseignée sauf dans le cas du dpe à l'immeuble
+dpe_caracteristique_generale;surface_tertiaire_immeuble; ;Numérique; ; ; ;logement + logement neuf;surface tertiaire totale de l'immeuble  dans le cas  d'un DPE immeuble. La surface tertiaire est prise en compte pour le calcul des besoins dans le cas d'une installation collective mixte tertiaire/residentiel
+dpe_caracteristique_generale;surface_utile;X;Numérique; ; ; ;tertiaire;surface de référence utile du bâtiment auquelle la consommation est rapportée
+dpe_caracteristique_generale;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_climatisation;besoin_fr;X;Numérique; ; ; ;logement + logement neuf;besoin de refroidissement annuel.  Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est le besoin  de l'installation à l'immeuble qu'il faut saisir.
+dpe_climatisation;cle_repartition_clim; ;Numérique; ; ; ;logement;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail.
+dpe_climatisation;conso_fr;X;Numérique; ; ; ;logement + logement neuf;consommation de refroidissement annuel (kWh).  Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_climatisation;conso_fr_depensier;X;Numérique; ; ; ;logement;consommation de refroidissement annuel pour le scénario dépensier (kWh)  .  Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_climatisation;description; ;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_climatisation;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_climatisation;eer;X;Numérique; ; ; ;logement + logement neuf;coefficient d'efficience energétique du système de climatisation final (SEER *0,95)
+dpe_climatisation;emetteur_plancher_fr; ;Numérique; ; ; ;logement;est ce que l'emetteur de froid est un plancher rafraichissant (utilisé pour le calcul des auxiliaires) A NE PLUS RENSEIGNER
+dpe_climatisation;enum_methode_calcul_conso_id;X; ;dpe_enum_methode_calcul_conso; ; ;logement;méthode de calcul de consommation de froid
+dpe_climatisation;enum_methode_saisie_carac_sys_id;X; ;dpe_enum_methode_saisie_carac_sys; ; ;logement + logement neuf;methode de saisie du seer
+dpe_climatisation;enum_periode_installation_fr_id;X; ;dpe_enum_periode_installation_fr;dpe_enum_periode_installation_fr;lib;logement;période d'installation du système de refroidissement
+dpe_climatisation;enum_type_energie_id; ; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;logement;type d'énergie consommée par le générateur de froid
+dpe_climatisation;enum_type_generateur_fr_id;X; ;dpe_enum_type_generateur_fr;dpe_enum_type_generateur_fr;lib;logement + logement neuf;type de générateur de froid
+dpe_climatisation;id;X; ; ; ; ;logement + logement neuf;Identifiant technique  la baie vitrée
+dpe_climatisation;nombre_logement_echantillon; ;Numérique; ; ; ;logement;nombre de logements représentés par le logement échantillon dans le cas d'un DPE immeuble avec installation de climatisation  individuelle.  (à ne renseigner que dans ce cas précis)
+dpe_climatisation;ref_produit_fr; ;Texte; ; ; ;logement + logement neuf;référence produit  et marque du générateur de froid
+dpe_climatisation;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels 
+dpe_climatisation;surface_clim;X;Numérique; ; ; ;logement + logement neuf;surface climatisée
+dpe_climatisation;tv_seer_id; ; ;dpe_tv_seer; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient d'efficience énergétique du système de climatisation seer
+dpe_climatisation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_confort_ete;aspect_traversant; ;Numérique; ; ; ;logement + logement neuf;est ce que le logement est traversant 0
+dpe_confort_ete;brasseur_air; ;Numérique; ; ; ;logement + logement neuf;est ce que le logement est équipé de brasseurs d'air 0
+dpe_confort_ete;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_confort_ete;enum_indicateur_confort_ete_id;X; ;dpe_enum_indicateur_confort_ete;dpe_enum_indicateur_confort_ete;lib;logement + logement neuf;indicateur confort été (bon moyen ou  mauvais)
+dpe_confort_ete;inertie_lourde;X;Numérique; ; ; ;logement + logement neuf;est ce que le logement possède une inerte lourde ou très lourde 0
+dpe_confort_ete;isolation_toiture; ;Numérique; ; ; ;logement + logement neuf;as-t-on une isolation de toiture 0
+dpe_confort_ete;protection_solaire_exterieure;X;Numérique; ; ; ;logement + logement neuf;as-t-on une protection solair exteriaire sur les facades vitrées (exception nord) 0
+dpe_confort_ete;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_consommation;annee_consommation; ;Numérique; ; ; ;tertiaire;année de relève de la consommation/production electricité
+dpe_consommation;conso_energie_finale; ;Numérique; ; ; ;tertiaire;consommation d'energie finale du poste de consommation en kWh
+dpe_consommation;conso_energie_primaire;X;Numérique; ; ; ;tertiaire;consommation d'energie primaire du poste de consommation en kWhep
+dpe_consommation;dpe_id;X; ;dpe; ; ;tertiaire;Identifiant technique du DPE
+dpe_consommation;enum_type_energie_id;X; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;tertiaire;type d'énergie associée à la consommaton
+dpe_consommation;enum_type_usage_id;X; ;dpe_enum_type_usage;dpe_enum_type_usage;lib;tertiaire;type d'usage associé à la consommation
+dpe_consommation;frais_annuels_energie;X;Numérique; ; ; ;tertiaire;frais d'energies associés  à la consommation (en euros)
+dpe_consommation;id;X; ; ; ; ;tertiaire;identifiant technique de la consommation
+dpe_consommation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_cout;cout_5_usages;X;Numérique; ; ; ;logement + logement neuf;coût totale  5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires) (déduit de la production pv autoconsommée) (€)
+dpe_cout;cout_auxiliaire_distribution_ch;X;Numérique; ; ; ;logement;coût des auxilliaires de distribution de chauffage  (€)
+dpe_cout;cout_auxiliaire_distribution_ecs;X;Numérique; ; ; ;logement;coût des auxilliaires de distribution de l'ECS  (€)
+dpe_cout;cout_auxiliaire_distribution_fr; ;Numérique; ; ; ;logement;coût  des auxilliaires de distribution de froid  (€) SUPPRIME
+dpe_cout;cout_auxiliaire_generation_ch;X;Numérique; ; ; ;logement;coût des auxilliaires de génération de chauffage  (€)
+dpe_cout;cout_auxiliaire_generation_ch_depensier;X;Numérique; ; ; ;logement;coût des auxilliaires de génération de chauffage  pour le scénario dépensier (€)
+dpe_cout;cout_auxiliaire_generation_ecs;X;Numérique; ; ; ;logement;coût des auxillaires de generation de l'ECS  (€)
+dpe_cout;cout_auxiliaire_generation_ecs_depensier;X;Numérique; ; ; ;logement;coût des auxillaires de generation de l'ECS  pour le scénario dépensier (€)
+dpe_cout;cout_auxiliaire_ventilation;X;Numérique; ; ; ;logement + logement neuf;coût  des auxilliaires de ventilation  (€)
+dpe_cout;cout_ch;X;Numérique; ; ; ;logement + logement neuf;coût de chauffage(déduit de la production pv autoconsommée)   (€)
+dpe_cout;cout_ch_depensier;X;Numérique; ; ; ;logement + logement neuf;coût de chauffage  pour le scénario dépensier (déduit de la production pv autoconsommée) (€)
+dpe_cout;cout_eclairage;X;Numérique; ; ; ;logement + logement neuf;coût des eclairage  (déduit de la production pv autoconsommée) (€)
+dpe_cout;cout_ecs;X;Numérique; ; ; ;logement + logement neuf;coût de l'ECS  (déduit de la production pv autoconsommée) (€)
+dpe_cout;cout_ecs_depensier;X;Numérique; ; ; ;logement + logement neuf;coût de l'ECS pour le scénario dépensier (déduit de la production pv autoconsommée)   (€)
+dpe_cout;cout_fr;X;Numérique; ; ; ;logement + logement neuf;coût  de refroidissement annuel (déduit de la production pv autoconsommée)  (€)
+dpe_cout;cout_fr_depensier;X;Numérique; ; ; ;logement + logement neuf;coût de refroidissement pour le scénario dépensier (déduit de la production pv autoconsommée)   (€)
+dpe_cout;cout_total_auxiliaire;X;Numérique; ; ; ;logement + logement neuf;coût  des auxilliaires de l'ensemble des auxiliaires  (déduit de la production pv autoconsommée)  (€)
+dpe_cout;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_cout;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_deperdition;deperdition_baie_vitree;X;Numérique; ; ; ;logement + logement neuf;deperditions par les baies vitrées (W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_enveloppe;X;Numérique; ; ; ;logement + logement neuf;deperditions par l'enveloppe (GV). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_mur;X;Numérique; ; ; ;logement + logement neuf;deperditions par les murs(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_plancher_bas;X;Numérique; ; ; ;logement + logement neuf;deperditions par les planchers bas(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_plancher_haut;X;Numérique; ; ; ;logement + logement neuf;deperditions par les planchers hauts(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_pont_thermique;X;Numérique; ; ; ;logement + logement neuf;deperditions par les ponts thermiques(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_porte;X;Numérique; ; ; ;logement + logement neuf;deperditions par les ponts thermiques(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;deperdition_renouvellement_air;X;Numérique; ; ; ;logement + logement neuf;deperditions par renouvellement d'air totale (hvent + hperm)(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_deperdition;hperm;X;Numérique; ; ; ;logement + logement neuf;part des deperditions de renouvellement d'air liées à la perméabilité à l'air du bâtiment(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;hvent;X;Numérique; ; ; ;logement + logement neuf;part des deperditions de renouvellement d'air liées au système de(W/K) ventilation. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+dpe_deperdition;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_descriptif_enr;description;X;Texte; ; ; ;logement + logement neuf;description du système d'ENR
+dpe_descriptif_enr;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_descriptif_enr;enum_categorie_enr_descriptif_id; ; ;dpe_enum_categorie_enr_descriptif;dpe_enum_categorie_enr_descriptif;lib;logement + logement neuf;catégorie de système ENR
+dpe_descriptif_enr;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du descriptif enr
+dpe_descriptif_enr;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_ef_conso;conso_5_usages;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie finale(déduit de la production pv autoconsommée)  (kWhef/an)
+dpe_ef_conso;conso_5_usages_m2;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie finale(déduit de la production pv autoconsommée)  (kWhef/m²/an)
+dpe_ef_conso;conso_auxiliaire_distribution_ch;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de distribution de chauffage en energie finale (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_distribution_ecs;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de distribution d'ECS en energie finale (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_distribution_fr; ;Numérique; ; ; ;logement;consommation annuelle  d'auxilliaires de distribution de froid en energie finale (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_generation_ch;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de génération de chauffage en energie finale (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_generation_ch_depensier;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de génération de chauffage en energie finale pour le scénario dépensier (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_generation_ecs;X;Numérique; ; ; ;logement;consommation annuelle d'auxillaires de generation d'ECS en energie finale (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_generation_ecs_depensier;X;Numérique; ; ; ;logement;consommation annuelle d'auxillaires de generation d'ECS en energie finale pour le scénario dépensier (kWhef/an)
+dpe_ef_conso;conso_auxiliaire_ventilation;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  d'auxilliaires de ventilation en energie finale (kWhef/an)
+dpe_ef_conso;conso_ch;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de chauffage en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_ch_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de chauffage en energie finale pour le scénario dépensier(déduit de la production pv autoconsommée)  (kWhef/an)
+dpe_ef_conso;conso_eclairage;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'eclairage en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_ecs;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'ECS en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_ecs_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'ECS en energie finale  pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_fr;X;Numérique; ; ; ;logement + logement neuf;consommation de refroidissement annuel  en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_fr_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation de refroidissement annuel en energie finale pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhef/an)
+dpe_ef_conso;conso_totale_auxiliaire;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de l'ensemble des auxiliaires en énergie finale(déduit de la production pv autoconsommée)  (kWhef/an)
+dpe_ef_conso;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_ef_conso;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_emetteur_chauffage;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_emetteur_chauffage;enum_equipement_intermittence_id;X; ;dpe_enum_equipement_intermittence; ; ;logement;type d'équipement d'intermittence associé à la génération
+dpe_emetteur_chauffage;enum_lien_generateur_emetteur_id;x; ;dpe_enum_lien_generateur_emetteur; ; ;logement;lien entre le générateur et l'émetteur associé
+dpe_emetteur_chauffage;enum_periode_installation_emetteur_id; ; ;dpe_enum_periode_installation_emetteur; ; ;logement + logement neuf;période d'installation des émetteurs de chauffage (utilisé pour le calcul des températures de fonctionnement des systèmes à combustion de type chaudière gaz ou fioul)
+dpe_emetteur_chauffage;enum_temp_distribution_ch_id;X; ;dpe_enum_temp_distribution_ch; ; ;logement + logement neuf;température de distribution de l'installation de chauffage (pour le calcul des auxiliaires de distribution)
+dpe_emetteur_chauffage;enum_type_chauffage_id;X; ;dpe_enum_type_chauffage; ; ;logement;type de chauffage
+dpe_emetteur_chauffage;enum_type_emission_distribution_id;X; ;dpe_enum_type_emission_distribution;dpe_enum_type_emission_distribution;lib;logement + logement neuf;enumérateur qui couple les notions d'emission et de distribution pour produire une description complète des emetteurs de chauffage
+dpe_emetteur_chauffage;enum_type_regulation_id;X; ;dpe_enum_type_regulation; ; ;logement;type de régulation associée au générateur
+dpe_emetteur_chauffage;i0;X;Numérique; ; ; ;logement;coefficient d'intermittence de l'installation
+dpe_emetteur_chauffage;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de l'émetteur de chauffage
+dpe_emetteur_chauffage;installation_chauffage_id;X; ;dpe_installation_chauffage; ; ;logement + logement neuf;Identifiant technique de l'installation de chauffage
+dpe_emetteur_chauffage;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_emetteur_chauffage;rendement_distribution;X;Numérique; ; ; ;logement;Rd
+dpe_emetteur_chauffage;rendement_emission;X;Numérique; ; ; ;logement;Re
+dpe_emetteur_chauffage;rendement_regulation;X;Numérique; ; ; ;logement;Rr
+dpe_emetteur_chauffage;reseau_distribution_isole; ;Numérique; ; ; ;logement + logement neuf;est ce que le réseau de distribution est isolé 0
+dpe_emetteur_chauffage;surface_chauffee;X;Numérique; ; ; ;logement + logement neuf;surface chauffée par l'emetteur (sous ensemble de la surface chauffée par l'installation). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+dpe_emetteur_chauffage;tv_intermittence_id;X; ;dpe_tv_intermittence; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient d'intermittence de l'installation I0
+dpe_emetteur_chauffage;tv_rendement_distribution_ch_id;X; ;dpe_tv_rendement_distribution_ch; ; ;logement;id de la ligne de la table utilisée pour le calcul du rendement de distribution de la distribution associée à l'émission
+dpe_emetteur_chauffage;tv_rendement_emission_id;X; ;dpe_tv_rendement_emission; ; ;logement;id de la ligne de la table utilisée pour le calcul du rendement d'emission de l'émetteur de chauffage
+dpe_emetteur_chauffage;tv_rendement_regulation_id;X; ;dpe_tv_rendement_regulation; ; ;logement;id de la ligne de la table utilisée pour le calcul du rendement de régulation associé à l'émission
+dpe_emetteur_chauffage;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_emission_ges;classe_emission_ges;X;Texte; ; ; ;logement + logement neuf;classe d'estimation ges du DPE 5 usages
+dpe_emission_ges;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_emission_ges;emission_ges_5_usages;X;Numérique; ; ; ;logement + logement neuf;estimation GES totale  5 usages (déduit de la production pv autoconsommée)  (ecs/chauffage/climatisation/eclairage/auxiliaires)(kgCO2/an)
+dpe_emission_ges;emission_ges_5_usages_m2;X;Numérique; ; ; ;logement + logement neuf;estimation GES totale  5 usages rapportée au m² (déduit de la production pv autoconsommée)  (ecs/chauffage/climatisation/eclairage/auxiliaires)(kgCO2/m2/an)
+dpe_emission_ges;emission_ges_auxiliaire_distribution_ch;X;Numérique; ; ; ;logement;estimation GES d'auxilliaires de distribution de chauffage  (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_distribution_ecs;X;Numérique; ; ; ;logement;estimation GES d'auxilliaires de distribution d'ECS  (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_distribution_fr; ;Numérique; ; ; ;logement;estimation GES  d'auxilliaires de distribution de froid  (kgCO2/an) SUPPRIME
+dpe_emission_ges;emission_ges_auxiliaire_generation_ch;X;Numérique; ; ; ;logement;estimation GES d'auxilliaires de génération de chauffage  (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_generation_ch_depensier;X;Numérique; ; ; ;logement;estimation GES d'auxilliaires de génération de chauffage  pour le scénario dépensier (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_generation_ecs;X;Numérique; ; ; ;logement;estimation GES d'auxillaires de generation d'ECS  (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_generation_ecs_depensier;X;Numérique; ; ; ;logement;estimation GES d'auxillaires de generation d'ECS  pour le scénario dépensier (kgCO2/an)
+dpe_emission_ges;emission_ges_auxiliaire_ventilation;X;Numérique; ; ; ;logement + logement neuf;estimation GES  d'auxilliaires de ventilation  (kgCO2/an)
+dpe_emission_ges;emission_ges_ch;X;Numérique; ; ; ;logement + logement neuf;estimation GES de chauffage (déduit de la production pv autoconsommée)   (kgCO2/an)
+dpe_emission_ges;emission_ges_ch_depensier;X;Numérique; ; ; ;logement + logement neuf;estimation GES de chauffage  pour le scénario dépensier(déduit de la production pv autoconsommée)  (kgCO2/an)
+dpe_emission_ges;emission_ges_eclairage;X;Numérique; ; ; ;logement + logement neuf;estimation GES d'eclairage  (déduit de la production pv autoconsommée) (kgCO2/an)
+dpe_emission_ges;emission_ges_ecs;X;Numérique; ; ; ;logement + logement neuf;estimation GES d'ECS (déduit de la production pv autoconsommée)   (kgCO2/an)
+dpe_emission_ges;emission_ges_ecs_depensier;X;Numérique; ; ; ;logement + logement neuf;estimation GES d'ECS pour le scénario dépensier  (déduit de la production pv autoconsommée)  (kgCO2/an)
+dpe_emission_ges;emission_ges_fr;X;Numérique; ; ; ;logement + logement neuf;estimation GES  de refroidissement annuel (déduit de la production pv autoconsommée)  (kgCO2/an)
+dpe_emission_ges;emission_ges_fr_depensier;X;Numérique; ; ; ;logement + logement neuf;estimation GES de refroidissement pour le scénario dépensier (déduit de la production pv autoconsommée)    (kgCO2/an)
+dpe_emission_ges;emission_ges_totale_auxiliaire;X;Numérique; ; ; ;logement + logement neuf;estimation GES de l'ensemble des auxiliaires (déduit de la production pv autoconsommée)  (kgCO2/an)
+dpe_emission_ges;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_ep_conso;classe_bilan_dpe;X;Texte; ; ; ;logement + logement neuf;Classe du DPE issu de la synthèse du double seuil  sur les consommations énergie primaire et les émissions de CO2 sur les 5 usages  (ecs/chauffage/climatisation/eclairage/auxiliaires)
+dpe_ep_conso;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_ep_conso;ep_conso_5_usages;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_5_usages_m2;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²/an)
+dpe_ep_conso;ep_conso_auxiliaire_distribution_ch;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de distribution de chauffage en energie primaire (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_distribution_ecs;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de distribution d'ECS en energie primaire (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_distribution_fr; ;Numérique; ; ; ;logement;consommation annuelle  d'auxilliaires de distribution de froid en energie primaire (kWhep/an) SUPPRIME
+dpe_ep_conso;ep_conso_auxiliaire_generation_ch;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de génération de chauffage en energie primaire (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_generation_ch_depensier;X;Numérique; ; ; ;logement;consommation annuelle d'auxilliaires de génération de chauffage en energie primaire pour le scénario dépensier (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_generation_ecs;X;Numérique; ; ; ;logement;consommation annuelle d'auxillaires de generation d'ECS en energie primaire (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_generation_ecs_depensier;X;Numérique; ; ; ;logement;consommation annuelle d'auxillaires de generation d'ECS en energie primaire pour le scénario dépensier (kWhep/an)
+dpe_ep_conso;ep_conso_auxiliaire_ventilation;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle  d'auxilliaires de ventilation en energie primaire (kWhep/an)
+dpe_ep_conso;ep_conso_ch;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de chauffage en energie primaire(déduit de la production pv autoconsommée)  (kWhep/an)
+dpe_ep_conso;ep_conso_ch_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de chauffage en energie primaire pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_eclairage;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'eclairage en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_ecs;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'ECS en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_ecs_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle d'ECS en energie primaire  pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_fr;X;Numérique; ; ; ;logement + logement neuf;consommation de refroidissement annuel en énergie primaire  (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;ep_conso_fr_depensier;X;Numérique; ; ; ;logement + logement neuf;consommation de refroidissement annuel en énergie primaire pour le scénario dépensier (déduit de la production pv autoconsommée)  (kWhep/an)
+dpe_ep_conso;ep_conso_totale_auxiliaire;X;Numérique; ; ; ;logement + logement neuf;consommation annuelle de l'ensemble des auxiliaires en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+dpe_ep_conso;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_ets;bver;X;Numérique; ; ; ;logement;coefficient de reduction des déperditions de l'espace tampon solarisé
+dpe_ets;coef_transparence_ets;X;Numérique; ; ; ;logement;coefficient de transparence de l'espace tampon solarisé T (déterminé à partir des parois vitrées de l'espace tampon solarisé)
+dpe_ets;description;Parfois;Texte; ; ; ;logement;description textuelle de l'objet
+dpe_ets;dpe_id;X; ;dpe; ; ;logement;Identifiant technique du DPE
+dpe_ets;enum_cfg_isolation_lnc_id;X; ;dpe_enum_cfg_isolation_lnc; ; ;logement;configuration de l'adjacence avec local non chauffé
+dpe_ets;id;X; ; ; ; ;logement;Identifiant technique de l'espace tampon solarisé
+dpe_ets;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_ets;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_ets;tv_coef_transparence_ets_id;X; ;dpe_tv_coef_transparence_ets; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transparence de l'espace tampon solarisé
+dpe_ets;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_generateur_chauffage;conso_ch;X;Numérique; ; ; ;logement + logement neuf;consommation d'energie annuelle du générateur de chauffage en energie finale kWh (exprimée en kWh PCI pour les combustibles). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+dpe_generateur_chauffage;conso_ch_depensier;X;Numérique; ; ; ;logement;consommation d'énergie annuelle du générateur de chauffage pour le scénario dépensier (scénario DH21) en energie finale kWh (exprimée en kWh PCI pour les combustibles). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+dpe_generateur_chauffage;date_arrete_reseau_chaleur; ; ; ; ; ;logement + logement neuf;date de l'arrêté qui modifie l'annexe 7 de l'arrêté du 15 septembre 2006 relatif au diagnostic de performance énergétique.
+dpe_generateur_chauffage;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_generateur_chauffage;enum_lien_generateur_emetteur_id;X; ;dpe_enum_lien_generateur_emetteur; ; ;logement;lien entre le générateur et l'émetteur associé
+dpe_generateur_chauffage;enum_methode_saisie_carac_sys_id;X; ;dpe_enum_methode_saisie_carac_sys; ; ;logement + logement neuf;méthode de saisie des performances du système de chauffage
+dpe_generateur_chauffage;enum_type_energie_id;X; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;logement + logement neuf;type d'énergie consommée par le générateur de chauffage
+dpe_generateur_chauffage;enum_type_generateur_ch_id;X; ;dpe_enum_type_generateur_ch;dpe_enum_type_generateur_ch;lib;logement + logement neuf;type de generateur de chauffage
+dpe_generateur_chauffage;enum_usage_generateur_id;X; ;dpe_enum_usage_generateur;dpe_enum_usage_generateur;lib;logement + logement neuf;usages assurés par le générateur (chauffage/ecs/chauffage+ecs)
+dpe_generateur_chauffage;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du générateur de chauffage
+dpe_generateur_chauffage;identifiant_reseau_chaleur; ;Texte; ; ; ;logement + logement neuf;identifiant réseau de chaleur ou de froid utilisé (utilisé à partir du 18 janvier 2022)
+dpe_generateur_chauffage;installation_chauffage_id;X; ;dpe_installation_chauffage; ; ;logement + logement neuf;Identifiant technique de l'installation de chauffage
+dpe_generateur_chauffage;n_radiateurs_gaz; ;Numérique; ; ; ;logement + logement neuf;nombre de radiateurs gaz
+dpe_generateur_chauffage;pn; ;Numérique; ; ; ;logement + logement neuf;puissance nominale du générateur à combustion (W)
+dpe_generateur_chauffage;position_volume_chauffe;X;Numérique; ; ; ;logement + logement neuf;est ce que le générateur est positionné dans le volume chauffé. (pour le calcul des pertes de génération récupérables)
+dpe_generateur_chauffage;presence_regulation_combustion; ;Numérique; ; ; ;logement + logement neuf;présence d'un organe de régulation pour le système de chauffage à combustion 0
+dpe_generateur_chauffage;presence_ventouse; ;Numérique; ; ; ;logement + logement neuf;présence d'un système de ventouse ou avec un ventilateur pour l'évacuation des fumées d'un système à combustion 0
+dpe_generateur_chauffage;priorite_generateur_cascade; ;Numérique; ; ; ;logement;ordre de priorité du générateur en cascade (ordonné de manière croissante 1
+dpe_generateur_chauffage;pveilleuse; ;Numérique; ; ; ;logement + logement neuf;puissance de la veilleuse du générateur à combustion  (W)
+dpe_generateur_chauffage;qp0; ;Numérique; ; ; ;logement + logement neuf;pertes à l'arret du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec chauffage collectif saisir Qp0 correspondant à Pe = a*Pn(collectif) (W)
+dpe_generateur_chauffage;ref_produit_generateur_ch; ;Texte; ; ; ;logement + logement neuf;référence produit  et marque du générateur de chauffage
+dpe_generateur_chauffage;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_generateur_chauffage;reference_generateur_mixte; ;Texte; ; ; ;logement;référence commune pour un générateur mixte chauffage ECS. Cette référence est identique pour les deux parties du générateur (chauffage et ECS)  et est utilisé pour faire le lien entre les deux
+dpe_generateur_chauffage;rendement_generation; ;Numérique; ; ; ;logement;Rg
+dpe_generateur_chauffage;rpint; ;Numérique; ; ; ;logement + logement neuf;rendement de génération à charge intermédiaire du générateur à combustion (0-1,5)
+dpe_generateur_chauffage;rpn; ;Numérique; ; ; ;logement + logement neuf;rendement de génération à pleine charge du générateur à combustion (0-1,5)
+dpe_generateur_chauffage;scop; ;Numérique; ; ; ;logement + logement neuf;scop du générateur thermodynamique (en remplacement du Rg pour les générateurs thermodynamique) (0-20)
+dpe_generateur_chauffage;temp_fonc_100; ;Numérique; ; ; ;logement + logement neuf;température de fonctionnement à 100% de charge (°C)
+dpe_generateur_chauffage;temp_fonc_30; ;Numérique; ; ; ;logement + logement neuf;température de fonctionnement à 30% de charge (°C)
+dpe_generateur_chauffage;tv_generateur_combustion_id; ; ;dpe_tv_generateur_combustion; ; ;logement;id de la ligne de la table utilisée pour le calcul des paramètres du générateur à combustion Rpn,Rpint,Qp0,Pveil
+dpe_generateur_chauffage;tv_rendement_generation_id; ; ;dpe_tv_rendement_generation; ; ;logement;id de la ligne de la table utilisée pour le calcul  des rendements de générations forfaitaires des générateurs autres qu'à combustion
+dpe_generateur_chauffage;tv_reseau_chaleur_id; ; ;dpe_tv_reseau_chaleur; ; ;logement + logement neuf;id de la ligne de la table utilisée pour le calcul du contenu CO2 des réseaux de chaleurs (OBSOLETE et remplacé par identifiant_reseau_chaleur à partir du 18 janvier 2022 et la prise en compte du nouvel arrêté réseau de chaleur).
+dpe_generateur_chauffage;tv_scop_id; ; ;dpe_tv_scop; ; ;logement;id de la ligne de la table utilisée pour le calcul  du coefficient de performance du système thermodynamique (SCOP)
+dpe_generateur_chauffage;tv_temp_fonc_100_id; ; ;dpe_tv_temp_fonc_100; ; ;logement;id de la ligne de la table utilisée pour le calcul  de la température à 100% de charge du système à combustion(SUPPRIME)
+dpe_generateur_chauffage;tv_temp_fonc_30_id; ; ;dpe_tv_temp_fonc_30; ; ;logement;id de la ligne de la table utilisée pour le calcul  de la température à 30% de charge du système à combustion(SUPPRIME)
+dpe_generateur_chauffage;migre_en_utc;X;Booléen; ; ; ;logement + logement neuf;Indique si les dates de la table ont été migrées au format UTC
+dpe_generateur_chauffage;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_generateur_ecs;conso_ecs;X;Numérique; ; ; ;logement + logement neuf;consommation d'energie annuelle du générateur d'ECS  (kWh) (Exprimé en kWh PCI pour les combustibles ).   Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+dpe_generateur_ecs;conso_ecs_depensier;X;Numérique; ; ; ;logement;consommation d'énergie annuelle du générateur d'ECS pour le scénario dépensier en énergie finale (kWh) (Exprimé en kWh PCI pour les combustibles ). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+dpe_generateur_ecs;cop; ;Numérique; ; ; ;logement + logement neuf;COP du chauffe-eau thermodynamique (inclus le rendement de stockage) (0-20)
+dpe_generateur_ecs;date_arrete_reseau_chaleur; ; ; ; ; ;logement + logement neuf;date de l'arrêté qui modifie l'annexe 7 de l'arrêté du 15 septembre 2006 relatif au diagnostic de performance énergétique.
+dpe_generateur_ecs;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_generateur_ecs;enum_methode_saisie_carac_sys_id;X; ;dpe_enum_methode_saisie_carac_sys; ; ;logement + logement neuf;méthode de saisie des performances du système d'ECS
+dpe_generateur_ecs;enum_periode_installation_ecs_thermo_id; ; ;dpe_enum_periode_installation_ecs_thermo;dpe_enum_periode_installation_ecs_thermo;lib;logement;periode installation du système thermodynamique
+dpe_generateur_ecs;enum_type_energie_id;X; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;logement + logement neuf;type d'énergie consommée par le générateur d'ECS
+dpe_generateur_ecs;enum_type_generateur_ecs_id;X; ;dpe_enum_type_generateur_ecs;dpe_enum_type_generateur_ecs;lib;logement + logement neuf;type de generateur d'ecs
+dpe_generateur_ecs;enum_type_stockage_ecs_id;X; ;dpe_enum_type_stockage_ecs; ; ;logement + logement neuf;Type de stockage d'ECS (intégré à la production ou indépendant)
+dpe_generateur_ecs;enum_usage_generateur_id;X; ;dpe_enum_usage_generateur;dpe_enum_usage_generateur;lib;logement + logement neuf;usages assurés par le générateur (chauffage/ecs/chauffage+ecs)
+dpe_generateur_ecs;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du générateur d'ECS
+dpe_generateur_ecs;identifiant_reseau_chaleur; ;Texte; ; ; ;logement + logement neuf;identifiant réseau de chaleur ou de froid utilisé (utilisé à partir du 18 janvier 2022)
+dpe_generateur_ecs;installation_ecs_id;X; ;dpe_installation_ecs; ; ;logement + logement neuf;Identifiant technique de l'installation d'ECS
+dpe_generateur_ecs;pn; ;Numérique; ; ; ;logement + logement neuf;puissance nominale du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec ECS collective saisir Pe = a*Pn(collectif) (W)
+dpe_generateur_ecs;position_volume_chauffe;X;Numérique; ; ; ;logement + logement neuf;est ce que le générateur est positionné dans le volume chauffé. (pour le calcul des pertes de génération récupérables)
+dpe_generateur_ecs;position_volume_chauffe_stockage; ;Numérique; ; ; ;logement + logement neuf;est ce que le ballon de stockage est positionné dans le volume chauffé. (pour le calcul des pertes de stockage récupérables)
+dpe_generateur_ecs;presence_ventouse; ;Numérique; ; ; ;logement + logement neuf;présence d'un système de ventouse ou avec un ventilateur pour l'évacuation des fumées d'un système à combustion 0
+dpe_generateur_ecs;pveilleuse; ;Numérique; ; ; ;logement + logement neuf;puissance de la veilleuse du générateur à combustion (W)
+dpe_generateur_ecs;qp0; ;Numérique; ; ; ;logement + logement neuf;pertes à l'arret du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec ECS collective saisir Qp0 correspondant à Pe = a*Pn(collectif)
+dpe_generateur_ecs;ratio_besoin_ecs;X;Numérique; ; ; ;logement + logement neuf;ratio du besoin ecs de l'installation affecté au générateur. Ce ratio est de 1 pour les installations classiques et de 0,5 pour les installations d'ECS avec deux générateurs
+dpe_generateur_ecs;ref_produit_generateur_ecs; ;Texte; ; ; ;logement + logement neuf;référence produit  et marque du générateur d'ECS
+dpe_generateur_ecs;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_generateur_ecs;reference_generateur_mixte; ;Texte; ; ; ;logement;référence commune pour un générateur mixte chauffage ECS. Cette référence est identique pour les deux parties du générateur (chauffage et ECS)  et est utilisé pour faire le lien entre les deux
+dpe_generateur_ecs;rendement_generation; ;Numérique; ; ; ;logement;Rg
+dpe_generateur_ecs;rendement_generation_stockage; ;Numérique; ; ; ;logement;RgxRs
+dpe_generateur_ecs;rendement_stockage; ;Numérique; ; ; ;logement;Rs
+dpe_generateur_ecs;rpn; ;Numérique; ; ; ;logement + logement neuf;rendement de génération à pleine charge du générateur à combustion (0-1,5)
+dpe_generateur_ecs;tv_generateur_combustion_id; ; ;dpe_tv_generateur_combustion; ; ;logement;id de la ligne de la table utilisée pour le calcul des paramètres du générateur à combustion Rpn,Rpint,Qp0,Pveil
+dpe_generateur_ecs;tv_pertes_stockage_id; ; ;dpe_tv_pertes_stockage; ; ;logement;id de la ligne de la table utilisée pour le calcul des pertes de stockage pour les ballons éléctriques
+dpe_generateur_ecs;tv_reseau_chaleur_id; ; ;dpe_tv_reseau_chaleur; ; ;logement;id de la ligne de la table utilisée pour le calcul du contenu CO2 des réseaux de chaleurs (OBSOLETE et remplacé par identifiant_reseau_chaleur à partir du 18 janvier 2022 et la prise en compte du nouvel arrêté réseau de chaleur).
+dpe_generateur_ecs;tv_scop_id; ; ;dpe_tv_scop; ; ;logement;id de la ligne de la table utilisée pour le calcul  du coefficient de performance du système thermodynamique (SCOP)
+dpe_generateur_ecs;volume_stockage;X;Numérique; ; ; ;logement + logement neuf;volume de stockage associé au générateur d'ECS
+dpe_generateur_ecs;migre_en_utc;X;Booléen; ; ; ;logement + logement neuf;Indique si les dates de la table ont été migrées au format UTC
+dpe_generateur_ecs;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_geolocalisation;administratif_id;X; ;dpe_administratif; ; ;tous;Identifiant technique du DPE
+dpe_geolocalisation;adresse_bien_id;X; ;dpe_t_adresse; ; ;tous;Identifiant technique de l'adresse du bien
+dpe_geolocalisation;id_batiment_rnb; ;Texte; ; ; ;tous;identifiant batiment du Référentiel National des Bâtiments (RNB) à venir sur les bâtiments en France (https://beta.gouv.fr/startups/bat-id.html)
+dpe_geolocalisation;idpar; ;Texte; ; ; ;tous;identifiant de parcelle cadastrale (14 caractères)
+dpe_geolocalisation;immatriculation_copropriete; ;Texte; ; ; ;tous;numéro d'immatriculation de la copropriété au registre des copropriétés (9 caractères XX0000000)
+dpe_geolocalisation;rpls_log_id; ; ; ; ; ;tous;identifiant Repertoire Logement Social (RPLS) du logement (dans le cas d'un propriétaire bailleur social)
+dpe_geolocalisation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_geolocalisation;provenance_rnb;X;Texte; ; ; ;tous;Indique la provenance du renseignement de l'identifiant bâtiment RNB (Logiciel / Reprise RNB)
+dpe_inertie;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_inertie;enum_classe_inertie_id;X; ;dpe_enum_classe_inertie;dpe_enum_classe_inertie;lib;logement + logement neuf;classe d'inertie globale du bâtiment
+dpe_inertie;inertie_paroi_verticale_lourd;X;Numérique; ; ; ;logement;est ce que les parois verticales sont considérées comme lourdes 0
+dpe_inertie;inertie_plancher_bas_lourd;X;Numérique; ; ; ;logement;est ce que le plancher bas est considéré comme lourd 0
+dpe_inertie;inertie_plancher_haut_lourd;X;Numérique; ; ; ;logement;est ce que le plancher haud est considéré comme lourd 0
+dpe_inertie;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_installation_chauffage;besoin_ch;X;Numérique; ; ; ;logement + logement neuf;Besoin de chauffage total de l'installation (kWh)
+dpe_installation_chauffage;besoin_ch_depensier;X;Numérique; ; ; ;logement;Besoin de chauffage total de l'installation pour le scénario dépensier (DH21) (kWh)
+dpe_installation_chauffage;cle_repartition_ch; ;Numérique; ; ; ;logement;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail
+dpe_installation_chauffage;coef_ifc; ;Numérique; ; ; ;logement;coefficient d'individualisation des frais de chauffage dans le cas d'un DPE appartement calculé à partir d'un DPE immeuble
+dpe_installation_chauffage;conso_ch;X;Numérique; ; ; ;logement + logement neuf;consommation d'energie annuelle de l'installation de chauffage  en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_chauffage;conso_ch_depensier;X;Numérique; ; ; ;logement;consommation d'energie annuelle de l'installation de chauffage pour le scénario dépensier (scénario DH21) en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_chauffage;description; ;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_installation_chauffage;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_installation_chauffage;enum_cfg_installation_ch_id;X; ;dpe_enum_cfg_installation_ch;dpe_enum_cfg_installation_ch;lib;logement + logement neuf;configuration de l'installation de chauffage
+dpe_installation_chauffage;enum_methode_calcul_conso_id;X; ;dpe_enum_methode_calcul_conso; ; ;logement;méthode de calcul de consommation de chauffage
+dpe_installation_chauffage;enum_methode_saisie_fact_couv_sol_id; ; ;dpe_enum_methode_saisie_fact_couv_sol; ; ;logement;méthode de saisie du facteur de couverture solaire pour le chauffage (saisi en direct justifié ou calculé à partir de la table)
+dpe_installation_chauffage;enum_type_installation_id;X; ;dpe_enum_type_installation;dpe_enum_type_installation;lib;logement + logement neuf;type d'installation de chauffage (collective ou individuelle ou  collective multi batiment
+dpe_installation_chauffage;fch; ;Numérique; ; ; ;logement;Facteur de couverture solaire pour l'installation de chauffage
+dpe_installation_chauffage;fch_saisi; ;Numérique; ; ; ;logement;Facteur de couverture solaire pour l'installation de chauffage(saisi)
+dpe_installation_chauffage;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de l'installation de chauffage
+dpe_installation_chauffage;nombre_logement_echantillon; ;Numérique; ; ; ;logement;nombre de logements représentés par le logement échantillon dans le cas d'un DPE immeuble avec installation de chauffage  individuelle.  (à ne renseigner que dans ce cas précis)
+dpe_installation_chauffage;nombre_niveau_installation_ch;X;Numérique; ; ; ;logement;nombre de niveaux desservis par l'installation de chauffage (très souvent égal au nombre de niveaux du bâtiment)
+dpe_installation_chauffage;production_ch_solaire; ;Numérique; ; ; ;logement;Production de chauffage solaire (kWh)
+dpe_installation_chauffage;ratio_virtualisation; ;Numérique; ; ; ;logement;ratio de virtualisation de l'installation collective lorsque l'on rapporte des usages collectifs à un appartement (a =  Shabappartement/Shabtotale)
+dpe_installation_chauffage;rdim;X; ; ; ; ;logement + logement neuf;nombre d'installations identiques.
+dpe_installation_chauffage;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_installation_chauffage;surface_chauffee;X;Numérique; ; ; ;logement + logement neuf;surface chauffée par l'installation de chauffage(surface du logement ou de l'immeuble). Dans le cas spécifique d'un DPE immeuble avec installation individuelle échantillonée
+dpe_installation_chauffage;tv_facteur_couverture_solaire_id; ; ;dpe_tv_facteur_couverture_solaire; ; ;logement;id de la ligne de la table utilisée pour le calcul du facteur de couverture solaire
+dpe_installation_chauffage;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_installation_ecs;besoin_ecs;X;Numérique; ; ; ;logement + logement neuf;besoin d'ECS annuel pour l'ensemble de l'installation (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_ecs;besoin_ecs_depensier;X;Numérique; ; ; ;logement;besoin d'ECS annuel pour l'ensemble de l'installation dans le cas du scénario dépensier (kWh).  Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_ecs;cle_repartition_ecs; ;Numérique; ; ; ;logement;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail
+dpe_installation_ecs;conso_ecs;X;Numérique; ; ; ;logement + logement neuf;consommation d'energie annuelle de l'installation d'ECS  en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_ecs;conso_ecs_depensier;X;Numérique; ; ; ;logement;consommation d'energie annuelle de l'installation d'ECS pour le scénario dépensier en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_ecs;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_installation_ecs;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_installation_ecs;enum_bouclage_reseau_ecs_id;X; ;dpe_enum_bouclage_reseau_ecs; ; ;logement + logement neuf;type de bouclage du réseau d'ECS pour la prise en compte des consommations d'auxiliaires de distribution
+dpe_installation_ecs;enum_cfg_installation_ecs_id; ; ;dpe_enum_cfg_installation_ecs;dpe_enum_cfg_installation_ecs;lib;logement + logement neuf;code de configuration de l'installation d'ECS (installation simple, avec solaire ou avec plusieurs systèmes d'ECS)
+dpe_installation_ecs;enum_methode_calcul_conso_id;X; ;dpe_enum_methode_calcul_conso; ; ;logement;méthode de calcul de consommation d'ECS
+dpe_installation_ecs;enum_methode_saisie_fact_couv_sol_id; ; ;dpe_enum_methode_saisie_fact_couv_sol; ; ;logement;méthode de saisie du facteur de couverture solaire pour l'ECS (saisi en direct justifié ou calculé à partir de la table)
+dpe_installation_ecs;enum_type_installation_id;X; ;dpe_enum_type_installation;dpe_enum_type_installation;lib;logement + logement neuf;code du type d'installation d'ECS (collective ou individuelle)
+dpe_installation_ecs;enum_type_installation_solaire_id; ; ;dpe_enum_type_installation_solaire;dpe_enum_type_installation_solaire;lib;logement + logement neuf;type d'installation solaire (ECS+Chauffage , ECS solaire seule etc…)
+dpe_installation_ecs;fecs; ;Numérique; ; ; ;logement;facteur de couverture solaire de l'ECS
+dpe_installation_ecs;fecs_saisi; ;Numérique; ; ; ;logement;facteur de couverture solaire pour l'ECS saisi directement lorsque celui-ci peut être justifié
+dpe_installation_ecs;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de l'installation d'ECS
+dpe_installation_ecs;nombre_logement;X;Numérique; ; ; ;logement + logement neuf;nombre de logements desservis par l'installation d'ECS. Dans le cas d'un DPE immeuble avec installation individuelle échantillonée
+dpe_installation_ecs;nombre_niveau_installation_ecs;X;Numérique; ; ; ;logement + logement neuf;nombre de niveaux desservis par l'installation d'ECS (très souvent égal au nombre de niveaux du bâtiment)
+dpe_installation_ecs;production_ecs_solaire; ;Numérique; ; ; ;logement + logement neuf;production d'ecs solaire annuelle (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_installation_ecs;ratio_virtualisation; ;Numérique; ; ; ;logement;ratio de virtualisation de l'installation collective lorsque l'on rapporte des usages collectifs à un appartement (a =  Shabappartement/Shabtotale)
+dpe_installation_ecs;rdim;X; ; ; ; ;logement + logement neuf;nombre d'installations identiques.
+dpe_installation_ecs;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_installation_ecs;rendement_distribution;X;Numérique; ; ; ;logement;rendement de distribution de l'installation d'ECS  (0-1)
+dpe_installation_ecs;reseau_distribution_isole; ;Numérique; ; ; ;logement + logement neuf;est ce que le réseau de distribution est isolé 0
+dpe_installation_ecs;surface_habitable;X;Numérique; ; ; ;logement + logement neuf;surface habitable correspondant au(x) logement(x) desservi(s) par l'installation d'ECS.(surface habitable du logement ou de la totalité des logements de l'immeuble) Dans le cas spécifique d'un DPE immeuble avec installation individuelle échantillonée
+dpe_installation_ecs;tv_facteur_couverture_solaire_id; ; ;dpe_tv_facteur_couverture_solaire; ; ;logement;id de la ligne de la table utilisée pour le calcul du facteur de couverture solaire
+dpe_installation_ecs;tv_rendement_distribution_ecs_id;X; ;dpe_tv_rendement_distribution_ecs; ; ;logement;id de la ligne de la table utilisée pour le calcul du rendement de distribution de l'installation d'ECS
+dpe_installation_ecs;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_justificatif;description;X;Texte; ; ; ;logement;description du justificatif adjoint au DPE
+dpe_justificatif;dpe_id;X; ;dpe; ; ;logement;Identifiant technique du DPE
+dpe_justificatif;enum_type_justificatif_id; ; ;dpe_enum_type_justificatif; ; ;logement;type de justificatif
+dpe_justificatif;id;X; ; ; ; ;logement;identifiant technique du justificatif
+dpe_justificatif;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_logement_visite;description;X;Texte; ; ; ;logement + logement neuf;description du logement visité
+dpe_logement_visite;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_logement_visite;enum_position_etage_logement_id; ; ;dpe_enum_position_etage_logement;dpe_enum_position_etage_logement;lib;logement + logement neuf;position du logement dans l'immeuble en terme d'étage
+dpe_logement_visite;enum_typologie_logement_id; ; ;dpe_enum_typologie_logement;dpe_enum_typologie_logement;lib;logement + logement neuf;typologie de logement (T1… T6)
+dpe_logement_visite;id;X; ; ; ; ;logement + logement neuf;identifiant technique du logement visité
+dpe_logement_visite;surface_habitable_logement; ; ; ; ; ;logement + logement neuf;surface habitable du logement renseignée sauf dans le cas du dpe à l'immeuble
+dpe_logement_visite;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_masque_lointain_non_homogene;id;X; ; ; ; ;logement;Identifiant technique du masque lointain non homogène
+dpe_masque_lointain_non_homogene;tv_coef_masque_lointain_non_homogene_id; ; ;dpe_tv_coef_masque_lointain_non_homogene; ; ;logement;Identifiant technique du coefficient pour un masque lointain non homogène
+dpe_masque_lointain_non_homogene;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_meteo;altitude; ; ; ; ; ;logement;altitude du logement en mètres
+dpe_meteo;batiment_materiaux_anciens;X;Numérique; ; ; ;logement + logement neuf;est ce que le bâtiment est principalement composé de matériaux anciens pour ses murs  0
+dpe_meteo;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_meteo;enum_classe_altitude_id;X; ;dpe_enum_classe_altitude;dpe_enum_classe_altitude;lib;logement + logement neuf;classe d'altitude du logement
+dpe_meteo;enum_zone_climatique_id;X; ;dpe_enum_zone_climatique;dpe_enum_zone_climatique;lib;logement + logement neuf;zone climatique du logement
+dpe_meteo;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_mur;b;X;Numérique; ; ; ;logement + logement neuf;coefficient de réduction des déperditions du mur
+dpe_mur;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_mur;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_mur;enduit_isolant_paroi_ancienne; ; ; ; ; ;logement + logement neuf;est ce qu'un enduit isolant est présent sur la paroi si celle-ci est une paroi ancienne (pierres, terre, mur à colombage, brique ancienne)(Renduit=0,7m².K.W-1)
+dpe_mur;enum_cfg_isolation_lnc_id; ; ;dpe_enum_cfg_isolation_lnc; ; ;logement + logement neuf;configuration de l'adjacence avec local non chauffé
+dpe_mur;enum_materiaux_structure_mur_id;X; ;dpe_enum_materiaux_structure_mur; ; ;logement + logement neuf;matériaux de structure  de la paroi
+dpe_mur;enum_methode_saisie_u_id;X; ;dpe_enum_methode_saisie_u; ; ;logement + logement neuf;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+dpe_mur;enum_methode_saisie_u0_id;X; ;dpe_enum_methode_saisie_u0; ; ;logement;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+dpe_mur;enum_orientation_id;X; ;dpe_enum_orientation; ; ;logement + logement neuf;orientation du mur
+dpe_mur;enum_periode_isolation_id; ; ;dpe_enum_periode_isolation; ; ;logement;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+dpe_mur;enum_type_adjacence_id;X; ;dpe_enum_type_adjacence; ; ;logement + logement neuf;type d'adjacence de la paroi
+dpe_mur;enum_type_doublage_id; ; ;dpe_enum_type_doublage; ; ;logement + logement neuf;type de doublage intérieur du mur.(précision de la nature du doublage ou de l'epaisseur de la lame d'air en cas de doublage indéterminé.)
+dpe_mur;enum_type_isolation_id;X; ;dpe_enum_type_isolation; ; ;logement + logement neuf;type d'isolation du mur (ITI/ITE…..)
+dpe_mur;epaisseur_isolation; ;Numérique; ; ; ;logement + logement neuf;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs) (cm)
+dpe_mur;epaisseur_structure; ;Numérique; ; ; ;logement + logement neuf;epaisseur de la partie structure de la paroi (sans l'isolation intérieure ou extérieure) (cm)
+dpe_mur;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du mur
+dpe_mur;paroi_ancienne; ;Numérique; ; ; ;logement + logement neuf;la paroi est une paroi ancienne sur laquelle a été appliquée un enduit isolant (Renduit=0,7m².K.W-1)  0
+dpe_mur;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_mur;reference_lnc; ; ; ; ; ;logement;reference projet de l'objet  local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+dpe_mur;resistance_isolation; ;Numérique; ; ; ;logement + logement neuf;resistance isolation
+dpe_mur;surface_aiu; ;Numérique; ; ; ;logement + logement neuf;surface aiu
+dpe_mur;surface_aue; ;Numérique; ; ; ;logement + logement neuf;surface aue
+dpe_mur;surface_paroi_opaque;X;Numérique; ; ; ;logement + logement neuf;Surface de paroi opaque  (sans baies vitrées sans portes)
+dpe_mur;surface_paroi_totale; ;Numérique; ; ; ;logement + logement neuf;Surface de paroi opaque + paroi vitrée de la paroi + surface des portes
+dpe_mur;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_mur;tv_umur_id; ; ;dpe_tv_umur; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique umur
+dpe_mur;tv_umur0_id; ; ;dpe_tv_umur0; ; ;logement;id de la ligne de la table utilisée pour le calcul du Umur0
+dpe_mur;umur;X;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du mur
+dpe_mur;umur_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du mur saisi en direct par le diagnostiqueur(à justifier)
+dpe_mur;umur0; ;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du mur non isolé final (avec pris en compte de l'enduit)
+dpe_mur;umur0_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du mur non isolé Saisi en direct par l'utilisateur (à justifier)
+dpe_mur;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_mur;paroi_lourde; ;Booléen; ; ; ;tous;la paroi est elle considérée comme lourde pour le calcul de l'inertie
+dpe_pack_travaux;conso_5_usages_apres_travaux; ;Numérique; ; ; ;logement;consommation 5 usages après travaux (kWh/m²/an)
+dpe_pack_travaux;cout_pack_travaux_max; ;Numérique; ; ; ;logement;fourchette haute de l'estimation des coûts du pack travaux(€)
+dpe_pack_travaux;cout_pack_travaux_min; ;Numérique; ; ; ;logement;fourchette basse de l'estimation des coûts du pack travaux(€)
+dpe_pack_travaux;descriptif_travaux_id;X; ;dpe_descriptif_travaux; ; ;logement;Identifiant technique du descriptif de travaux
+dpe_pack_travaux;emission_ges_5_usages_apres_travaux; ;Numérique; ; ; ;logement;emissions C02 5 usages après travaux (kgCO2/m²/an)
+dpe_pack_travaux;enum_num_pack_travaux_id; ; ;dpe_enum_num_pack_travaux; ; ;logement;numéro du pack travaux (1,2,1+2)
+dpe_pack_travaux;id;X; ; ; ; ;logement;Identifiant technique du pack travaux
+dpe_pack_travaux;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_panneaux_pv;enum_inclinaison_pv_id; ; ;dpe_enum_inclinaison_pv; ; ;logement;inclinaison des panneaux photovoltaïques
+dpe_panneaux_pv;enum_orientation_pv_id; ; ;dpe_enum_orientation_pv; ; ;logement;orientation des panneaux photovoltaïques
+dpe_panneaux_pv;id;X; ; ; ; ;logement + logement neuf;Identifiant technique des panneaux photovoltaïques
+dpe_panneaux_pv;nombre_module; ;Numérique; ; ; ;logement + logement neuf;nombre de modules photovoltaïque standards posés.
+dpe_panneaux_pv;production_elec_enr_id; ; ;dpe_production_elec_enr; ; ;logement + logement neuf;Identifiant technique de la production électrique enr
+dpe_panneaux_pv;ratio_virtualisation; ;Numérique; ; ; ;logement;ratio de virtualisation de l'installation PV collective lorsque l'on rapporte des usages collectifs à un appartement (a =  Shabappartement/Shabtotale)
+dpe_panneaux_pv;surface_totale_capteurs; ;Numérique; ; ; ;logement + logement neuf;surface totale de capteurs photovoltaïque. Dans le cas d'une installation collective de PV pour un DPE appartement, la surface est celle proratisé
+dpe_panneaux_pv;tv_coef_orientation_pv_id; ; ;dpe_tv_coef_orientation_pv; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient d'orientation des panneaux photovoltaïques
+dpe_panneaux_pv;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_plancher_bas;b;X;Numérique; ; ; ;logement + logement neuf;coefficient de réduction des déperditions du planchers_bas
+dpe_plancher_bas;calcul_ue;X;Numérique; ; ; ;logement;est ce que le plancher bas est passé par le calcul du Ue 0
+dpe_plancher_bas;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_plancher_bas;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_plancher_bas;enum_cfg_isolation_lnc_id; ; ;dpe_enum_cfg_isolation_lnc; ; ;logement + logement neuf;configuration de l'adjacence avec local non chauffé
+dpe_plancher_bas;enum_methode_saisie_u_id;X; ;dpe_enum_methode_saisie_u; ; ;logement + logement neuf;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+dpe_plancher_bas;enum_methode_saisie_u0_id;X; ;dpe_enum_methode_saisie_u0; ; ;logement;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+dpe_plancher_bas;enum_periode_isolation_id; ; ;dpe_enum_periode_isolation; ; ;logement;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+dpe_plancher_bas;enum_type_adjacence_id;X; ;dpe_enum_type_adjacence; ; ;logement + logement neuf;type d'adjacence de la paroi
+dpe_plancher_bas;enum_type_isolation_id;X; ;dpe_enum_type_isolation; ; ;logement + logement neuf;type d'isolation du plancher bas (ITI/ITE…..)
+dpe_plancher_bas;enum_type_plancher_bas_id; ; ;dpe_enum_type_plancher_bas; ; ;logement + logement neuf;type de plancher bas
+dpe_plancher_bas;epaisseur_isolation; ;Numérique; ; ; ;logement + logement neuf;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs)
+dpe_plancher_bas;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du plancher bas
+dpe_plancher_bas;perimetre_ue; ;Numérique; ; ; ;logement;périmètredu plancher lorsqu'il est en contact avec un terre plein/sous sol non chauffé ou vide sanitaire (à renseigner lorsque calcul du Ue)
+dpe_plancher_bas;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_plancher_bas;reference_lnc; ; ; ; ; ;logement;reference projet de l'objet  local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+dpe_plancher_bas;resistance_isolation; ;Numérique; ; ; ;logement + logement neuf;resistance isolation
+dpe_plancher_bas;surface_aiu; ;Numérique; ; ; ;logement + logement neuf;surface aiu
+dpe_plancher_bas;surface_aue; ;Numérique; ; ; ;logement + logement neuf;surface aue
+dpe_plancher_bas;surface_paroi_opaque;X;Numérique; ; ; ;logement + logement neuf;Surface de paroi opaque
+dpe_plancher_bas;surface_ue; ;Numérique; ; ; ;logement;surface de plancher qui est en contact avec un terre plein/sous sol non chauffé ou vide sanitaire (à renseigner lorsque calcul du Ue)
+dpe_plancher_bas;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul de coefficient de reduction des déperditions
+dpe_plancher_bas;tv_upb_id; ; ;dpe_tv_upb; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique upb
+dpe_plancher_bas;tv_upb0_id; ; ;dpe_tv_upb0; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique upb0
+dpe_plancher_bas;ue; ;Numérique; ; ; ;logement;Ue coefficient remplaçant Upb dans le cas sur terre plein
+dpe_plancher_bas;upb;X;Numérique; ; ; ;logement;Coefficient de transmission thermique du planchers_bas Upb
+dpe_plancher_bas;upb_final;X;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du planchers_bas (Ue ou Upb en fonction du type d'adjacence)
+dpe_plancher_bas;upb_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du planchers_bas saisi en direct par le diagnostiqueur(à justifier)
+dpe_plancher_bas;upb0; ;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du planchers bas non isolé final
+dpe_plancher_bas;upb0_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du planchers bas non isolé Saisi en direct par l'utilisateur (à justifier)
+dpe_plancher_bas;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_plancher_bas;paroi_lourde; ;Booléen; ; ; ;tous;la paroi est elle considérée comme lourde pour le calcul de l'inertie
+dpe_plancher_haut;b;X;Numérique; ; ; ;logement + logement neuf;coefficient de réduction des déperditions du planchers_hauts
+dpe_plancher_haut;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_plancher_haut;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_plancher_haut;enum_cfg_isolation_lnc_id; ; ;dpe_enum_cfg_isolation_lnc; ; ;logement + logement neuf;configuration de l'adjacence avec local non chauffé
+dpe_plancher_haut;enum_methode_saisie_u_id;X; ;dpe_enum_methode_saisie_u; ; ;logement + logement neuf;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+dpe_plancher_haut;enum_methode_saisie_u0_id;X; ;dpe_enum_methode_saisie_u0; ; ;logement;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+dpe_plancher_haut;enum_periode_isolation_id; ; ;dpe_enum_periode_isolation; ; ;logement;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+dpe_plancher_haut;enum_type_adjacence_id;X; ;dpe_enum_type_adjacence; ; ;logement + logement neuf;type d'adjacence de la paroi
+dpe_plancher_haut;enum_type_isolation_id;X; ;dpe_enum_type_isolation; ; ;logement + logement neuf;type d'isolation du plancher haut (ITI/ITE…..)
+dpe_plancher_haut;enum_type_plancher_haut_id;X; ;dpe_enum_type_plancher_haut; ; ;logement + logement neuf;type de plancher haut
+dpe_plancher_haut;epaisseur_isolation; ;Numérique; ; ; ;logement + logement neuf;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs)
+dpe_plancher_haut;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du plancher haut
+dpe_plancher_haut;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_plancher_haut;reference_lnc; ; ; ; ; ;logement;reference projet de l'objet  local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+dpe_plancher_haut;resistance_isolation; ;Numérique; ; ; ;logement + logement neuf;resistance isolation
+dpe_plancher_haut;surface_aiu; ;Numérique; ; ; ;logement + logement neuf;surface aiu
+dpe_plancher_haut;surface_aue; ;Numérique; ; ; ;logement + logement neuf;surface aue
+dpe_plancher_haut;surface_paroi_opaque;X;Numérique; ; ; ;logement + logement neuf;Surface de paroi opaque
+dpe_plancher_haut;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_plancher_haut;tv_uph_id; ; ;dpe_tv_uph; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique uph
+dpe_plancher_haut;tv_uph0_id; ; ;dpe_tv_uph0; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique uph0
+dpe_plancher_haut;uph;X;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du planchers_hauts uph
+dpe_plancher_haut;uph_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du planchers_hauts saisi en direct par le diagnostiqueur(à justifier)
+dpe_plancher_haut;uph0; ;Numérique; ; ; ;logement + logement neuf;Coefficient de transmission thermique du planchers hauts non isolé final
+dpe_plancher_haut;uph0_saisi; ;Numérique; ; ; ;logement;Coefficient de transmission thermique du planchers hauts non isolé Saisi en direct par l'utilisateur (à justifier)
+dpe_plancher_haut;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_plancher_haut;paroi_lourde; ; ;Booléen; ;tous; ; 
+dpe_pont_thermique;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_pont_thermique;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_pont_thermique;enum_methode_saisie_pont_thermique_id;X; ;dpe_enum_methode_saisie_pont_thermique; ; ;logement + logement neuf;methode de saisie des ponts thermiques
+dpe_pont_thermique;enum_type_liaison_id;X; ;dpe_enum_type_liaison; ; ;logement + logement neuf;type de liaison de pont thermique
+dpe_pont_thermique;id;X; ; ; ; ;logement + logement neuf;Identifiant technique du pont thermique
+dpe_pont_thermique;k;X;Numérique; ; ; ;logement + logement neuf;valeur du pont thermique
+dpe_pont_thermique;k_saisi; ;Numérique; ; ; ;logement;valeur du pont thermique saisie
+dpe_pont_thermique;l;X;Numérique; ; ; ;logement + logement neuf;longueur du pont thermique
+dpe_pont_thermique;pourcentage_valeur_pont_thermique;X;Numérique; ; ; ;logement;pourcentage de prise en compte de la valeur du pont thermique (dans le cas des pont thermiques refend/mur et plancher intermediaire/mur cette valeur est à 0,5 au lieu de 1)
+dpe_pont_thermique;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels 
+dpe_pont_thermique;reference_1; ;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels. Pour les ponts thermique il est laissé la possibilité d'avoir 2 références correspondant aux référence de chacun des deux objets concernés par le pont thermique
+dpe_pont_thermique;reference_2; ;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels. Pour les ponts thermique il est laissé la possibilité d'avoir 2 références correspondant aux référence de chacun des deux objets concernés par le pont thermique
+dpe_pont_thermique;tv_pont_thermique_id; ; ;dpe_tv_pont_thermique; ; ;logement;id de la ligne de la table utilisée pour le calcul de la valeur du pont thermique k
+dpe_pont_thermique;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_porte;b;X;Numérique; ; ; ;logement + logement neuf;coefficient de transmission thermique de la porte final
+dpe_porte;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_porte;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_porte;enum_cfg_isolation_lnc_id; ; ;dpe_enum_cfg_isolation_lnc; ; ;logement + logement neuf;configuration de l'adjacence avec local non chauffé
+dpe_porte;enum_methode_saisie_uporte_id;X; ;dpe_enum_methode_saisie_uporte; ; ;logement + logement neuf;méthode de saisie du U de la porte
+dpe_porte;enum_type_adjacence_id;X; ;dpe_enum_type_adjacence; ; ;logement;type d'adjacence de la paroi
+dpe_porte;enum_type_porte_id;X; ;dpe_enum_type_porte; ; ;logement + logement neuf;type de porte
+dpe_porte;enum_type_pose_id;X; ;dpe_enum_type_pose; ; ;logement + logement neuf;type de pose de la porte
+dpe_porte;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de la porte
+dpe_porte;largeur_dormant; ;Numérique; ; ; ;logement;largeur du dormant de la porte (cm)
+dpe_porte;nb_porte; ;Numérique; ; ; ;logement;nombre de portes
+dpe_porte;presence_joint; ; ; ; ; ;logement + logement neuf;y a-t-il présence de joints sur la baie (utilisé pour le calcul de la perméabilité) 0 : non 1 : oui
+dpe_porte;presence_retour_isolation; ;Numérique; ; ; ;logement;y a-t-il un retour d'isolant de la paroi opaque sur la porte 0
+dpe_porte;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_porte;reference_lnc; ;Texte; ; ; ;logement;reference projet de l'objet  local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+dpe_porte;reference_paroi; ;Texte; ; ; ;logement + logement neuf;reference projet de l'objet paroi qui est associé à l'objet porte. La codification et utilisation des références peut différer entre logiciels mais il devrait être attendu que reference_paroi est la référence d'une paroi de type mur,plancher_haut ou plancher_bas
+dpe_porte;surface_aiu; ;Numérique; ; ; ;logement + logement neuf;surface aiu
+dpe_porte;surface_aue; ;Numérique; ; ; ;logement + logement neuf;surface aue
+dpe_porte;surface_porte;X;Numérique; ; ; ;logement;surface totale de portes déclaré (nb_porte x surface unitaire de porte dans le cas de plusieurs portes)
+dpe_porte;tv_coef_reduction_deperdition_id; ; ;dpe_tv_coef_reduction_deperdition; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+dpe_porte;tv_uporte_id; ; ;dpe_tv_uporte; ; ;logement;id de la ligne de la table utilisée pour le calcul du coefficient de transfert thermique de la porte
+dpe_porte;uporte;X;Numérique; ; ; ;logement + logement neuf;coefficient de transmission thermique de la porte final
+dpe_porte;uporte_saisi; ;Numérique; ; ; ;logement;coefficient de transmission thermique de la porte saisi directement (nécessite une justification)
+dpe_porte;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_production_elec_enr;conso_elec_ac;X;Numérique; ; ; ;logement + logement neuf;éléctricité photovoltaique autoconsommée (kWh)
+dpe_production_elec_enr;description;Parfois;Texte; ; ; ;logement + logement neuf;description textuelle de l'objet
+dpe_production_elec_enr;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_production_elec_enr;enum_type_enr_id;X; ;dpe_enum_type_enr;dpe_enum_type_enr;lib;logement + logement neuf;enumérateur listant les systèmes de production d'éléctricité d'origine renouvelables présents dans le bâtiment
+dpe_production_elec_enr;presence_production_pv;X;Numérique; ; ; ;logement + logement neuf;est ce qu'il y a de la production de photovoltaique renouvelable 0
+dpe_production_elec_enr;production_pv;X;Numérique; ; ; ;logement + logement neuf;production d'éléctricité photovoltaique (kWh)
+dpe_production_elec_enr;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_production_elec_enr;taux_autoproduction; ;Numérique; ; ; ;logement;taux d'autoproduction Tap de la production d'éléctricité d'origne renouvelable
+dpe_production_elec_enr;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_production_electricite;conso_elec_ac; ;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée(kWhep/an)
+dpe_production_electricite;conso_elec_ac_autre_usage;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour les autres usages de l'éléctricité  (kWhep/an)
+dpe_production_electricite;conso_elec_ac_auxiliaire;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour l'usage auxiliaire (les consommations finales sont déduites de cette valeur) (kWhep/an)
+dpe_production_electricite;conso_elec_ac_ch;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour l'usage chauffage (les consommations finales sont déduites de cette valeur) (kWhep/an)
+dpe_production_electricite;conso_elec_ac_eclairage;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour l'usage eclairage (les consommations finales sont déduites de cette valeur) (kWhep/an)
+dpe_production_electricite;conso_elec_ac_ecs;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour l'usage ecs (les consommations finales sont déduites de cette valeur) (kWhep/an)
+dpe_production_electricite;conso_elec_ac_fr;X;Numérique; ; ; ;logement;éléctricité photovoltaique autoconsommée pour l'usage climatisation (les consommations finales sont déduites de cette valeur) (kWhep/an)
+dpe_production_electricite;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_production_electricite;production_pv;X;Numérique; ; ; ;logement + logement neuf;production d'éléctricité photovoltaique(kWhep/an)
+dpe_production_electricite;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_qualite_isolation;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_qualite_isolation;qualite_isol_enveloppe;X;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement + logement neuf;qualité d'isolation de l'enveloppe
+dpe_qualite_isolation;qualite_isol_menuiserie;X;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement + logement neuf;qualité d'isolation des menuiseries
+dpe_qualite_isolation;qualite_isol_mur; ;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement + logement neuf;qualité d'isolation des murs
+dpe_qualite_isolation;qualite_isol_plancher_bas; ;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement + logement neuf;qualité de l'isolation des planchers
+dpe_qualite_isolation;qualite_isol_plancher_haut_comble_amenage; ;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement + logement neuf;qualité d'isolation de la toiture/planchers hauts partie comble aménagé
+dpe_qualite_isolation;qualite_isol_plancher_haut_comble_perdu; ;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement;qualité d'isolation de la toiture/planchers hauts partie comble perdue
+dpe_qualite_isolation;qualite_isol_plancher_haut_toit_terrasse; ;Numérique;dpe_enum_qualite_composant;dpe_enum_qualite_composant;lib;logement;qualité d'isolation de la toiture/planchers hauts partie toit terrasse
+dpe_qualite_isolation;ubat;X;Numérique; ; ; ;logement + logement neuf;Ubat(W/m²K)
+dpe_qualite_isolation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_repartition_chauffage;cle_repartition_ch;X;Numérique; ; ; ;logement_neuf;clé de répartition de chauffage à appliquer au logement
+dpe_repartition_chauffage;coef_ifc;X;Numérique; ; ; ;logement_neuf;coefficient d'individualisation des frais de chauffage dans le cas d'un DPE appartement calculé à partir d'un DPE immeuble
+dpe_repartition_chauffage;deperdition_totale_batiment;X;Numérique; ; ; ;logement_neuf;calcul de deperdition batiment pour de la clé de répartition de chauffage
+dpe_repartition_chauffage;deperdition_totale_logement;X;Numérique; ; ; ;logement_neuf;calcul de deperdition logement pour de la clé de répartition de chauffage
+dpe_repartition_chauffage;dpe_id;X; ;dpe; ; ;logement_neuf;Identifiant technique du DPE
+dpe_repartition_chauffage;surface_baie_est_ouest;X;Numérique; ; ; ;logement_neuf;surface des baies du logement orientées est ou ouest
+dpe_repartition_chauffage;surface_baie_nord; ;Numérique; ; ; ;logement_neuf;surface des baies du logement orientées nord
+dpe_repartition_chauffage;surface_baie_sud;X;Numérique; ; ; ;logement_neuf;surface des baies du logement orientées sud
+dpe_repartition_chauffage;surface_paroi_verticale_ext;X;Numérique; ; ; ;logement_neuf;surface des parois verticales donnant sur l'extérieur
+dpe_repartition_chauffage;surface_plancher_bas;X;Numérique; ; ; ;logement_neuf;surface des planchers bas du logement
+dpe_repartition_chauffage;surface_plancher_haut;X;Numérique; ; ; ;logement_neuf;surface des planchers hauts du logement
+dpe_repartition_chauffage;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_repartition_ecs;besoin_ecs_batiment; ;Numérique; ; ; ;logement_neuf;besoin d'ECS du bâtiment calculé pour la clé de répartition d'ECS
+dpe_repartition_ecs;besoin_ecs_logement;X;Numérique; ; ; ;logement_neuf;besoin d'ECS du logement calculé pour la clé de répartition d'ECS
+dpe_repartition_ecs;cle_repartition_ecs;X;Numérique; ; ; ;logement_neuf;clé de répartition de l'ECS
+dpe_repartition_ecs;dpe_id;X; ;dpe; ; ;logement_neuf;Identifiant technique du DPE
+dpe_repartition_ecs;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_sortie_par_energie;conso_5_usages;X;Numérique; ; ; ;logement + logement neuf;consommation totale en énergie finale pour l'énergie considérée (kWhef/an)
+dpe_sortie_par_energie;conso_ch;X;Numérique; ; ; ;logement + logement neuf;consommation de chauffage en énergie finale pour l'énergie considérée (kWhef/an)
+dpe_sortie_par_energie;conso_ecs;X;Numérique; ; ; ;logement + logement neuf;consommation d'ECS en énergie finale pour l'énergie considérée (kWhef/an)
+dpe_sortie_par_energie;cout_5_usages;X;Numérique; ; ; ;logement + logement neuf;coût totale pour l'énergie considérée (€)
+dpe_sortie_par_energie;cout_ch;X;Numérique; ; ; ;logement + logement neuf;coût lié au chauffage pour l'énergie considérée (€)
+dpe_sortie_par_energie;cout_ecs;X;Numérique; ; ; ;logement + logement neuf;coût  lié à l'ECS pour l'énergie considérée (€)
+dpe_sortie_par_energie;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_sortie_par_energie;emission_ges_5_usages;X;Numérique; ; ; ;logement + logement neuf;estimation GES totale pour l'énergie considérée (kgCO2/an)
+dpe_sortie_par_energie;emission_ges_ch;X;Numérique; ; ; ;logement + logement neuf;estimation GES de chauffage pour l'énergie considérée (kgCO2/an)
+dpe_sortie_par_energie;emission_ges_ecs;X;Numérique; ; ; ;logement + logement neuf;estimation GES d'ECS pour l'énergie considérée (kgCO2/an)
+dpe_sortie_par_energie;enum_type_energie_id;X; ;dpe_enum_type_energie;dpe_enum_type_energie;lib;logement + logement neuf;type d'énergie
+dpe_sortie_par_energie;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de la sortie par énergie
+dpe_sortie_par_energie;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_t_adresse;adresse_brut; ;Texte; ; ; ;tous;champs texte brute de l'adresse saisi par le diagnostiqueur
+dpe_t_adresse;ban_city; ;Texte; ; ; ;tous;nom de la commune de l'adresse géocodée ban
+dpe_t_adresse;ban_citycode; ;Texte; ; ; ;tous;code insee de la commune de  l'adresse géocodée ban
+dpe_t_adresse;ban_date_appel;X;Date; ; ; ;tous;date d'appel à la ban
+dpe_t_adresse;ban_departement; ;Texte; ; ; ;tous;Département de l'adresse géocodée ban
+dpe_t_adresse;ban_erreur; ;Booléen; ; ; ;tous;Booléen qui indique si la ban renvoie un message d'erreur
+dpe_t_adresse;ban_housenumber; ;Texte; ; ; ;tous;Numéro éventuel de l’adresse dans la voie (champ BAN)
+dpe_t_adresse;ban_id; ; ; ; ; ;tous;identifiant de la BAN referençant l'adresse
+dpe_t_adresse;ban_label; ;Texte; ; ; ;tous;label de l'adresse au format ban
+dpe_t_adresse;ban_postcode; ;Texte; ; ; ;tous;code postal de la commune de l'adresse géocodée ban
+dpe_t_adresse;ban_region; ;Texte; ; ; ;tous;Région de l'adresse géocodée ban
+dpe_t_adresse;ban_score; ;Numérique; ; ; ;tous;score de match entre le label brut et le résultat de géocodage de la BAN
+dpe_t_adresse;ban_street; ;Texte; ; ; ;tous;Nom de la voie en minuscules accentuées avec les noms alternatifs éventuels (champ BAN)
+dpe_t_adresse;ban_type; ;Texte; ; ; ;tous;type de résultat ban
+dpe_t_adresse;ban_x; ;Numérique; ; ; ;tous;coordonnée x du géolocalisant ban dans le referentiel epsg 2154 lambert 93
+dpe_t_adresse;ban_y; ;Numérique; ; ; ;tous;coordonnée x du géolocalisant ban dans le referentiel epsg 2154 lambert 93
+dpe_t_adresse;code_postal_brut;X;Texte; ; ; ;tous;code postal de l'adresse brute saisie par le diagnostiqueur
+dpe_t_adresse;compl_etage_appartement; ;Numérique; ; ; ;tous;complement d'adresses
+dpe_t_adresse;compl_nom_residence; ;Texte; ; ; ;tous;complement d'adresses
+dpe_t_adresse;compl_ref_batiment; ;Texte; ; ; ;tous;complement d'adresse
+dpe_t_adresse;compl_ref_cage_escalier; ;Texte; ; ; ;tous;complement d'adresses
+dpe_t_adresse;compl_ref_logement; ;Texte; ; ; ;tous;complement d'adresses
+dpe_t_adresse;enum_statut_geocodage_ban_id; ; ;dpe_enum_statut_geocodage_ban;dpe_enum_statut_geocodage_ban;lib;tous;statut de l'appareillement à la BAN de l'adresse
+dpe_t_adresse;id;X; ; ; ; ;tous;Identifiant technique d'une adresse qui peut correspondre à l'adresse du bien, du propriétaire ou du propriétaire de l'installation commune
+dpe_t_adresse;label_brut;X;Texte; ; ; ;tous;label complet de l'adresse saisie par le diagnostiqueur (adresse + code postal + nom commune)
+dpe_t_adresse;label_brut_avec_complement; ; ; ; ; ;tous;label complet de l'adresse saisie par le diagnostiqueur  en saisie libre (adresse + code postal + nom commune)
+dpe_t_adresse;nom_commune_brut;X;Texte; ; ; ;tous;nom de commune brute saisie par le diagnostiqueur
+dpe_t_adresse;traite_par_batch;X;Booléen; ; ; ;tous;Booléen qui indique si l'adresse a déjà été traitée par le batch de normalisation des adresses
+dpe_t_adresse;ban_epci; ;Texte; ; ; ;tous;EPCI de l'adresse géocodée ban
+dpe_t_adresse;migre_en_utc;X;Booléen; ; ; ;tous;Indique si les dates de la table ont été migrées au format UTC
+dpe_t_adresse;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement
+dpe_ventilation;cle_repartition_ventilation; ;Numérique; ; ; ;logement;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail. Pour la ventilation il s'agit du rapport surface habitable logement / surface habitable immeuble
+dpe_ventilation;conso_auxiliaire_ventilation;X;Numérique; ; ; ;logement + logement neuf;Consommation des auxilliaires de ventilation.  Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+dpe_ventilation;description;Parfois;Texte; ; ; ;logement;description textuelle de l'objet
+dpe_ventilation;dpe_id;X; ;dpe; ; ;logement + logement neuf;Identifiant technique du DPE
+dpe_ventilation;enum_methode_saisie_q4pa_conv_id;X; ;dpe_enum_methode_saisie_q4pa_conv; ; ;logement + logement neuf;code de la methode de saisie du q4paconv
+dpe_ventilation;enum_type_ventilation_id;X; ;dpe_enum_type_ventilation;dpe_enum_type_ventilation;lib;logement + logement neuf;code du type de ventilation
+dpe_ventilation;hperm;XX;Numérique; ; ; ;logement + logement neuf;déperdition thermique par renouvellement d'air due au vent
+dpe_ventilation;hvent; ;Numérique; ; ; ;logement + logement neuf;déperdition thermique par renouvellement d'air due au système de ventilation
+dpe_ventilation;id;X; ; ; ; ;logement + logement neuf;Identifiant technique de la ventilation
+dpe_ventilation;plusieurs_facade_exposee;X;Numérique; ; ; ;logement + logement neuf;est ce qu'il y a plusieurs facades exposées au vent 0
+dpe_ventilation;pvent_moy; ;Numérique; ; ; ;logement + logement neuf;puissance de la ventilation moyenne soit saisie soit calculée avec la méthode proposée
+dpe_ventilation;q4pa_conv;X;Numérique; ; ; ;logement + logement neuf;q4pa conv final soit issue d'une saisie de mesure  à l'étanchéité à l'air soit d'une valeur forfaitaire. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+dpe_ventilation;X; ;Numérique; ; ; ;logement;q4paconv saisi directement quand la valeur est donnée par une mesure d'étanchéité à l'air. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+dpe_ventilation;ref_produit_ventilation; ;Texte; ; ; ;logement + logement neuf;référence produit  et marque du système de ventilation
+dpe_ventilation;reference;X;Texte; ; ; ;logement + logement neuf;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+dpe_ventilation;surface_ventile;X;Numérique; ; ; ;logement + logement neuf;surface ventilée. Dans le cas d'une seule ventilation c'est la surface habitable totale. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+dpe_ventilation;tv_debits_ventilation_id; ; ;dpe_tv_debits_ventilation; ; ;logement;id de la ligne de la table utilisée pour le calcul des débits de ventilations
+dpe_ventilation;tv_q4pa_conv_id; ; ;dpe_tv_q4pa_conv; ; ;logement;id de la ligne de la table utilisée pour le calcul du q4pa conventionnel. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+dpe_ventilation;ventilation_post_2012;X;Numérique; ; ; ;logement + logement neuf;est ce que le système de ventilation est postérieur à 2012 0
+dpe_ventilation;date_derniere_modification;X;Date; ; ; ;tous;Date de dernière modification de l'enregistrement

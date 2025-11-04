@@ -1,0 +1,162 @@
+﻿xml.source;xml.value;json.schema;json.value;commentaire
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;8;/enveloppe/local_non_chauffe/type;garage;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;9;/enveloppe/local_non_chauffe/type;cellier;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;11;/enveloppe/local_non_chauffe/type;comble_fortement_ventile;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;12;/enveloppe/local_non_chauffe/type;comble_faiblement_ventile;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;13;/enveloppe/local_non_chauffe/type;comble_tres_faiblement_ventile;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;14;/enveloppe/local_non_chauffe/type;circulation_sans_ouverture_exterieure;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;15;/enveloppe/local_non_chauffe/type;circulation_avec_ouverture_exterieure;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;16;/enveloppe/local_non_chauffe/type;circulation_avec_bouche_ou_gaine_desenfumage_ouverte;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;17;/enveloppe/local_non_chauffe/type;hall_entree_avec_fermeture_automatique;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;18;/enveloppe/local_non_chauffe/type;hall_entree_sans_fermeture_automatique;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;19;/enveloppe/local_non_chauffe/type;garage_collectif;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_type_adjacence_id;21;/enveloppe/local_non_chauffe/type;autres;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;8;/enveloppe/local_non_chauffe/type;garage;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;9;/enveloppe/local_non_chauffe/type;cellier;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;11;/enveloppe/local_non_chauffe/type;comble_fortement_ventile;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;12;/enveloppe/local_non_chauffe/type;comble_faiblement_ventile;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;13;/enveloppe/local_non_chauffe/type;comble_tres_faiblement_ventile;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;14;/enveloppe/local_non_chauffe/type;circulation_sans_ouverture_exterieure;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;15;/enveloppe/local_non_chauffe/type;circulation_avec_ouverture_exterieure;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;16;/enveloppe/local_non_chauffe/type;circulation_avec_bouche_ou_gaine_desenfumage_ouverte;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;17;/enveloppe/local_non_chauffe/type;hall_entree_avec_fermeture_automatique;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;18;/enveloppe/local_non_chauffe/type;hall_entree_sans_fermeture_automatique;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;19;/enveloppe/local_non_chauffe/type;garage_collectif;
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_type_adjacence_id;21;/enveloppe/local_non_chauffe/type;autres;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;8;/enveloppe/local_non_chauffe/type;garage;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;9;/enveloppe/local_non_chauffe/type;cellier;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;11;/enveloppe/local_non_chauffe/type;comble_fortement_ventile;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;12;/enveloppe/local_non_chauffe/type;comble_faiblement_ventile;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;13;/enveloppe/local_non_chauffe/type;comble_tres_faiblement_ventile;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;14;/enveloppe/local_non_chauffe/type;circulation_sans_ouverture_exterieure;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;15;/enveloppe/local_non_chauffe/type;circulation_avec_ouverture_exterieure;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;16;/enveloppe/local_non_chauffe/type;circulation_avec_bouche_ou_gaine_desenfumage_ouverte;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;17;/enveloppe/local_non_chauffe/type;hall_entree_avec_fermeture_automatique;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;18;/enveloppe/local_non_chauffe/type;hall_entree_sans_fermeture_automatique;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;19;/enveloppe/local_non_chauffe/type;garage_collectif;
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_type_adjacence_id;21;/enveloppe/local_non_chauffe/type;autres;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;8;/enveloppe/local_non_chauffe/type;garage;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;9;/enveloppe/local_non_chauffe/type;cellier;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;11;/enveloppe/local_non_chauffe/type;comble_fortement_ventile;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;12;/enveloppe/local_non_chauffe/type;comble_faiblement_ventile;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;13;/enveloppe/local_non_chauffe/type;comble_tres_faiblement_ventile;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;14;/enveloppe/local_non_chauffe/type;circulation_sans_ouverture_exterieure;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;15;/enveloppe/local_non_chauffe/type;circulation_avec_ouverture_exterieure;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;16;/enveloppe/local_non_chauffe/type;circulation_avec_bouche_ou_gaine_desenfumage_ouverte;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;17;/enveloppe/local_non_chauffe/type;hall_entree_avec_fermeture_automatique;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;18;/enveloppe/local_non_chauffe/type;hall_entree_sans_fermeture_automatique;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;19;/enveloppe/local_non_chauffe/type;garage_collectif;
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_type_adjacence_id;21;/enveloppe/local_non_chauffe/type;autres;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;8;/enveloppe/local_non_chauffe/type;garage;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;9;/enveloppe/local_non_chauffe/type;cellier;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;11;/enveloppe/local_non_chauffe/type;comble_fortement_ventile;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;12;/enveloppe/local_non_chauffe/type;comble_faiblement_ventile;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;13;/enveloppe/local_non_chauffe/type;comble_tres_faiblement_ventile;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;14;/enveloppe/local_non_chauffe/type;circulation_sans_ouverture_exterieure;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;15;/enveloppe/local_non_chauffe/type;circulation_avec_ouverture_exterieure;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;16;/enveloppe/local_non_chauffe/type;circulation_avec_bouche_ou_gaine_desenfumage_ouverte;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;17;/enveloppe/local_non_chauffe/type;hall_entree_avec_fermeture_automatique;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;18;/enveloppe/local_non_chauffe/type;hall_entree_sans_fermeture_automatique;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;19;/enveloppe/local_non_chauffe/type;garage_collectif;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_adjacence_id;21;/enveloppe/local_non_chauffe/type;autres;
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/baie_vitree_collection/baie_vitree/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/mur_collection/mur/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_bas_collection/plancher_bas/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/plancher_haut_collection/plancher_haut/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur l'extérieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur l'extérieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;2;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;3;/enveloppe/local_non_chauffe/paroi/isolation;non_isole;Paroi donnant sur un local chauffé
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;4;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_cfg_isolation_lnc_id;5;/enveloppe/local_non_chauffe/paroi/isolation;isole;Paroi donnant sur un local chauffé
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;1;/enveloppe/local_non_chauffe/baie/materiau;polycarbonate;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;2;/enveloppe/local_non_chauffe/baie/materiau;bois;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;3;/enveloppe/local_non_chauffe/baie/materiau;bois;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;4;/enveloppe/local_non_chauffe/baie/materiau;bois;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;5;/enveloppe/local_non_chauffe/baie/materiau;bois;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;6;/enveloppe/local_non_chauffe/baie/materiau;bois;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;7;/enveloppe/local_non_chauffe/baie/materiau;pvc;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;8;/enveloppe/local_non_chauffe/baie/materiau;pvc;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;9;/enveloppe/local_non_chauffe/baie/materiau;pvc;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;10;/enveloppe/local_non_chauffe/baie/materiau;pvc;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;11;/enveloppe/local_non_chauffe/baie/materiau;pvc;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;12;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;13;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;14;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;15;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;16;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;17;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;18;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;19;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;20;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;21;/enveloppe/local_non_chauffe/baie/materiau;metal;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;12;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;true;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;13;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;true;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;14;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;true;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;15;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;true;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;16;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;true;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;17;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;false;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;18;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;false;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;19;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;false;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;20;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;false;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;21;/enveloppe/local_non_chauffe/baie/presence_rupteur_pont_thermique;false;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;1;/enveloppe/local_non_chauffe/baie/type_vitrage;polycarbonate;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;2;/enveloppe/local_non_chauffe/baie/type_vitrage;simple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;3;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;4;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;5;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;6;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;7;/enveloppe/local_non_chauffe/baie/type_vitrage;simple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;8;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;9;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;10;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;11;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;12;/enveloppe/local_non_chauffe/baie/type_vitrage;simple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;13;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;14;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;15;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;16;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;17;/enveloppe/local_non_chauffe/baie/type_vitrage;simple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;18;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;19;/enveloppe/local_non_chauffe/baie/type_vitrage;double_vitrage_fe;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;20;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage;
+logement/enveloppe/ets_collection/ets/donnee_entree/tv_coef_transparence_ets;21;/enveloppe/local_non_chauffe/baie/type_vitrage;triple_vitrage_fe;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_orientation_id;1;/enveloppe/local_non_chauffe/baie/orientation;180;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_orientation_id;2;/enveloppe/local_non_chauffe/baie/orientation;0;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_orientation_id;3;/enveloppe/local_non_chauffe/baie/orientation;90;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_orientation_id;4;/enveloppe/local_non_chauffe/baie/orientation;270;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_orientation_id;5;/enveloppe/local_non_chauffe/baie/orientation;;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_inclinaison_vitrage_id;1;/enveloppe/local_non_chauffe/baie/inclinaison;12.5;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_inclinaison_vitrage_id;2;/enveloppe/local_non_chauffe/baie/inclinaison;50;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_inclinaison_vitrage_id;3;/enveloppe/local_non_chauffe/baie/inclinaison;90;
+logement/enveloppe/ets_collection/ets/baie_ets_collection/baie_ets/donnee_entree/enum_inclinaison_vitrage_id;4;/enveloppe/local_non_chauffe/baie/inclinaison;0;

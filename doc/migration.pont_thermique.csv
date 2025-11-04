@@ -1,0 +1,6 @@
+﻿xml.source;xml.id;json.path;json.value
+logement/enveloppe/pont_thermique_collection/pont_thermique/donnee_entree/enum_type_liaison_id;1;/enveloppe/pont_thermique/liaison/type;plancher_bas_mur
+logement/enveloppe/pont_thermique_collection/pont_thermique/donnee_entree/enum_type_liaison_id;2;/enveloppe/pont_thermique/liaison/type;plancher_intermediaire_mur
+logement/enveloppe/pont_thermique_collection/pont_thermique/donnee_entree/enum_type_liaison_id;3;/enveloppe/pont_thermique/liaison/type;plancher_haut_mur
+logement/enveloppe/pont_thermique_collection/pont_thermique/donnee_entree/enum_type_liaison_id;4;/enveloppe/pont_thermique/liaison/type;refend_mur
+logement/enveloppe/pont_thermique_collection/pont_thermique/donnee_entree/enum_type_liaison_id;5;/enveloppe/pont_thermique/liaison/type;menuiserie_mur

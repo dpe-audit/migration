@@ -1,0 +1,888 @@
+﻿Nom table;Identifiant BDD;Donnée obligatoire;Type de donnée;Table de références;Champ récupéré (enum) ;Description
+audit;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit;date_etablissement_audit;X;Date; ; ;Date d'établissement de l'AUDIT
+audit;date_reception_audit;X;Date; ; ;Date de réception de l'AUDIT
+audit;numero;X;Texte; ; ;Numéro de l'AUDIT
+audit;ancien_audit_id; ; ;audit; ;N° de l'AUDIT remplacé le cas échéant
+audit;audit_remplacant_id; ; ;audit;numero;Indique si l'AUDIT a été remplacé et par quel autre AUDIT
+audit;hashkey; ;Texte; ; ;clé de hachage
+audit;id;X; ; ; ;Identifiant technique de l'AUDIT
+audit;id_auditeur;X; ; ; ;Identifiant technique de l'auditeur
+audit;id_from_xml; ;Texte; ; ;id
+audit;version;X;Texte; ; ;Version schéma
+audit;xml_hash; ;Texte; ; ;Hash de la chaine de caractère modélisant le xml
+audit;xml_path; ;Texte; ; ;Chemin du répertoire de stockage du XML
+audit;migre_en_utc;X;Booléen; ; ;Indique si les dates de la table ont été migrées au format UTC
+audit;suppression_en_cours; ;Booléen; ; ;Indique si une demande de suppression est en cours
+audit;traite_par_batch_migration_compte_factice; ;Booléen; ; ;Indique si l'AUDIT a été traité par le batch de reprise des AUDIT sur compte factice
+audit;migre_compte_factice; ;Booléen; ; ;Indique si l'AUDIT a été migré du compte factice vers un autre compte
+audit_administratif;date_expiration_audit; ;Date; ; ;date d'expiration de l'audit
+audit_administratif;date_visite_auditeur;X;Date; ; ;date de visite de l'auditeur
+audit_administratif;audit_a_remplacer; ;Texte; ; ;numéro de l'audit à remplacer dans le cas d'une opération de remplacement de l'audit
+audit_administratif;numero_dpe; ;Texte; ; ;numéro du DPE en lien avec l'audit
+audit_administratif;audit_id;X; ;audit; ;Identifiant technique de l'AUDIT
+audit_administratif;date_etablissement_audit;X;Date; ; ;date de l'établissement de l'audit
+audit_administratif;derogation_economique_detail; ;Texte; ; ;justification de la dérogation économique, pour coûts de travaux excessifs
+audit_administratif;derogation_technique_detail; ;Texte; ; ;justification de la dérogation technique, architecturale, patrimoniale
+audit_administratif;enum_derogation_ventilation_id; ; ;audit_enum_derogation_ventilation; ;Cas de dérogation où la ventilation ne peut être traitée pour raisons techniques
+audit_administratif;derogation_ventilation_detail;X; ; ; ;justification de la dérogation pour la ventilation
+audit_administratif;enum_derogation_economique_id;X; ;audit_enum_derogation_economique;lib;Cas de dérogation pour des raisons de disproportion des coûts des travaux
+audit_administratif;enum_derogation_technique_id;X; ;audit_enum_derogation_technique;lib;Cas de dérogation pour des raisons architecturales, techniques ou patrimoniales
+audit_administratif;motif_remplacement; ;Texte; ; ;motif du remplacement du DPE : texte libre
+audit_administratif;reference_interne_projet;Parfois;Texte; ; ;référence interne logiciel du projet. Mis en place pour réidentification du projet en cas d'import depuis l'observatoire
+audit_administratif;migre_en_utc;X;Booléen; ; ;Indique si les dates de la table ont été migrées au format UTC
+audit_administratif;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_apport_et_besoin;besoin_ch;X;Numérique; ; ;besoin de chauffage annuel total du logement ou immeuble (kWh) . Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;apport_interne_ch;X;Numérique; ; ;apports internes totaux durant la saison de chauffe Ai (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;apport_interne_fr;X;Numérique; ; ;apports internes totaux durant la saison de froid Ai (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;apport_solaire_ch;X;Numérique; ; ;apports solaires totaux durant la saison de chauffe As (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;apport_solaire_fr;X;Numérique; ; ;apports solaires totaux durant la saison de froid As (kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;besoin_ecs;X;Numérique; ; ;besoin d'ecs annuel total du bâtiment (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;besoin_fr;X;Numérique; ; ;besoin de refroidissement annuel (kWh).Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;besoin_ch_depensier;X;Numérique; ; ;besoin de chauffage total du bâtiment pour le scénario dépensier (kWh) (DH21). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;besoin_ecs_depensier;X;Numérique; ; ;besoin d'ecs total du bâtiment pour le scénario dépensier (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;besoin_fr_depensier;X;Numérique; ; ;besoin de refroidissement annuel pour le scénario dépensier (kWh). Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;fraction_apport_gratuit_ch;X;Numérique; ; ;fraction des apports gratuits sur la saison de chauffe F. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;fraction_apport_gratuit_depensier_ch;X;Numérique; ; ;fraction des apports gratuits sur la saison de chauffe F pour le scénario dépensier (DH21). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_apport_et_besoin;nadeq;X;Numérique; ; ;nombre d'adulte équivalent calculés pour le besoin d'ECS. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;pertes_distribution_ecs_recup;X;Numérique; ; ;pertes de distribution d'ECS récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;pertes_distribution_ecs_recup_depensier;X;Numérique; ; ;pertes de distribution d'ECS récupérées(kWh) pour le scénario dépensier. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;pertes_generateur_ch_recup;X;Numérique; ; ;pertes des générateurs de chauffage récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;pertes_generateur_ch_recup_depensier;X;Numérique; ; ;pertes des générateurs de chauffage récupérées(kWh) pour le scénario dépensier. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;pertes_stockage_ecs_recup;X;Numérique; ; ;pertes de stockage d'ECS récupérées(kWh). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;surface_sud_equivalente;X;Numérique; ; ;surface sud équivalente. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_apport_et_besoin;v40_ecs_journalier;X;Numérique; ; ;consommation en l d'ecs à 40°C sur une journée. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;v40_ecs_journalier_depensier;X;Numérique; ; ;consommation en l d'ecs à 40°C sur une journée scénario dépensier. Pour les DPE immeubles ces données sont à l'immeuble. Pour les dpe appartements à partir de l'immeuble ces données sont à l'appartement
+audit_apport_et_besoin;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_auditeur;administratif_id;X; ;audit_administratif; ;Identifiant technique de l'AUDIT
+audit_auditeur;usr_logiciel_id;X; ;usr_logiciel; ;identifiant de logiciel audit unique
+audit_auditeur;version_logiciel;X;Texte; ; ;version du logiciel utilisé
+audit_auditeur;version_moteur_calcul; ;Texte; ; ;version du moteur de calcul utilisé par le logiciel
+audit_auditeur;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_baie_ets;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_baie_ets;enum_inclinaison_vitrage_id;X; ;audit_enum_inclinaison_vitrage; ;inclinaison du vitrage
+audit_baie_ets;enum_orientation_id;X; ;audit_enum_orientation; ;orientation de la baie
+audit_baie_ets;ets_id;X; ;audit_ets; ;Identifiant technique de l'espace tampon solarisé
+audit_baie_ets;id;X; ; ; ;Identifiant technique de la baie de l'espace tampon solarisé
+audit_baie_ets;nb_baie;X;Numérique; ; ;nombre de baies
+audit_baie_ets;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_baie_ets;surface_totale_baie;X;Numérique; ; ;surface totale de paroi vitrée pour ce type de vitrage et sur cette orientation (nombre de baies x surface unitaire). La surface est la surface de la baie dans son ensemble. (vitrage + menuiserie inclus)
+audit_baie_ets;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_baie_vitree;b;X;Numérique; ; ;coefficient de réduction des déperditions de la baie vitrée
+audit_baie_vitree;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_baie_vitree;double_fenetre;X;Booléen; ; ;est ce qu'il s'agit d'une double fenetre. DANS LE CAS D'UNE DOUBLE FENETRE LES DONNEES DU MODELE SONT FOURNIES POUR LE VITRAGE LE PLUS PERFORMANT OU POUR LA BAIE DANS SON ENSEMBLE A L'EXCEPTION DE Uw2 ET Sw2 QUI SONT LES CARACTERISTIQUES DU DEUXIEME VITRAGE (le moins performant) 0 : non 1 : oui
+audit_baie_vitree;enum_cfg_isolation_lnc_id; ; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_baie_vitree;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_baie_vitree;enum_inclinaison_vitrage_id;X; ;audit_enum_inclinaison_vitrage; ;inclinaison du vitrage
+audit_baie_vitree;enum_methode_saisie_perf_vitrage_id;X; ;audit_enum_methode_saisie_perf_vitrage; ;methode de saisie des caractéristiques thermiques des vitrage (valeurs forfaitaires ou saisies en direct lorsque issu d'un justificatif)
+audit_baie_vitree;enum_orientation_id;X; ;audit_enum_orientation; ;orientation de la baie
+audit_baie_vitree;enum_type_adjacence_id;X; ;audit_enum_type_adjacence; ;type d'adjacence de la paroi
+audit_baie_vitree;enum_type_baie_id;X; ;audit_enum_type_baie;lib;type de baie
+audit_baie_vitree;enum_type_fermeture_id;X; ;audit_enum_type_fermeture; ;type de fermeture associé à la baie (volets/persiennes etc..)
+audit_baie_vitree;enum_type_gaz_lame_id; ; ;audit_enum_type_gaz_lame; ;type de gaz présent dans la lame
+audit_baie_vitree;enum_type_materiaux_menuiserie_id;X; ;audit_enum_type_materiaux_menuiserie; ;type de matériaux des menuiseries
+audit_baie_vitree;enum_type_pose_id;X; ;audit_enum_type_pose; ;type de pose de la baie
+audit_baie_vitree;enum_type_vitrage_id;X; ;audit_enum_type_vitrage;lib;type de vitrage
+audit_baie_vitree;epaisseur_lame; ;Numérique; ; ;epaisseur de la lame
+audit_baie_vitree;fe1;X;Numérique; ; ;fe1 facteur d'ensoleillement calculé à partir de la table sur les masques proches
+audit_baie_vitree;fe2;X;Numérique; ; ;fe2 facteur d'ensoleillement calculé soit à l'aide de la méthode masque lointain homogène ou méthode des masques lointains proches
+audit_baie_vitree;id;X; ; ; ;Identifiant technique de la baie vitrée
+audit_baie_vitree;largeur_dormant;X;Numérique; ; ;largeur du dormant de la baie (cm)
+audit_baie_vitree;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_baie_vitree;nb_baie;X;Numérique; ; ;nombre de baies
+audit_baie_vitree;presence_joint;X; ; ; ;y a-t-il présence de joints sur la baie (utilisé pour le calcul de la perméabilité) 0 : non 1 : oui
+audit_baie_vitree;presence_protection_solaire_hors_fermeture;X; ; ; ;y a-t-il une protection solaire qui n'est pas considérée comme une fermeture (R=0 pour le calcul de Ujn) mais qui est prise en compte pour le calcul du confort d'été.
+audit_baie_vitree;presence_retour_isolation;X;Booléen; ; ;y a-t-il un retour d'isolant de la paroi opaque sur la baie 0 : non 1 : oui
+audit_baie_vitree;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_baie_vitree;reference_lnc; ;Texte; ; ;reference projet de l'objet local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+audit_baie_vitree;reference_paroi; ;Texte; ; ;reference projet de l'objet paroi qui est associé à l'objet baie vitrée. La codification et utilisation des références peut différer entre logiciels mais il devrait être attendu que reference_paroi est la référence d'une paroi de type mur,plancher_haut ou plancher_bas
+audit_baie_vitree;surface_aiu; ;Numérique; ; ;surface aiu : surface des parois du local non chauffé qui donnent sur des locaux chauffés.
+audit_baie_vitree;surface_aue; ;Numérique; ; ;surface aue : surface des parois du local non chauffé en contact avec l'extérieur ou le sol
+audit_baie_vitree;surface_totale_baie;X;Numérique; ; ;surface totale de paroi vitrée pour ce type de vitrage et sur cette orientation (nombre de baies x surface unitaire). La surface est la surface de la baie dans son ensemble. (vitrage + menuiserie inclus)
+audit_baie_vitree;sw;X;Numérique; ; ;sw final de la baie: soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree;sw_1; ;Numérique; ; ;"Sw de la première fenêtre dans le cas d'une double fenêtre (par défaut la première fenêtre est toujours celle avec le Uw le plus élevé -&gt; plus performante)"
+audit_baie_vitree;sw_2; ;Numérique; ; ;"Sw de la deuxième fenêtre dans le cas d'une double fenêtre (par défaut la deuxième fenêtre est toujours celle avec le Uw le plus faible -&gt; moins performante)"
+audit_baie_vitree;sw_saisi; ;Numérique; ; ;facteur solaire de la baie saisi directement (nécessite une justification)
+audit_baie_vitree;tv_coef_masque_lointain_homogene_id;Parfois; ;audit_tv_coef_masque_lointain_homogene; ;id de la ligne de la table utilisée pour le calcul du coefficient de masque homogène lointain
+audit_baie_vitree;tv_coef_masque_proche_id;X; ;audit_tv_coef_masque_proche; ;id de la ligne de la table utilisée pour le calcul du coefficent de masque proche
+audit_baie_vitree;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+audit_baie_vitree;tv_deltar_id; ; ;audit_tv_deltar; ;id de la ligne de la table utilisée pour le calcul du delta de resistance de la protection mobile. (volets persienne etc..)
+audit_baie_vitree;tv_sw_id; ; ;audit_tv_sw; ;id de la ligne de la table utilisée pour le calcul du facteur solaire de la baie sw
+audit_baie_vitree;tv_ug_id; ; ;audit_tv_ug; ;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique du vitrage ug
+audit_baie_vitree;tv_ujn_id; ; ;audit_tv_ujn; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmissiion de la baie jour/nuit Ujn. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+audit_baie_vitree;tv_uw_id; ; ;audit_tv_uw; ;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique de la baie uw. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+audit_baie_vitree;u_menuiserie;X;Numérique; ; ;U final de la menuiserie utilisé dans le calcul : soit Ujn dans le cas d'une baie avec protection solaire soit Uw dans le cas d'une baie sans protection solaire
+audit_baie_vitree;ug; ;Numérique; ; ;Ug final de la baie : soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree;ug_saisi; ;Numérique; ; ;coefficient de transmission thermique du vitrage saisi directement (nécessite une justification)
+audit_baie_vitree;ujn; ;Numérique; ; ;Ujn final de la baie : soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree;ujn_saisi; ;Numérique; ; ;coefficient de transmission thermique de la baie avec ses protection solaires saisi directement (nécessite une justification)
+audit_baie_vitree;uw;X;Numérique; ; ;Uw final de la baie : soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree;uw_1; ;Numérique; ; ;"Uw de la première fenêtre dans le cas d'une double fenêtre (par défaut la première fenêtre est toujours celle avec le Uw le plus élevé -&gt; plus performante)"
+audit_baie_vitree;uw_2; ;Numérique; ; ;"Uw de la deuxième fenêtre dans le cas d'une double fenêtre (par défaut la deuxième fenêtre est toujours celle avec le Uw le plus faible -&gt; moins performante)"
+audit_baie_vitree;uw_saisi; ;Numérique; ; ;coefficient de transmission thermique de la baie saisi directement (nécessite une justification)
+audit_baie_vitree;vitrage_vir; ;Booléen; ; ;est ce que le vitrage est à isolation renforcée 0 : non 1 : oui
+audit_baie_vitree;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_baie_vitree_double_fenetre;baie_vitree_id; ; ;audit_baie_vitree; ;Identifiant technique de la baie vitrée
+audit_baie_vitree_double_fenetre;enum_inclinaison_vitrage_id;X; ;audit_enum_inclinaison_vitrage; ;inclinaison du vitrage
+audit_baie_vitree_double_fenetre;enum_methode_saisie_perf_vitrage_id;X; ;audit_enum_methode_saisie_perf_vitrage; ;methode de saisie des caractéristiques thermiques des vitrage (valeurs forfaitaires ou saisies en direct lorsque issu d'un justificatif)
+audit_baie_vitree_double_fenetre;enum_type_baie_id;X; ;audit_enum_type_baie;lib;type de baie
+audit_baie_vitree_double_fenetre;enum_type_gaz_lame_id; ; ;audit_enum_type_gaz_lame; ;type de gaz présent dans la lame
+audit_baie_vitree_double_fenetre;enum_type_materiaux_menuiserie_id;X; ;audit_enum_type_materiaux_menuiserie; ;type de matériaux des menuiseries
+audit_baie_vitree_double_fenetre;enum_type_pose_id;X; ;audit_enum_type_pose; ;type de pose de la baie
+audit_baie_vitree_double_fenetre;enum_type_vitrage_id;X; ;audit_enum_type_vitrage;lib;type de vitrage
+audit_baie_vitree_double_fenetre;epaisseur_lame; ; ; ; ;epaisseur de la lame
+audit_baie_vitree_double_fenetre;sw;X; ; ; ;sw final de la baie: soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree_double_fenetre;sw_saisi; ; ; ; ;facteur solaire de la baie saisi directement (nécessite une justification)
+audit_baie_vitree_double_fenetre;tv_sw_id; ; ;audit_tv_sw; ;id de la ligne de la table utilisée pour le calcul du facteur solaire de la baie sw
+audit_baie_vitree_double_fenetre;tv_ug_id;Parfois; ;audit_tv_ug; ;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique du vitrage ug
+audit_baie_vitree_double_fenetre;tv_uw_id; ; ;audit_tv_uw; ;id de la ligne de la table utilisée pour le calcul du coefficent de transmission thermique de la baie uw. Dans le cas d'une interpolation/extrapolation prendre la valeur tabulée la plus proche
+audit_baie_vitree_double_fenetre;ug;Parfois; ; ; ;Ug final de la baie : soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree_double_fenetre;ug_saisi; ; ; ; ;coefficient de transmission thermique du vitrage saisi directement (nécessite une justification)
+audit_baie_vitree_double_fenetre;uw;X; ; ; ;Uw final de la baie : soit saisi directement soit issu des tables forfaitaires
+audit_baie_vitree_double_fenetre;uw_saisi; ; ; ; ;coefficient de transmission thermique de la baie saisi directement (nécessite une justification)
+audit_baie_vitree_double_fenetre;vitrage_vir; ; ; ; ;est ce que le vitrage est à isolation renforcée 0 : non 1 : oui
+audit_baie_vitree_double_fenetre;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_baie_vitree_masque;baie_vitree_id;X; ;audit_baie_vitree; ;Identifiant technique baie vitrée
+audit_baie_vitree_masque;masque_id;X; ;audit_masque; ;Identifiant technique masque
+audit_baie_vitree_masque;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_ballon_ecs_effet_joule;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_ballon_ecs_effet_joule;volume_stockage;X;Numérique; ; ;volume de stockage du ballon d'ECS (en litres)
+audit_ballon_ecs_effet_joule;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_caracteristiques_travaux;travaux_id;X; ;audit_travaux; ;Identifiant technique des travaux
+audit_caracteristiques_travaux;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_chauffe_eau_thermodynamique;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_chauffe_eau_thermodynamique;cop;X;Numérique; ; ;COP du chauffe-eau thermodynamique
+audit_chauffe_eau_thermodynamique;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_climatisation;conso_fr;X;Numérique; ; ;consommation de refroidissement annuel (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_climatisation;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_climatisation;enum_periode_installation_fr_id;X; ;audit_enum_periode_installation_fr;lib;période d'installation du système de refroidissement
+audit_climatisation;surface_clim;X;Numérique; ; ;surface climatisée : si le logement n'est pas climatisé dans son ensemble la surface climatisée peut être inférieure à la surface totale du logement.Dans le cas spécifique d'un DPE immeuble avec installation individuelle échantillonée :saisir la surface climatisée par la totalité des logements représentés par le logement moyen surface_clim = Shmoy*Nblgt. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+audit_climatisation;enum_type_energie_id; ; ;audit_enum_type_energie;lib;type d'énergie consommée par le générateur de froid
+audit_climatisation;enum_type_generateur_fr_id;X; ;audit_enum_type_generateur_fr;lib;type de générateur de froid
+audit_climatisation;besoin_fr;X;Numérique; ; ;besoin de refroidissement annuel. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est le besoin de l'installation à l'immeuble qu'il faut saisir.
+audit_climatisation;cle_repartition_clim; ;Numérique; ; ;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail.
+audit_climatisation;conso_fr_depensier;X;Numérique; ; ;consommation de refroidissement annuel pour le scénario dépensier (kWh) . Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_climatisation;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_climatisation;eer;X;Numérique; ; ;coefficient d'efficience energétique du système de climatisation final (SEER *0,95)
+audit_climatisation;enum_methode_calcul_conso_id;X; ;audit_enum_methode_calcul_conso; ;méthode de calcul de consommation de froid : simple, ou cas particuliers installation collective virtualisée ou installation individuelle échantilonnée (dpe immeuble)
+audit_climatisation;enum_methode_saisie_carac_sys_id;X; ;audit_enum_methode_saisie_carac_sys; ;methode de saisie du seer : lecture de table forfaitaire ou saisie justifiée
+audit_climatisation;id;X; ; ; ;Identifiant technique de la climatisation
+audit_climatisation;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_climatisation;nombre_logement_echantillon; ;Numérique; ; ;nombre de logements représentés par le logement échantillon dans le cas d'un DPE immeuble avec installation de climatisation individuelle. (à ne renseigner que dans ce cas précis)
+audit_climatisation;ref_produit_fr; ;Texte; ; ;référence produit et marque du générateur de froid
+audit_climatisation;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_climatisation;tv_seer_id; ; ;audit_tv_seer; ;id de la ligne de la table utilisée pour le calcul du coefficient d'efficience énergétique du système de climatisation seer
+audit_climatisation;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_confort_ete;enum_indicateur_confort_ete_id;X; ;audit_enum_indicateur_confort_ete;lib;indicateur confort été (bon moyen ou mauvais)
+audit_confort_ete;inertie_lourde;X;Booléen; ; ;est ce que le logement possède une inerte lourde ou très lourde 0 : non 1 : oui
+audit_confort_ete;isolation_toiture; ;Booléen; ; ;as-t-on une isolation de toiture 0 : non 1 : oui
+audit_confort_ete;aspect_traversant; ;Booléen; ; ;est ce que le logement est traversant 0 : non 1 : oui
+audit_confort_ete;brasseur_air; ;Booléen; ; ;est ce que le logement est équipé de brasseurs d'air 0 : non 1 : oui
+audit_confort_ete;protection_solaire_exterieure;X;Booléen; ; ;as-t-on une protection solair exteriaire sur les facades vitrées (exception nord) 0 : non 1 : oui
+audit_confort_ete;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_confort_ete;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_cout;cout_5_usages;X;Numérique; ; ;coût totale 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires) (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_total_auxiliaire;X;Numérique; ; ;coût des auxilliaires de l'ensemble des auxiliaires (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_ch;X;Numérique; ; ;coût de chauffage(déduit de la production pv autoconsommée) (€)
+audit_cout;cout_eclairage;X;Numérique; ; ;coût des eclairage (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_ecs;X;Numérique; ; ;coût de l'ECS (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_fr;X;Numérique; ; ;coût de refroidissement annuel (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_auxiliaire_distribution_ch;X;Numérique; ; ;coût des auxilliaires de distribution de chauffage (€)
+audit_cout;cout_auxiliaire_distribution_ecs;X;Numérique; ; ;coût des auxilliaires de distribution de l'ECS (€)
+audit_cout;cout_auxiliaire_distribution_fr; ;Numérique; ; ;coût des auxilliaires de distribution de froid (€) SUPPRIME
+audit_cout;cout_auxiliaire_generation_ch;X;Numérique; ; ;coût des auxilliaires de génération de chauffage (€)
+audit_cout;cout_auxiliaire_generation_ch_depensier;X;Numérique; ; ;coût des auxilliaires de génération de chauffage pour le scénario dépensier (€)
+audit_cout;cout_auxiliaire_generation_ecs;X;Numérique; ; ;coût des auxillaires de generation de l'ECS (€)
+audit_cout;cout_auxiliaire_generation_ecs_depensier;X;Numérique; ; ;coût des auxillaires de generation de l'ECS pour le scénario dépensier (€)
+audit_cout;cout_auxiliaire_ventilation;X;Numérique; ; ;coût des auxilliaires de ventilation (€)
+audit_cout;cout_ch_depensier;X;Numérique; ; ;coût de chauffage pour le scénario dépensier (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_ecs_depensier;X;Numérique; ; ;coût de l'ECS pour le scénario dépensier (déduit de la production pv autoconsommée) (€)
+audit_cout;cout_fr_depensier;X;Numérique; ; ;coût de refroidissement pour le scénario dépensier (déduit de la production pv autoconsommée) (€)
+audit_cout;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_cout;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_deperdition;deperdition_baie_vitree;X;Numérique; ; ;deperditions par les baies vitrées (W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_enveloppe;X;Numérique; ; ;deperditions par l'enveloppe (GV). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_mur;X;Numérique; ; ;deperditions par les murs(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_plancher_bas;X;Numérique; ; ;deperditions par les planchers bas(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_plancher_haut;X;Numérique; ; ;deperditions par les planchers hauts(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_pont_thermique;X;Numérique; ; ;deperditions par les ponts thermiques(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_porte;X;Numérique; ; ;deperditions par les ponts thermiques(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;deperdition_renouvellement_air;X;Numérique; ; ;deperditions par renouvellement d'air totale (hvent + hperm)(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;hperm;X;Numérique; ; ;part des deperditions de renouvellement d'air liées à la perméabilité à l'air du bâtiment(W/K). Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;hvent;X;Numérique; ; ;part des deperditions de renouvellement d'air liées au système de(W/K) ventilation. Pour les DPE immeubles et appartement à partir de l'immeuble ces données sont à l'immeuble.
+audit_deperdition;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_deperdition;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_descriptif_enveloppe;id;X; ; ; ;Identifiant technique du descriptif de l'enveloppe
+audit_descriptif_enveloppe;vue_ensemble_logement_id;X; ;audit_vue_ensemble_logement; ;Identifiant technique de la vue de l'ensemble du logement
+audit_descriptif_enveloppe;nom;X;Texte; ; ;nom du composant
+audit_descriptif_enveloppe;description;X;Texte; ; ;description du composant
+audit_descriptif_enveloppe;enum_categorie_descriptif_enveloppe_id;X; ;audit_enum_categorie_descriptif_enveloppe; ;lot pour la description de l'etat existant de l'enveloppe à la page 5 de la trame de l'audit
+audit_descriptif_enveloppe;qualite_isol;X;Numérique; ; ;qualité d'isolation
+audit_descriptif_enveloppe;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_descriptif_equipements;id;X; ; ; ;Identifiant technique du descriptif des équipements
+audit_descriptif_equipements;vue_ensemble_logement_id;X; ;audit_vue_ensemble_logement; ;Identifiant technique de la vue de l'ensemble du logement
+audit_descriptif_equipements;description; ;Texte; ; ;description du système
+audit_descriptif_equipements;description_etat_systeme; ;Texte; ; ;informations sur l’état de fonctionnement du système
+audit_descriptif_equipements;enum_categorie_descriptif_sys_id; ; ;audit_enum_categorie_descriptif_sys; ;lot pour la description de l'etat existant des equipements à la page 6 de la trame de l'audit
+audit_descriptif_equipements;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_description_du_bien;id;X; ; ; ;Identifiant technique de la description du bien
+audit_description_du_bien;vue_ensemble_logement_id;X; ;audit_vue_ensemble_logement; ;Identifiant technique de la vue de l'ensemble du logement
+audit_description_du_bien;enum_rubrique_description_id;X; ;audit_enum_rubrique_description; ;rubrique thématique pour la description du bien
+audit_description_du_bien;description;X;Texte; ; ;description pour la rubrique thématique sélectionnée
+audit_description_du_bien;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_dpe_immeuble;audit_id;X; ;audit; ;Identifiant technique de l'AUDIT
+audit_dpe_immeuble;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_ef_conso;conso_5_usages;X;Numérique; ; ;consommation annuelle 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie finale(déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_5_usages_m2;X;Numérique; ; ;consommation annuelle 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie finale(déduit de la production pv autoconsommée) (kWhef/m²/an)
+audit_ef_conso;conso_totale_auxiliaire;X;Numérique; ; ;consommation annuelle de l'ensemble des auxiliaires en énergie finale(déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_ch;X;Numérique; ; ;consommation annuelle de chauffage en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_eclairage;X;Numérique; ; ;consommation annuelle d'eclairage en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_ecs;X;Numérique; ; ;consommation annuelle d'ECS en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_fr;X;Numérique; ; ;consommation de refroidissement annuel en energie finale (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_auxiliaire_distribution_ch;X;Numérique; ; ;consommation annuelle d'auxilliaires de distribution de chauffage en energie finale (kWhef/an)
+audit_ef_conso;conso_auxiliaire_distribution_ecs;X;Numérique; ; ;consommation annuelle d'auxilliaires de distribution d'ECS en energie finale (kWhef/an)
+audit_ef_conso;conso_auxiliaire_distribution_fr; ;Numérique; ; ;consommation annuelle d'auxilliaires de distribution de froid en energie finale (kWhef/an)
+audit_ef_conso;conso_auxiliaire_generation_ch;X;Numérique; ; ;consommation annuelle d'auxilliaires de génération de chauffage en energie finale (kWhef/an)
+audit_ef_conso;conso_auxiliaire_generation_ch_depensier;X;Numérique; ; ;consommation annuelle d'auxilliaires de génération de chauffage en energie finale pour le scénario dépensier (kWhef/an)
+audit_ef_conso;conso_auxiliaire_generation_ecs;X;Numérique; ; ;consommation annuelle d'auxillaires de generation d'ECS en energie finale (kWhef/an)
+audit_ef_conso;conso_auxiliaire_generation_ecs_depensier;X;Numérique; ; ;consommation annuelle d'auxillaires de generation d'ECS en energie finale pour le scénario dépensier (kWhef/an)
+audit_ef_conso;conso_auxiliaire_ventilation;X;Numérique; ; ;consommation annuelle d'auxilliaires de ventilation en energie finale (kWhef/an)
+audit_ef_conso;conso_ch_depensier;X;Numérique; ; ;consommation annuelle de chauffage en energie finale pour le scénario dépensier(déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_ecs_depensier;X;Numérique; ; ;consommation annuelle d'ECS en energie finale pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;conso_fr_depensier;X;Numérique; ; ;consommation de refroidissement annuel en energie finale pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhef/an)
+audit_ef_conso;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_ef_conso;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_emetteur_chauffage;enum_type_emission_distribution_id;X; ;audit_enum_type_emission_distribution;lib;enumérateur qui couple les notions d'emission et de distribution pour produire une description complète des emetteurs de chauffage
+audit_emetteur_chauffage;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_emetteur_chauffage;enum_equipement_intermittence_id;X; ;audit_enum_equipement_intermittence; ;type d'équipement d'intermittence associé à la génération
+audit_emetteur_chauffage;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_emetteur_chauffage;enum_lien_generateur_emetteur_id;X; ;audit_enum_lien_generateur_emetteur; ;lien entre le générateur et l'émetteur associé
+audit_emetteur_chauffage;enum_periode_installation_emetteur_id; ; ;audit_enum_periode_installation_emetteur;lib;période d'installation des émetteurs de chauffage (utilisé pour le calcul des températures de fonctionnement des systèmes à combustion de type chaudière gaz ou fioul)
+audit_emetteur_chauffage;enum_temp_distribution_ch_id;X; ;audit_enum_temp_distribution_ch; ;température de distribution de l'installation de chauffage (pour le calcul des auxiliaires de distribution)
+audit_emetteur_chauffage;enum_type_chauffage_id;X; ;audit_enum_type_chauffage;lib;type de chauffage : Central ou Divisé
+audit_emetteur_chauffage;enum_type_regulation_id;X; ;audit_enum_type_regulation; ;type de régulation associée au générateur
+audit_emetteur_chauffage;i0;X;Numérique; ; ;coefficient d'intermittence de l'installation
+audit_emetteur_chauffage;id;X; ; ; ;Identifiant technique de l'émetteur de chauffage
+audit_emetteur_chauffage;installation_chauffage_id;X; ;audit_installation_chauffage; ;Identifiant technique de l'installation de chauffage
+audit_emetteur_chauffage;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_emetteur_chauffage;rendement_distribution;X;Numérique; ; ;Rd : rendement de distribution du système de chauffage (0-1)
+audit_emetteur_chauffage;rendement_emission;X;Numérique; ; ;Re : rendement d'émission du système de chauffage (0-1)
+audit_emetteur_chauffage;rendement_regulation;X;Numérique; ; ;Rr : rendement de régulation du système de chauffage (0-1)
+audit_emetteur_chauffage;reseau_distribution_isole; ;Numérique; ; ;est ce que le réseau de distribution est isolé 0 : non 1 : oui
+audit_emetteur_chauffage;surface_chauffee;X;Numérique; ; ;surface chauffée par l'emetteur (sous ensemble de la surface chauffée par l'installation). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+audit_emetteur_chauffage;tv_intermittence_id;X; ;audit_tv_intermittence; ;id de la ligne de la table utilisée pour le calcul du coefficient d'intermittence de l'installation I0
+audit_emetteur_chauffage;tv_rendement_distribution_ch_id;X; ;audit_tv_rendement_distribution_ch; ;id de la ligne de la table utilisée pour le calcul du rendement de distribution de la distribution associée à l'émission
+audit_emetteur_chauffage;tv_rendement_emission_id;X; ;audit_tv_rendement_emission; ;id de la ligne de la table utilisée pour le calcul du rendement d'emission de l'émetteur de chauffage
+audit_emetteur_chauffage;tv_rendement_regulation_id;X; ;audit_tv_rendement_regulation; ;id de la ligne de la table utilisée pour le calcul du rendement de régulation associé à l'émission
+audit_emetteur_chauffage;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_emission_ges;classe_emission_ges;X;Texte; ; ;classe d'estimation ges du DPE 5 usages
+audit_emission_ges;emission_ges_5_usages;X;Numérique; ; ;estimation GES totale 5 usages (déduit de la production pv autoconsommée) (ecs/chauffage/climatisation/eclairage/auxiliaires)(kgCO2/an)
+audit_emission_ges;emission_ges_5_usages_m2;X;Numérique; ; ;estimation GES totale 5 usages rapportée au m² (déduit de la production pv autoconsommée) (ecs/chauffage/climatisation/eclairage/auxiliaires)(kgCO2/m2/an)
+audit_emission_ges;emission_ges_totale_auxiliaire;X;Numérique; ; ;estimation GES de l'ensemble des auxiliaires (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_ch;X;Numérique; ; ;estimation GES de chauffage (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_eclairage;X;Numérique; ; ;estimation GES d'eclairage (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_ecs;X;Numérique; ; ;estimation GES d'ECS (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_fr;X;Numérique; ; ;estimation GES de refroidissement annuel (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_distribution_ch;X;Numérique; ; ;estimation GES d'auxilliaires de distribution de chauffage (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_distribution_ecs;X;Numérique; ; ;estimation GES d'auxilliaires de distribution d'ECS (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_distribution_fr; ;Numérique; ; ;estimation GES d'auxilliaires de distribution de froid (kgCO2/an) SUPPRIME
+audit_emission_ges;emission_ges_auxiliaire_generation_ch;X;Numérique; ; ;estimation GES d'auxilliaires de génération de chauffage (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_generation_ch_depensier;X;Numérique; ; ;estimation GES d'auxilliaires de génération de chauffage pour le scénario dépensier (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_generation_ecs;X;Numérique; ; ;estimation GES d'auxillaires de generation d'ECS (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_generation_ecs_depensier;X;Numérique; ; ;estimation GES d'auxillaires de generation d'ECS pour le scénario dépensier (kgCO2/an)
+audit_emission_ges;emission_ges_auxiliaire_ventilation;X;Numérique; ; ;estimation GES d'auxilliaires de ventilation (kgCO2/an)
+audit_emission_ges;emission_ges_ch_depensier;X;Numérique; ; ;estimation GES de chauffage pour le scénario dépensier(déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_ecs_depensier;X;Numérique; ; ;estimation GES d'ECS pour le scénario dépensier (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;emission_ges_fr_depensier;X;Numérique; ; ;estimation GES de refroidissement pour le scénario dépensier (déduit de la production pv autoconsommée) (kgCO2/an)
+audit_emission_ges;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_emission_ges;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_ep_conso;classe_bilan_dpe;X;Texte; ; ;Classe du DPE issu de la synthèse du double seuil sur les consommations énergie primaire et les émissions de CO2 sur les 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)
+audit_ep_conso;ep_conso_5_usages;X;Numérique; ; ;consommation annuelle 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_5_usages_m2;X;Numérique; ; ;consommation annuelle 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires)en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²/an)
+audit_ep_conso;ep_conso_totale_auxiliaire;X;Numérique; ; ;consommation annuelle de l'ensemble des auxiliaires en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_ch;X;Numérique; ; ;consommation annuelle de chauffage en energie primaire(déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_eclairage;X;Numérique; ; ;consommation annuelle d'eclairage en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_ecs;X;Numérique; ; ;consommation annuelle d'ECS en energie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_fr;X;Numérique; ; ;consommation de refroidissement annuel en énergie primaire (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_distribution_ch;X;Numérique; ; ;consommation annuelle d'auxilliaires de distribution de chauffage en energie primaire (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_distribution_ecs;X;Numérique; ; ;consommation annuelle d'auxilliaires de distribution d'ECS en energie primaire (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_distribution_fr; ;Numérique; ; ;consommation annuelle d'auxilliaires de distribution de froid en energie primaire (kWhep/an) SUPPRIME
+audit_ep_conso;ep_conso_auxiliaire_generation_ch;X;Numérique; ; ;consommation annuelle d'auxilliaires de génération de chauffage en energie primaire (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_generation_ch_depensier;X;Numérique; ; ;consommation annuelle d'auxilliaires de génération de chauffage en energie primaire pour le scénario dépensier (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_generation_ecs;X;Numérique; ; ;consommation annuelle d'auxillaires de generation d'ECS en energie primaire (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_generation_ecs_depensier;X;Numérique; ; ;consommation annuelle d'auxillaires de generation d'ECS en energie primaire pour le scénario dépensier (kWhep/an)
+audit_ep_conso;ep_conso_auxiliaire_ventilation;X;Numérique; ; ;consommation annuelle d'auxilliaires de ventilation en energie primaire (kWhep/an)
+audit_ep_conso;ep_conso_ch_depensier;X;Numérique; ; ;consommation annuelle de chauffage en energie primaire pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_ecs_depensier;X;Numérique; ; ;consommation annuelle d'ECS en energie primaire pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;ep_conso_fr_depensier;X;Numérique; ; ;consommation de refroidissement annuel en énergie primaire pour le scénario dépensier (déduit de la production pv autoconsommée) (kWhep/an)
+audit_ep_conso;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_ep_conso;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_etape_travaux;ef_conso_totale_auxiliaire_m2;X;Numérique; ; ;consommation annuelle de l'ensemble des auxiliaires en energie finale (déduit de la production pv autoconsommée) (kWhef/m²SHAB/an)
+audit_etape_travaux;ef_conso_ch_m2;X;Numérique; ; ;consommation annuelle de chauffage en energie finale (déduit de la production pv autoconsommée) (kWhef/m²SHAB/an)
+audit_etape_travaux;ef_conso_eclairage_m2;X;Numérique; ; ;consommation annuelle d'eclairage en energie finale (déduit de la production pv autoconsommée) (kWhef/m²SHAB/an)
+audit_etape_travaux;ef_conso_ecs_m2;X;Numérique; ; ;consommation annuelle d'ECS en energie finale (déduit de la production pv autoconsommée) (kWhef/m²SHAB/an)
+audit_etape_travaux;ef_conso_fr_m2;X;Numérique; ; ;consommation de refroidissement annuel en énergie finale (déduit de la production pv autoconsommée) (kWhef/m²SHAB/an)
+audit_etape_travaux;ep_conso_totale_auxiliaire_m2;X;Numérique; ; ;consommation annuelle de l'ensemble des auxiliaires en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;ep_conso_ch_m2;Parfois;Numérique; ; ;consommation annuelle de chauffage en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;ep_conso_eclairage_m2;X;Numérique; ; ;consommation annuelle d'eclairage en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;ep_conso_ecs_m2;X;Numérique; ; ;consommation annuelle d'ECS en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;ep_conso_fr_m2;X;Numérique; ; ;consommation de refroidissement annuel en énergie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;cout;Parfois;Numérique; ; ;coût des travaux de l’étape, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux;cout_cumule;X;Numérique; ; ;coût cumulé du scénario de travaux jusqu’à l’étape en cours inclus, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux;ef_conso_5_usages_m2_gain;X;Numérique; ; ;gain en énergie finale (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (kWhef/m²SHAB/an)
+audit_etape_travaux;ep_conso_5_usages_m2_gain;X;Numérique; ; ;gain en énergie primaire (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (kWhep/m²SHAB/an)
+audit_etape_travaux;emission_ges_5_usages_m2_gain;X;Numérique; ; ;réduction des GES (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (kgCO2eq/m²SHAB/an)
+audit_etape_travaux;facture_gain_cumule;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’état initial (€/an)
+audit_etape_travaux;facture_gain;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’étape précédente (€/an)
+audit_etape_travaux;ef_conso_5_usages_m2_gain_relatif;X;Numérique; ; ;gain relatif en énergie finale (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (%)
+audit_etape_travaux;ep_conso_5_usages_m2_gain_relatif;X;Numérique; ; ;gain relatif en énergie primaire (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (%)
+audit_etape_travaux;emission_ges_5_usages_m2_gain_relatif;X;Numérique; ; ;gain relatif des GES (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) de l'étape par rapport à l’étape précédente (%)
+audit_etape_travaux;facture_gain_max;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’étape précédente (€/an)
+audit_etape_travaux;facture_gain_min;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’étape précédente (€/an)
+audit_etape_travaux;ef_conso_5_usages_m2_gain_cumule;X;Numérique; ; ;gain en énergie finale (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulé jusqu’à l’étape en cours inclus (kWhef/m²SHAB/an)
+audit_etape_travaux;ep_conso_5_usages_m2_gain_cumule;X;Numérique; ; ;gain en énergie primaire (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulé jusqu’à l’étape en cours inclus (kWhep/m²SHAB/an)
+audit_etape_travaux;emission_ges_5_usages_m2_gain_cumule;X;Numérique; ; ;réduction des GES (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulée jusqu’à l’étape en cours inclus (kgCO2eq/m²SHAB/an)
+audit_etape_travaux;facture_gain_cumule_max;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’état initial (€/an)
+audit_etape_travaux;facture_gain_cumule_min;X;Numérique; ; ;économie sur les factures annuelles d'énergie de l'étape par rapport à l’état initial (€/an)
+audit_etape_travaux;ef_conso_5_usages_m2_gain_cumule_relatif;X;Numérique; ; ;gain relatif en énergie finale (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulé jusqu’à l’étape en cours inclus (%)
+audit_etape_travaux;ep_conso_5_usages_m2_gain_cumule_relatif;X;Numérique; ; ;gain relatif en énergie primaire (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulé jusqu’à l’étape en cours inclus (%)
+audit_etape_travaux;emission_ges_5_usages_m2_gain_cumule_relatif;X;Numérique; ; ;réduction relative des GES (totale 5 usages rapportée au m², déduit de la production pv autoconsommée) du scénario de travaux cumulée jusqu’à l’étape en cours inclus (%)
+audit_etape_travaux;classe_emission_ges;X;Texte; ; ;classe d'estimation ges du DPE 5 usages
+audit_etape_travaux;ef_conso_5_usages_m2;X;Numérique; ; ;consommation annuelle 5 usages (déduit de la production pv autoconsommée) (ecs/chauffage/climatisation/eclairage/auxiliaires) en energie finale (kWhef/m²SHAB/an)
+audit_etape_travaux;ef_conso_5_usages_m2_sans_ac;X;Numérique; ; ;consommation annuelle 5 usages (hors production pv autoconsommée) (ecs/chauffage/climatisation/eclairage/auxiliaires) en energie finale (kWhef/m²SHAB/an)
+audit_etape_travaux;emission_ges_5_usages_m2;X;Numérique; ; ;emission GES totale 5 usages (déduit de la production pv autoconsommée)(ecs/chauffage/climatisation/eclairage/auxiliaires)(kgCO2eq/m²SHAB/an)
+audit_etape_travaux;ep_conso_5_usages_m2;X;Numérique; ; ;consommation annuelle 5 usages (ecs/chauffage/climatisation/eclairage/auxiliaires) en energie primaire (déduit de la production pv autoconsommée) (kWhep/m²SHAB/an)
+audit_etape_travaux;ep_conso_5_usages_m2_sans_ac;X;Numérique; ; ;consommation annuelle 5 usages (hors production pv autoconsommée) (ecs/chauffage/climatisation/eclairage/auxiliaires) en energie primaire (kWhep/m²SHAB/an)
+audit_etape_travaux;aide_financiere_locale;X;Texte; ; ;mention des principales aides financières disponibles au niveau locale
+audit_etape_travaux;aide_financiere_nationale;X;Texte; ; ;mention des principales aides financières disponibles au niveau nationale
+audit_etape_travaux;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_etape_travaux;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_etape_travaux;cout_min; ;Numérique; ; ;coût minimal des travaux de l’étape, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux;cout_max; ;Numérique; ; ;coût maximal des travaux de l’étape, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux;cout_cumule_min; ;Numérique; ; ;coût minimal cumulé du scénario de travaux jusqu’à l’étape en cours inclus, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux;cout_cumule_max; ;Numérique; ; ;coût maximal cumulé du scénario de travaux jusqu’à l’étape en cours inclus, dont les travaux auxiliaires permettant la bonne exécution (€TTC)
+audit_etape_travaux_travaux_resume;enum_travaux_resume_collection_id;X; ;audit_enum_travaux_resume_collection;lib;travaux élémentaire à sélectionner par l'auditeur, pour affichage en p.8 de la trame de l'audit
+audit_etape_travaux_travaux_resume;etape_travaux_id;X; ;a+K366+F365; ;travaux élémentaire sélectionné par l'auditeur
+audit_etape_travaux_travaux_resume;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_etape_travaux_travaux_resume;enum_travaux_resume_id; ; ;audit_enum_travaux_resume; ;travaux élémentaire à sélectionner par l'auditeur, pour affichage en p.8 de la trame de l'audit
+audit_ets;bver;X;Numérique; ; ;coefficient de reduction des déperditions de l'espace tampon solarisé
+audit_ets;coef_transparence_ets;X;Numérique; ; ;coefficient de transparence de l'espace tampon solarisé T (déterminé à partir des parois vitrées de l'espace tampon solarisé)
+audit_ets;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_ets;enum_cfg_isolation_lnc_id;X; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_ets;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_ets;id;X; ; ; ;Identifiant technique de l'espace tampon solarisé
+audit_ets;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_ets;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_ets;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+audit_ets;tv_coef_transparence_ets_id;X; ;audit_tv_coef_transparence_ets; ;id de la ligne de la table utilisée pour le calcul du coefficient de transparence de l'espace tampon solarisé
+audit_ets;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_expertise_auditeur;audit_id;X; ;audit; ;Identifiant technique de l'AUDIT
+audit_expertise_auditeur;explications_personnalisees; ;Texte; ; ;Explications personnalisées sur les éléments pouvant amener à des différences entre consommations estimées et réelles (trame p.6)
+audit_expertise_auditeur;observations_auditeur; ;Texte; ; ;Observations de l'auditeur concernant l'état existant du bâtiment (trame p.7)
+audit_expertise_auditeur;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_generateur_chauffage;conso_ch;X;Numérique; ; ;consommation d'energie annuelle du générateur de chauffage en energie finale kWh (exprimée en kWh PCI pour les combustibles). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+audit_generateur_chauffage;enum_type_energie_id;X; ;audit_enum_type_energie;lib;type d'énergie consommée par le générateur de chauffage
+audit_generateur_chauffage;enum_type_generateur_ch_id;X; ;audit_enum_type_generateur_ch;lib;type de generateur de chauffage
+audit_generateur_chauffage;enum_usage_generateur_id;X; ;audit_enum_usage_generateur;lib;usages assurés par le générateur (chauffage/ecs/chauffage+ecs)
+audit_generateur_chauffage;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_generateur_chauffage;conso_ch_depensier;X;Numérique; ; ;consommation d'énergie annuelle du générateur de chauffage pour le scénario dépensier (scénario DH21) en energie finale kWh (exprimée en kWh PCI pour les combustibles). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+audit_generateur_chauffage;date_arrete_reseau_chaleur; ; ; ; ;identifiant réseau de chaleur ou de froid utilisé (utilisé à partir du 18 janvier 2022)
+audit_generateur_chauffage;description;Parfois;Texte; ; ;Identifiant technique du générateur de chauffage
+audit_generateur_chauffage;enum_lien_generateur_emetteur_id;X; ;audit_enum_lien_generateur_emetteur; ;lien entre le générateur et l'émetteur associé
+audit_generateur_chauffage;enum_methode_saisie_carac_sys_id;X; ;audit_enum_methode_saisie_carac_sys; ;méthode de saisie des performances du système de chauffage
+audit_generateur_chauffage;id;X; ; ; ;Identifiant technique du générateur de chauffage
+audit_generateur_chauffage;identifiant_reseau_chaleur; ;Texte; ; ;identifiant réseau de chaleur ou de froid utilisé (utilisé à partir du 18 janvier 2022). Cet identifiant doit correspondre à un identifiant déclaré dans la liste des réseaux de chaleurs spécifiés dans l'arrêté en vigueur qui modifie l'annexe 7 de l'arrêté du 15 septembre 2006 relatif au diagnostic de performance energétique
+audit_generateur_chauffage;installation_chauffage_id;X; ;audit_installation_chauffage; ;Identifiant technique de l'installation de chauffage
+audit_generateur_chauffage;n_radiateurs_gaz; ;Numérique; ; ;nombre de radiateurs gaz
+audit_generateur_chauffage;pn; ;Numérique; ; ;puissance nominale du générateur à combustion (W)
+audit_generateur_chauffage;position_volume_chauffe;X;Booléen; ; ;est ce que le générateur est positionné dans le volume chauffé. (pour le calcul des pertes de génération récupérables)
+audit_generateur_chauffage;presence_regulation_combustion; ;Booléen; ; ;présence d'un organe de régulation pour le système de chauffage à combustion 0 : non 1 : oui
+audit_generateur_chauffage;presence_ventouse; ;Booléen; ; ;présence d'un système de ventouse ou avec un ventilateur pour l'évacuation des fumées d'un système à combustion 0 : non 1 : oui
+audit_generateur_chauffage;priorite_generateur_cascade; ;Numérique; ; ;ordre de priorité du générateur en cascade (ordonné de manière croissante 1 : générateur principal , 2: genérateur secondaire etc…). Dans le cas de deux générateurs en cascade sans priorité, les deux générateurs sont déclarés comme principal
+audit_generateur_chauffage;pveilleuse; ;Numérique; ; ;puissance de la veilleuse du générateur à combustion (W)
+audit_generateur_chauffage;qp0; ;Numérique; ; ;pertes à l'arret du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec chauffage collectif saisir Qp0 correspondant à Pe = a*Pn(collectif) (W)
+audit_generateur_chauffage;ref_produit_generateur_ch; ;Texte; ; ;référence produit et marque du générateur de chauffage
+audit_generateur_chauffage;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_generateur_chauffage;reference_generateur_mixte; ;Texte; ; ;référence commune pour un générateur mixte chauffage ECS. Cette référence est identique pour les deux parties du générateur (chauffage et ECS) et est utilisé pour faire le lien entre les deux
+audit_generateur_chauffage;rendement_generation; ;Numérique; ; ;Rg : rendement de génération du système de chauffage pour tous les générateurs sauf thermodynamique. Pour les générateurs à combustion il faut saisir le rendement sur PCI (0-1,5)
+audit_generateur_chauffage;rpint; ;Numérique; ; ;rendement de génération à charge intermédiaire du générateur à combustion (0-1,5)
+audit_generateur_chauffage;rpn; ;Numérique; ; ;rendement de génération à pleine charge du générateur à combustion (0-1,5)
+audit_generateur_chauffage;scop;Parfois;Numérique; ; ;scop du générateur thermodynamique (en remplacement du Rg pour les générateurs thermodynamique) (0-20)
+audit_generateur_chauffage;temp_fonc_100; ;Numérique; ; ;température de fonctionnement à 100% de charge (°C)
+audit_generateur_chauffage;temp_fonc_30; ;Numérique; ; ;température de fonctionnement à 30% de charge (°C)
+audit_generateur_chauffage;tv_generateur_combustion_id; ; ;audit_tv_generateur_combustion; ;id de la ligne de la table utilisée pour le calcul des paramètres du générateur à combustion Rpn,Rpint,Qp0,Pveil
+audit_generateur_chauffage;tv_rendement_generation_id; ; ;audit_tv_rendement_generation; ;id de la ligne de la table utilisée pour le calcul des rendements de générations forfaitaires des générateurs autres qu'à combustion
+audit_generateur_chauffage;tv_reseau_chaleur_id; ; ;audit_tv_reseau_chaleur; ;id de la ligne de la table utilisée pour le calcul du contenu CO2 des réseaux de chaleurs (OBSOLETE et remplacé par identifiant_reseau_chaleur à partir du 18 janvier 2022 et la prise en compte du nouvel arrêté réseau de chaleur).
+audit_generateur_chauffage;tv_scop_id; ; ;audit_tv_scop; ;id de la ligne de la table utilisée pour le calcul du coefficient de performance du système thermodynamique (SCOP)
+audit_generateur_chauffage;tv_temp_fonc_100_id; ; ;audit_tv_temp_fonc_100; ;id de la ligne de la table utilisée pour le calcul de la température à 100% de charge du système à combustion(SUPPRIME)
+audit_generateur_chauffage;tv_temp_fonc_30_id; ; ;audit_tv_temp_fonc_30; ;id de la ligne de la table utilisée pour le calcul de la température à 30% de charge du système à combustion(SUPPRIME)
+audit_generateur_chauffage;migre_en_utc;X;Booléen; ; ;Indique si les dates de la table ont été migrées au format UTC
+audit_generateur_chauffage;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_generateur_ecs;conso_ecs;X;Numérique; ; ;consommation d'energie annuelle du générateur d'ECS (kWh) (Exprimé en kWh PCI pour les combustibles ). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+audit_generateur_ecs;cop; ;Numérique; ; ;COP du chauffe-eau thermodynamique (inclus le rendement de stockage) (0-20)
+audit_generateur_ecs;enum_periode_installation_ecs_thermo_id; ; ;audit_enum_periode_installation_ecs_thermo;lib;periode installation du système thermodynamique
+audit_generateur_ecs;enum_type_energie_id;X; ;audit_enum_type_energie;lib;type d'énergie consommée par le générateur d'ECS
+audit_generateur_ecs;enum_type_generateur_ecs_id;X; ;audit_enum_type_generateur_ecs;lib;type de generateur d'ecs
+audit_generateur_ecs;enum_usage_generateur_id;X; ;audit_enum_usage_generateur;lib;usages assurés par le générateur (chauffage/ecs/chauffage+ecs)
+audit_generateur_ecs;volume_stockage;X;Numérique; ; ;volume de stockage associé au générateur d'ECS
+audit_generateur_ecs;conso_ecs_depensier;X;Numérique; ; ;consommation d'énergie annuelle du générateur d'ECS pour le scénario dépensier en énergie finale (kWh) (Exprimé en kWh PCI pour les combustibles ). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation du générateur à l'immeuble qu'il faut saisir.
+audit_generateur_ecs;date_arrete_reseau_chaleur; ; ; ; ;"date de l'arrêté qui modifie l'annexe 7 de l'arrêté du 15 septembre 2006 relatif au diagnostic de performance énergétique. (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000788395?isAdvancedResult=&amp;page=3&amp;pageSize=10&amp;query=Arr%C3%AAt%C3%A9+relatif+au+classement+des+r%C3%A9seaux+de+chaleur+et+de+froid&amp;searchField=ALL&amp;searchProximity=&amp;searchType=ALL&amp;tab_selection=all&amp;typePagination=DEFAULT). L'arrêté publie la liste des réseaux de chaleurs référencés pour le calcul du DPE et publie les taux de CO2 et ENR associés. La fréquence de ces arrêtés est d'une année en général mais ils ne sont pas publiés à des dates stables. Ce champ est obligatoire lorsqu'un réseau de chaleur est renseigné. les informations sur les arrêtés de réseaux de chaleur sont disponibles dans observatoire_dpe.modele_donnee.arrete_reseau_chaleur.json"
+audit_generateur_ecs;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_generateur_ecs;enum_etat_composant_id;X; ;audit_enum_etat_composant; ;indique si le composant a été changé par rapport au logement initial
+audit_generateur_ecs;enum_methode_saisie_carac_sys_id;X; ;audit_enum_methode_saisie_carac_sys; ;méthode de saisie des performances du système d'ECS
+audit_generateur_ecs;enum_type_stockage_ecs_id;X; ;audit_enum_type_stockage_ecs; ;Type de stockage d'ECS (intégré à la production ou indépendant)
+audit_generateur_ecs;id;X; ; ; ;Identifiant technique du générateur d'ECS
+audit_generateur_ecs;identifiant_reseau_chaleur; ;Texte; ; ;identifiant réseau de chaleur ou de froid utilisé (utilisé à partir du 18 janvier 2022). Cet identifiant doit correspondre à un identifiant déclaré dans la liste des réseaux de chaleurs spécifiés dans l'arrêté en vigueur qui modifie l'annexe 7 de l'arrêté du 15 septembre 2006 relatif au diagnostic de performance energétique
+audit_generateur_ecs;installation_ecs_id;X; ;audit_installation_ecs; ;Identifiant technique de l'installation d'ECS
+audit_generateur_ecs;pn; ;Numérique; ; ;puissance nominale du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec ECS collective saisir Pe = a*Pn(collectif) (W)
+audit_generateur_ecs;position_volume_chauffe;X;Booléen; ; ;est ce que le générateur est positionné dans le volume chauffé. (pour le calcul des pertes de génération récupérables)
+audit_generateur_ecs;position_volume_chauffe_stockage; ;Numérique; ; ;est ce que le ballon de stockage est positionné dans le volume chauffé. (pour le calcul des pertes de stockage récupérables)
+audit_generateur_ecs;presence_ventouse; ;Numérique; ; ;présence d'un système de ventouse ou avec un ventilateur pour l'évacuation des fumées d'un système à combustion 0 : non 1 : oui
+audit_generateur_ecs;pveilleuse; ;Numérique; ; ;puissance de la veilleuse du générateur à combustion (W)
+audit_generateur_ecs;qp0; ;Numérique; ; ;pertes à l'arret du générateur à combustion. Dans le cas d'un générateur virtualisé pour DPE appartement avec ECS collective saisir Qp0 correspondant à Pe = a*Pn(collectif)
+audit_generateur_ecs;ratio_besoin_ecs;X;Numérique; ; ;ratio du besoin ecs de l'installation affecté au générateur. Ce ratio est de 1 pour les installations classiques et de 0,5 pour les installations d'ECS avec deux générateurs
+audit_generateur_ecs;ref_produit_generateur_ecs; ;Texte; ; ;référence produit et marque du générateur d'ECS
+audit_generateur_ecs;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_generateur_ecs;reference_generateur_mixte; ;Texte; ; ;référence commune pour un générateur mixte chauffage ECS. Cette référence est identique pour les deux parties du générateur (chauffage et ECS) et est utilisé pour faire le lien entre les deux
+audit_generateur_ecs;rendement_generation; ;Numérique; ; ;Rg : rendement de génération dans le cas où le rendement de stockage est séparé du rendement de génération (ballon éléctrique ou ballon séparé de la production) (0-1,5)
+audit_generateur_ecs;rendement_generation_stockage; ;Numérique; ; ;RgxRs : rendement de génération x rendement de stockage pour les systèmes pour lesquels le ballon est intégré au système de production ou réseau de chaleur (0-1,5)
+audit_generateur_ecs;rendement_stockage; ;Numérique; ; ;Rs : rendement de stockage dans le cas où le rendement de stockage est séparé du rendement de génération (ballon éléctrique ou ballon séparé de la production) sinon égal à 1 (0-1)
+audit_generateur_ecs;rpn; ;Numérique; ; ;rendement de génération à pleine charge du générateur à combustion (0-1,5)
+audit_generateur_ecs;tv_generateur_combustion_id; ; ;audit_tv_generateur_combustion; ;id de la ligne de la table utilisée pour le calcul des paramètres du générateur à combustion Rpn,Rpint,Qp0,Pveil
+audit_generateur_ecs;tv_pertes_stockage_id; ; ;audit_tv_pertes_stockage; ;id de la ligne de la table utilisée pour le calcul des pertes de stockage pour les ballons éléctriques
+audit_generateur_ecs;tv_reseau_chaleur_id; ; ;audit_tv_reseau_chaleur; ;id de la ligne de la table utilisée pour le calcul du contenu CO2 des réseaux de chaleurs (OBSOLETE et remplacé par identifiant_reseau_chaleur à partir du 18 janvier 2022 et la prise en compte du nouvel arrêté réseau de chaleur).
+audit_generateur_ecs;tv_scop_id; ; ;audit_tv_scop; ;id de la ligne de la table utilisée pour le calcul du coefficient de performance du système thermodynamique (SCOP)
+audit_generateur_ecs;migre_en_utc;X;Booléen; ; ;Indique si les dates de la table ont été migrées au format UTC
+audit_generateur_ecs;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_geolocalisation;id_batiment_rnb; ;Texte; ; ;identifiant batiment du Référentiel National des Bâtiments (RNB) à venir sur les bâtiments en France (https://beta.gouv.fr/startups/bat-id.html)
+audit_geolocalisation;immatriculation_copropriete; ;Texte; ; ;numéro d'immatriculation de la copropriété au registre des copropriétés (9 caractères XX0000000)
+audit_geolocalisation;provenance_rnb; ;Texte; ; ;Origine de l'identifiant bâtiment du Référentiel National des Bâtiments (RNB)
+audit_geolocalisation;administratif_id;X; ;audit_administratif; ;Identifiant technique de l'AUDIT
+audit_geolocalisation;adresse_bien_id;X; ;audit_t_adresse; ;Adresse bien
+audit_geolocalisation;idpar; ;Texte; ; ;identifiant de parcelle cadastrale (14 caractères)
+audit_geolocalisation;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_increment;annee; ;Texte; ; ;Année de l'incrément
+audit_increment;id;X; ; ; ;Identifiant technique de l'incrément
+audit_increment;increment;X;Numérique; ; ;Incrément du numéro d'AUDIT
+audit_increment;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_inertie;enum_classe_inertie_id;X; ;audit_enum_classe_inertie;lib;classe d'inertie globale du bâtiment
+audit_inertie;inertie_paroi_verticale_lourd;X;Numérique; ; ;est ce que les parois verticales sont considérées comme lourdes 0 : non 1 : oui
+audit_inertie;inertie_plancher_bas_lourd;X;Numérique; ; ;est ce que le plancher bas est considéré comme lourd 0 : non 1 : oui
+audit_inertie;inertie_plancher_haut_lourd;X;Numérique; ; ;est ce que le plancher haud est considéré comme lourd 0 : non 1 : oui
+audit_inertie;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_inertie;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_installation_chauffage;enum_cfg_installation_ch_id;X; ;audit_enum_cfg_installation_ch;lib;configuration de l'installation de chauffage
+audit_installation_chauffage;conso_ch;X;Numérique; ; ;consommation d'energie annuelle de l'installation de chauffage en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_chauffage;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_installation_chauffage;fch; ;Numérique; ; ;Facteur de couverture solaire pour l'installation de chauffage
+audit_installation_chauffage;fch_saisi; ;Numérique; ; ;Facteur de couverture solaire pour l'installation de chauffage(saisi)
+audit_installation_chauffage;surface_chauffee;X;Numérique; ; ;surface chauffée par l'installation de chauffage(surface du logement ou de l'immeuble). Dans le cas spécifique d'un DPE immeuble avec installation individuelle échantillonée :saisir la surface chauffée de la totalité des logements représentés par le logement moyen surface_habitable= Shmoy*Nblgt. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+audit_installation_chauffage;enum_type_installation_id;X; ;audit_enum_type_installation;lib;type d'installation de chauffage (collective ou individuelle ou collective multi batiment
+audit_installation_chauffage;besoin_ch;X;Numérique; ; ;Besoin de chauffage total de l'installation (kWh)
+audit_installation_chauffage;besoin_ch_depensier;X;Numérique; ; ;Besoin de chauffage total de l'installation pour le scénario dépensier (DH21) (kWh)
+audit_installation_chauffage;cle_repartition_ch; ;Numérique; ; ;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail
+audit_installation_chauffage;coef_ifc; ;Numérique; ; ;coefficient d'individualisation des frais de chauffage dans le cas d'un DPE appartement calculé à partir d'un DPE immeuble
+audit_installation_chauffage;conso_ch_depensier;X;Numérique; ; ;consommation d'energie annuelle de l'installation de chauffage pour le scénario dépensier (scénario DH21) en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_chauffage;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_installation_chauffage;enum_methode_calcul_conso_id;X; ;audit_enum_methode_calcul_conso; ;méthode de calcul de consommation de chauffage : simple, ou cas particuliers installation collective virtualisée ou installation individuelle échantilonnée (dpe immeuble)
+audit_installation_chauffage;enum_methode_saisie_fact_couv_sol_id; ; ;audit_enum_methode_saisie_fact_couv_sol; ;méthode de saisie du facteur de couverture solaire pour le chauffage (saisi en direct justifié ou calculé à partir de la table)
+audit_installation_chauffage;id;X; ; ; ;Identifiant technique de l'installation de chauffage
+audit_installation_chauffage;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_installation_chauffage;nombre_logement_echantillon; ;Numérique; ; ;nombre de logements représentés par le logement échantillon dans le cas d'un DPE immeuble avec installation de chauffage individuelle. (à ne renseigner que dans ce cas précis)
+audit_installation_chauffage;nombre_niveau_installation_ch;X;Numérique; ; ;nombre de niveaux desservis par l'installation de chauffage (très souvent égal au nombre de niveaux du bâtiment)
+audit_installation_chauffage;production_ch_solaire; ;Numérique; ; ;Production de chauffage solaire (kWh)
+audit_installation_chauffage;ratio_virtualisation; ;Numérique; ; ;ratio de virtualisation de l'installation collective lorsque l'on rapporte des usages collectifs à un appartement (a = Shabappartement/Shabtotale)
+audit_installation_chauffage;rdim;X; ; ; ;nombre d'installations identiques. Ce paramètre est utilisé pour dénombrer les installations identiques considérées lors d'un calcul d'échantillonage. Ce nombre peut être non entier en cas d'application de la méthode d'échantillonage (pour une installation sans échantillonage rdim=1)
+audit_installation_chauffage;reference; ;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_installation_chauffage;tv_facteur_couverture_solaire_id; ; ;audit_tv_facteur_couverture_solaire; ;id de la ligne de la table utilisée pour le calcul du facteur de couverture solaire
+audit_installation_chauffage;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_installation_ecs;enum_cfg_installation_ecs_id;X; ;audit_enum_cfg_installation_ecs;lib;code de configuration de l'installation d'ECS (installation simple, avec solaire ou avec plusieurs systèmes d'ECS)
+audit_installation_ecs;conso_ecs;X;Numérique; ; ;consommation d'energie annuelle de l'installation d'ECS en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_ecs;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_installation_ecs;fecs; ;Numérique; ; ;facteur de couverture solaire de l'ECS
+audit_installation_ecs;fecs_saisi; ;Numérique; ; ;facteur de couverture solaire pour l'ECS saisi directement lorsque celui-ci peut être justifié
+audit_installation_ecs;nombre_logement;X;Numérique; ; ;nombre de logements desservis par l'installation d'ECS. Dans le cas d'un DPE immeuble avec installation individuelle échantillonée : saisir le nombre de logements qui sont équipés de ce type d'installation d'ECS.
+audit_installation_ecs;production_ecs_solaire; ;Numérique; ; ;production d'ecs solaire annuelle (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_ecs;surface_habitable;X;Numérique; ; ;surface habitable correspondant au(x) logement(x) desservi(s) par l'installation d'ECS.(surface habitable du logement ou de la totalité des logements de l'immeuble) Dans le cas spécifique d'un DPE immeuble avec installation individuelle échantillonée :saisir la surface de la totalité des logements représentés par le logement moyen surface_habitable= Shmoy*Nblgt. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+audit_installation_ecs;enum_type_installation_id;X; ;audit_enum_type_installation;lib;code du type d'installation d'ECS (collective ou individuelle)
+audit_installation_ecs;enum_type_installation_solaire_id; ; ;audit_enum_type_installation_solaire;lib;type d'installation solaire (ECS+Chauffage , ECS solaire seule etc…)
+audit_installation_ecs;besoin_ecs;X;Numérique; ; ;besoin d'ECS annuel pour l'ensemble de l'installation (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_ecs;besoin_ecs_depensier;X;Numérique; ; ;besoin d'ECS annuel pour l'ensemble de l'installation dans le cas du scénario dépensier (kWh). Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_ecs;cle_repartition_ecs; ;Numérique; ; ;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail
+audit_installation_ecs;conso_ecs_depensier;X;Numérique; ; ;consommation d'energie annuelle de l'installation d'ECS pour le scénario dépensier en energie finale kWh. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_installation_ecs;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_installation_ecs;enum_bouclage_reseau_ecs_id;X; ;audit_enum_bouclage_reseau_ecs; ;type de bouclage du réseau d'ECS pour la prise en compte des consommations d'auxiliaires de distribution
+audit_installation_ecs;enum_methode_calcul_conso_id;X; ;audit_enum_methode_calcul_conso; ;méthode de calcul de consommation d'ECS : simple, ou cas particuliers installation collective virtualisée ou installation individuelle échantilonnée (dpe immeuble)
+audit_installation_ecs;enum_methode_saisie_fact_couv_sol_id; ; ;audit_enum_methode_saisie_fact_couv_sol; ;méthode de saisie du facteur de couverture solaire pour l'ECS (saisi en direct justifié ou calculé à partir de la table)
+audit_installation_ecs;id;X; ; ; ;Identifiant technique de l'installation d'ECS
+audit_installation_ecs;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_installation_ecs;nombre_niveau_installation_ecs;X;Numérique; ; ;nombre de niveaux desservis par l'installation d'ECS (très souvent égal au nombre de niveaux du bâtiment)
+audit_installation_ecs;ratio_virtualisation; ;Numérique; ; ;ratio de virtualisation de l'installation collective lorsque l'on rapporte des usages collectifs à un appartement (a = Shabappartement/Shabtotale)
+audit_installation_ecs;rdim;X; ; ; ;nombre d'installations identiques. Ce paramètre est utilisé pour dénombrer les installations identiques considérées lors d'un calcul d'échantillonage. Ce nombre peut être non entier en cas d'application de la méthode d'échantillonage (pour une installation sans échantillonage rdim=1)
+audit_installation_ecs;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_installation_ecs;rendement_distribution;X;Numérique; ; ;rendement de distribution de l'installation d'ECS (0-1)
+audit_installation_ecs;reseau_distribution_isole; ;Numérique; ; ;est ce que le réseau de distribution est isolé 0 : non 1 : oui
+audit_installation_ecs;tv_facteur_couverture_solaire_id; ; ;audit_tv_facteur_couverture_solaire; ;id de la ligne de la table utilisée pour le calcul du facteur de couverture solaire
+audit_installation_ecs;tv_rendement_distribution_ecs_id;X; ;audit_tv_rendement_distribution_ecs; ;id de la ligne de la table utilisée pour le calcul du rendement de distribution de l'installation d'ECS
+audit_installation_ecs;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_combles_non_amenages;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_combles_non_amenages;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_combles_non_amenages;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_combles_non_amenages;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_mur_ite;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_mur_ite;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_mur_ite;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_mur_ite;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_mur_iti;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_mur_iti;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_mur_iti;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_mur_iti;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_planchers_bas;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_planchers_bas;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_planchers_bas;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_planchers_bas;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_sous_rampants;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_sous_rampants;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_sous_rampants;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_sous_rampants;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_isolation_toiture_terrasse;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_isolation_toiture_terrasse;resistance_isolant; ;Numérique; ; ;resistance de l'isolant (m2.K/W)
+audit_isolation_toiture_terrasse;surface_isolant; ;Numérique; ; ;surface d'isolant posé (m²)
+audit_isolation_toiture_terrasse;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_justificatif_audit;audit_id;X; ; ; ;Identifiant technique de l'AUDIT
+audit_justificatif_audit;description; ;Texte; ; ;description du justificatif adjoint à l'audit
+audit_justificatif_audit;enum_type_justificatif_audit_id; ; ;audit_enum_type_justificatif_audit;lib;type de justificatif
+audit_justificatif_audit;id;X; ; ; ;identifiant technique du justificatif
+audit_justificatif_audit;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_logement;enum_scenario_id;X; ;audit_enum_scenario;lib;indique le type de scénario de rénovation
+audit_logement;enum_etape_id;X; ;audit_enum_etape;lib;indique l'étape de rénovation au sein d'un scénario
+audit_logement;enum_methode_application_dpe_log_id;X; ;audit_enum_methode_application_dpe_log;lib;méthode d'application du DPE logement
+audit_logement;annee_construction;Parfois;Texte; ; ;annee de construction
+audit_logement;hsp;X;Numérique; ; ;hauteur sous plafond moyenne du logement/de l'immeuble
+audit_logement;nombre_appartement; ;Numérique; ; ;nombre d'appartements de l'immeuble dans le cas d'un DPE appartement avec usage collectif ou d'un DPE immeuble.
+audit_logement;nombre_niveau_immeuble; ;Numérique; ; ;nombre de niveaux total de l'immeuble
+audit_logement;nombre_niveau_logement; ;Numérique; ; ;nombre de niveaux du logement (maison ou appartement)
+audit_logement;enum_periode_construction_id;X; ;audit_enum_periode_construction;lib;période de construction
+audit_logement;surface_habitable_immeuble; ;Numérique; ; ;surface habitable totale de l'immeuble dans le cas d'un DPE appartement avec usage collectif ou d'un DPE immeuble.
+audit_logement;surface_habitable_logement; ;Numérique; ; ;surface habitable du logement renseignée sauf dans le cas du dpe à l'immeuble
+audit_logement;enum_type_energie_principale_chauffage_id; ; ;audit_enum_type_energie;lib;Type d'énergie consommée par le chauffage principal
+audit_logement;generateur_chauffage_principal_id; ; ;audit_generateur_chauffage; ;Identifiant technique du générateur de chauffage principal calculé à l'insertion
+audit_logement;enum_type_energie_principale_ecs_id; ; ;audit_enum_type_energie;lib;Type d'énergie consommée par le système d'ecs principal
+audit_logement;generateur_ecs_principal_id; ; ;audit_generateur_ecs; ;Identifiant technique du générateur d'ecs principal calculé à l'insertion
+audit_logement;appartement_non_visite;X;Numérique; ; ;est ce que l'appartement est un appartement non visité dans le cas d'un DPE appartement généré à partir d'un immeuble. (application de système individuel les moins performants de l'immeuble)
+audit_logement;audit_id;X; ;audit; ;Identifiant technique de l'AUDIT
+audit_logement;enum_calcul_echantillonnage_id; ; ;audit_enum_calcul_echantillonnage; ;quel type d'échantillonnage a été appliqué pour le calcul du DPE immeuble (dans le cas d'un DPE immeuble)
+audit_logement;id;X; ; ; ;identifiant technique du logement
+audit_logement;nom_scenario; ;Texte; ; ;nom du scénario de travaux
+audit_logement;surface_tertiaire_immeuble; ;Numérique; ; ;surface tertiaire totale de l'immeuble dans le cas d'un DPE immeuble. La surface tertiaire est prise en compte pour le calcul des besoins dans le cas d'une installation collective mixte tertiaire/residentiel
+audit_logement;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_logement_visite;surface_habitable_logement;X;Numérique; ; ;surface habitable du logement visité dans le cadre d'un DPE immeuble
+audit_logement_visite;enum_typologie_logement_id;X; ;audit_enum_typologie_logement;lib;typologie de logement visité (T1… T6)
+audit_logement_visite;enum_position_etage_logement_id;X; ;audit_enum_position_etage_logement;lib;position du logement visité dans l'immeuble en terme d'étage
+audit_logement_visite;description;Parfois;Texte; ; ;description du logement visité dans le cadre d'un DPE immeuble
+audit_logement_visite;dpe_immeuble_id;X; ;audit_dpe_immeuble; ;Identifiant technique de l'AUDIT
+audit_logement_visite;id;X; ; ; ;identifiant technique du logement visité
+audit_logement_visite;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_masque_lointain_non_homogene;id;X; ; ; ;Identifiant technique du masque lointain non homogène
+audit_masque_lointain_non_homogene;tv_coef_masque_lointain_non_homogene_id; ; ;audit_tv_coef_masque_lointain_non_homogene; ;id de la ligne de la table utilisée pour le calcul du coefficient de masque non homogène lointain
+audit_masque_lointain_non_homogene;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_menuiseries_double_vitrage;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_menuiseries_double_vitrage;uw; ;Numérique; ; ;Uw de la baie
+audit_menuiseries_double_vitrage;sw; ;Numérique; ; ;Sw (facteur solaire) de la baie
+audit_menuiseries_double_vitrage;nombre_fenetres; ;Numérique; ; ;nombre de fenêtres installées
+audit_menuiseries_double_vitrage;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_menuiseries_triple_vitrage;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_menuiseries_triple_vitrage;uw; ;Numérique; ; ;Uw de la baie
+audit_menuiseries_triple_vitrage;sw; ;Numérique; ; ;Sw (facteur solaire) de la baie
+audit_menuiseries_triple_vitrage;nombre_fenetres; ;Numérique; ; ;nombre de fenêtres installées
+audit_menuiseries_triple_vitrage;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_meteo;enum_classe_altitude_id;X; ;audit_enum_classe_altitude;lib;classe d'altitude du logement
+audit_meteo;enum_zone_climatique_id;X; ;audit_enum_zone_climatique;lib;zone climatique du logement
+audit_meteo;altitude; ; ; ; ;altitude du logement (m)
+audit_meteo;batiment_materiaux_anciens;X;Booléen; ; ;est ce que le bâtiment est principalement composé de matériaux anciens pour ses murs 0 : non 1 : oui
+audit_meteo;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_meteo;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_mur;b;X;Numérique; ; ;coefficient de réduction des déperditions du mur
+audit_mur;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_mur;enduit_isolant_paroi_ancienne;X; ; ; ;"est ce qu'un enduit isolant est présent sur la paroi si celle-ci est une paroi ancienne (pierres, terre, mur à colombage, brique ancienne)(Renduit=0,7m².K.W-1) 0 : non 1 : oui. (renommage de la propriété paroi_ancienne -&gt; enduit_isolant_paroi_ancienne)"
+audit_mur;enum_cfg_isolation_lnc_id; ; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_mur;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_mur;enum_materiaux_structure_mur_id;X; ;audit_enum_materiaux_structure_mur;lib;matériaux de structure de la paroi
+audit_mur;enum_methode_saisie_u_id;X; ;audit_enum_methode_saisie_u; ;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+audit_mur;enum_methode_saisie_u0_id;X; ;audit_enum_methode_saisie_u0; ;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+audit_mur;enum_orientation_id;X; ;audit_enum_orientation; ;orientation du mur
+audit_mur;enum_periode_isolation_id; ; ;audit_enum_periode_isolation;lib;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+audit_mur;enum_type_adjacence_id;X; ;audit_enum_type_adjacence; ;type d'adjacence de la paroi
+audit_mur;enum_type_doublage_id;X; ;audit_enum_type_doublage; ;type de doublage intérieur du mur.(précision de la nature du doublage ou de l'epaisseur de la lame d'air en cas de doublage indéterminé.)
+audit_mur;enum_type_isolation_id;X; ;audit_enum_type_isolation;lib;type d'isolation du mur (ITI/ITE…..)
+audit_mur;epaisseur_isolation; ;Numérique; ; ;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs) (cm)
+audit_mur;epaisseur_structure; ;Numérique; ; ;epaisseur de la partie structure de la paroi (sans l'isolation intérieure ou extérieure) (cm)
+audit_mur;id;X; ; ; ;Identifiant technique du mur
+audit_mur;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_mur;paroi_ancienne; ;Booléen; ; ;"la paroi est une paroi ancienne sur laquelle a été appliquée un enduit isolant (Renduit=0,7m².K.W-1) 0 : non 1 : oui. (Attention ! nom de propriété pas tout à fait explicite) OBSOLETE -&gt; remplacé par enduit_isolant_paroi_ancienne"
+audit_mur;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_mur;reference_lnc; ;Texte; ; ;reference projet de l'objet local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+audit_mur;resistance_isolation; ;Numérique; ; ;resistance isolation
+audit_mur;surface_aiu; ;Numérique; ; ;surface aiu : surface des parois du local non chauffé qui donnent sur des locaux chauffés.
+audit_mur;surface_aue; ;Numérique; ; ;surface aue : surface des parois du local non chauffé en contact avec l'extérieur ou le sol
+audit_mur;surface_paroi_opaque;X;Numérique; ; ;Surface de paroi opaque (sans baies vitrées sans portes)
+audit_mur;surface_paroi_totale; ;Numérique; ; ;Surface de paroi opaque + paroi vitrée de la paroi + surface des portes
+audit_mur;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+audit_mur;tv_umur_id; ; ;audit_tv_umur; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique umur
+audit_mur;tv_umur0_id; ; ;audit_tv_umur0; ;id de la ligne de la table utilisée pour le calcul du Umur0
+audit_mur;umur;X;Numérique; ; ;Coefficient de transmission thermique du mur
+audit_mur;umur_saisi; ;Numérique; ; ;Coefficient de transmission thermique du mur saisi en direct par le diagnostiqueur(à justifier)
+audit_mur;umur0; ;Numérique; ; ;"Coefficient de transmission thermique du mur non isolé final (avec pris en compte de l'enduit et du doublage). C'est bien le U du mur ""nu"" avec l'ensemble des éléments hors isolations rapportée"
+audit_mur;umur0_saisi; ;Numérique; ; ;"Coefficient de transmission thermique du mur non isolé Saisi en direct par l'utilisateur (à justifier). Coefficient de transmission thermique du mur non isolé (avec pris en compte de l'enduit et du doublage). C'est bien le U du mur ""nu"" avec l'ensemble des éléments hors isolations rapportée"
+audit_mur;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_mur;paroi_lourde; ;Booléen; ; ;la paroi est elle considérée comme lourde pour le calcul de l'inertie
+audit_pac_air_air;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_pac_air_air;scop; ;Numérique; ; ;scop du générateur thermodynamique spécifique à l'installation d'une PAC air/air (climatiseur inclu)
+audit_pac_air_air;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_pac_air_eau;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_pac_air_eau;scop; ;Numérique; ; ;scop du générateur thermodynamique spécifique à l'installation d'une PAC air/eau
+audit_pac_air_eau;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_pac_eau_eau;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_pac_eau_eau;scop; ;Numérique; ; ;scop du générateur thermodynamique spécifique à l'installation d'une PAC eau/eau
+audit_pac_eau_eau;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_pac_geothermique;caracteristiques_travaux_id;X; ;audit_caracteristiques_travaux; ;Identifiant technique des caractéristiques travaux
+audit_pac_geothermique;scop; ;Numérique; ; ;scop du générateur thermodynamique spécifique à l'installation d'une PAC géothermique
+audit_pac_geothermique;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_panneaux_pv;nombre_module; ;Numérique; ; ;nombre de modules photovoltaïque standards posés.
+audit_panneaux_pv;surface_totale_capteurs; ;Numérique; ; ;surface totale de capteurs photovoltaïque. Dans le cas d'une installation collective de PV pour un DPE appartement, la surface est celle proratisé
+audit_panneaux_pv;enum_inclinaison_pv_id; ; ;audit_enum_inclinaison_pv;lib;inclinaison des panneaux photovoltaïques
+audit_panneaux_pv;enum_orientation_pv_id; ; ;audit_enum_orientation_pv;lib;orientation des panneaux photovoltaïques
+audit_panneaux_pv;id;X; ; ; ;Identifiant technique des panneaux photovoltaïques
+audit_panneaux_pv;production_elec_enr_id;X; ;audit_production_elec_enr; ;Identifiant technique du logement
+audit_panneaux_pv;ratio_virtualisation; ;Numérique; ; ;ratio de virtualisation de l'installation PV collective lorsque l'on rapporte des usages collectifs à un appartement (a = Shabappartement/Shabtotale)
+audit_panneaux_pv;tv_coef_orientation_pv_id; ; ;audit_tv_coef_orientation_pv; ;id de la ligne de la table utilisée pour le calcul du coefficient d'orientation des panneaux photovoltaïques
+audit_panneaux_pv;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_pathologie_caracteristique;conseil; ;Texte; ; ;conseil concernant la pathologie ou la caractéristique architecturale, patrimoniale, techniques ciblée (trame p.6)
+audit_pathologie_caracteristique;description; ;Texte; ; ;description de la pathologie ou de la caractéristique architecturale, patrimoniale, techniques ciblée (trame p.6)
+audit_pathologie_caracteristique;enum_type_observation_id; ; ;audit_enum_type_observation; ;type d'observation concernant l'état existant du bâtiment : pathologie, architecturale, patrimoniale ou technique (trame p.6)
+audit_pathologie_caracteristique;expertise_auditeur_id;X; ;audit_expertise_auditeur; ;Identifiant technique de l'expertise auditeur
+audit_pathologie_caracteristique;id;X; ; ; ;Identifiant technique de la pathologie caractéristique
+audit_pathologie_caracteristique;uri_interne_image; ;Texte; ; ;url/uri de l'image de la pathologie (interne au logiciel). Ce champ est mis en place pour permettre de générer des rapports PDF depuis le xml
+audit_pathologie_caracteristique;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_plancher_bas;b;X;Numérique; ; ;coefficient de réduction des déperditions du planchers_bas
+audit_plancher_bas;calcul_ue;X;Booléen; ; ;est ce que le plancher bas est passé par le calcul du Ue 0 : non 1 : oui
+audit_plancher_bas;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_plancher_bas;enum_cfg_isolation_lnc_id; ; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_plancher_bas;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_plancher_bas;enum_methode_saisie_u_id;X; ;audit_enum_methode_saisie_u; ;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+audit_plancher_bas;enum_methode_saisie_u0_id;X; ;audit_enum_methode_saisie_u0; ;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+audit_plancher_bas;enum_periode_isolation_id; ; ;audit_enum_periode_isolation;lib;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+audit_plancher_bas;enum_type_adjacence_id;X; ;audit_enum_type_adjacence; ;type d'adjacence de la paroi
+audit_plancher_bas;enum_type_isolation_id;X; ;audit_enum_type_isolation;lib;type d'isolation du plancher bas (ITI/ITE…..)
+audit_plancher_bas;enum_type_plancher_bas_id;X; ;audit_enum_type_plancher_bas;lib;type de plancher bas
+audit_plancher_bas;epaisseur_isolation; ;Numérique; ; ;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs)
+audit_plancher_bas;id;X; ; ; ;Identifiant technique du plancher bas
+audit_plancher_bas;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_plancher_bas;perimetre_ue; ;Numérique; ; ;périmètredu plancher lorsqu'il est en contact avec un terre plein/sous sol non chauffé ou vide sanitaire (à renseigner lorsque calcul du Ue)
+audit_plancher_bas;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_plancher_bas;reference_lnc; ;Texte; ; ;reference projet de l'objet local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+audit_plancher_bas;resistance_isolation; ;Numérique; ; ;resistance isolation
+audit_plancher_bas;surface_aiu; ;Numérique; ; ;surface aiu : surface des parois du local non chauffé qui donnent sur des locaux chauffés.
+audit_plancher_bas;surface_aue; ;Numérique; ; ;surface aue : surface des parois du local non chauffé en contact avec l'extérieur ou le sol
+audit_plancher_bas;surface_paroi_opaque;X;Numérique; ; ;Surface de paroi opaque
+audit_plancher_bas;surface_ue; ;Numérique; ; ;surface de plancher qui est en contact avec un terre plein/sous sol non chauffé ou vide sanitaire (à renseigner lorsque calcul du Ue)
+audit_plancher_bas;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul de coefficient de reduction des déperditions
+audit_plancher_bas;tv_upb_id; ; ;audit_tv_upb; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique upb
+audit_plancher_bas;tv_upb0_id; ; ;audit_tv_upb0; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique upb0
+audit_plancher_bas;ue; ;Numérique; ; ;Ue coefficient remplaçant Upb dans le cas sur terre plein
+audit_plancher_bas;upb;X;Numérique; ; ;Coefficient de transmission thermique du planchers_bas Upb
+audit_plancher_bas;upb_final;X;Numérique; ; ;Coefficient de transmission thermique du planchers_bas (Ue ou Upb en fonction du type d'adjacence)
+audit_plancher_bas;upb_saisi; ;Numérique; ; ;Coefficient de transmission thermique du planchers_bas saisi en direct par le diagnostiqueur(à justifier)
+audit_plancher_bas;upb0; ;Numérique; ; ;Coefficient de transmission thermique du planchers bas non isolé final
+audit_plancher_bas;upb0_saisi; ;Numérique; ; ;Coefficient de transmission thermique du planchers bas non isolé Saisi en direct par l'utilisateur (à justifier)
+audit_plancher_bas;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_plancher_bas;paroi_lourde; ;Booléen; ; ;la paroi est elle considérée comme lourde pour le calcul de l'inertie
+audit_plancher_haut;b;X;Numérique; ; ;coefficient de réduction des déperditions du planchers_hauts
+audit_plancher_haut;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_plancher_haut;enum_cfg_isolation_lnc_id; ; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_plancher_haut;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_plancher_haut;enum_methode_saisie_u_id;X; ;audit_enum_methode_saisie_u; ;methode de saisie du U (inclus les justifications à produire en cas de saisie directe)
+audit_plancher_haut;enum_methode_saisie_u0_id;X; ;audit_enum_methode_saisie_u0; ;methode de saisie de U0 (inclus les justifications à produire en cas de saisie directe)
+audit_plancher_haut;enum_periode_isolation_id; ; ;audit_enum_periode_isolation;lib;periode d'isolation à saisir si différent de la période de construction (cas d'une rénovation de la paroi)
+audit_plancher_haut;enum_type_adjacence_id;X; ;audit_enum_type_adjacence; ;type d'adjacence de la paroi
+audit_plancher_haut;enum_type_isolation_id;X; ;audit_enum_type_isolation;lib;type d'isolation du plancher haut (ITI/ITE…..)
+audit_plancher_haut;enum_type_plancher_haut_id;X; ;audit_enum_type_plancher_haut;lib;type de plancher haut
+audit_plancher_haut;epaisseur_isolation; ;Numérique; ; ;epaisseur de l'isolation (si plusieurs isolant différents sommer leurs épaisseurs)
+audit_plancher_haut;id;X; ; ; ;Identifiant technique du plancher haut
+audit_plancher_haut;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_plancher_haut;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_plancher_haut;reference_lnc; ;Texte; ; ;reference projet de l'objet local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+audit_plancher_haut;resistance_isolation; ;Numérique; ; ;resistance isolation
+audit_plancher_haut;surface_aiu; ;Numérique; ; ;surface aiu : surface des parois du local non chauffé qui donnent sur des locaux chauffés.
+audit_plancher_haut;surface_aue; ;Numérique; ; ;surface aue : surface des parois du local non chauffé en contact avec l'extérieur ou le sol
+audit_plancher_haut;surface_paroi_opaque;X;Numérique; ; ;Surface de paroi opaque
+audit_plancher_haut;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+audit_plancher_haut;tv_uph_id; ; ;audit_tv_uph; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique uph
+audit_plancher_haut;tv_uph0_id; ; ;audit_tv_uph0; ;id de la ligne de la table utilisée pour le calcul du coefficient de transmission thermique uph0
+audit_plancher_haut;uph;X;Numérique; ; ;Coefficient de transmission thermique du planchers_hauts uph
+audit_plancher_haut;uph_saisi; ;Numérique; ; ;Coefficient de transmission thermique du planchers_hauts saisi en direct par le diagnostiqueur(à justifier)
+audit_plancher_haut;uph0; ;Numérique; ; ;Coefficient de transmission thermique du planchers hauts non isolé final
+audit_plancher_haut;uph0_saisi; ;Numérique; ; ;Coefficient de transmission thermique du planchers hauts non isolé Saisi en direct par l'utilisateur (à justifier)
+audit_plancher_haut;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_plancher_haut;paroi_lourde; ;Booléen; ;la paroi est elle considérée comme lourde pour le calcul de l'inertie; 
+audit_pont_thermique;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_pont_thermique;enum_etat_composant_id;X; ;audit_enum_etat_composant; ;indique si le composant a été changé par rapport au logement initial
+audit_pont_thermique;enum_methode_saisie_pont_thermique_id;X; ;audit_enum_methode_saisie_pont_thermique; ;methode de saisie des ponts thermiques
+audit_pont_thermique;enum_type_liaison_id;X; ;audit_enum_type_liaison; ;type de liaison de pont thermique
+audit_pont_thermique;id;X; ; ; ;Identifiant technique du pont thermique
+audit_pont_thermique;k;X;Numérique; ; ;valeur du pont thermique
+audit_pont_thermique;k_saisi; ;Numérique; ; ;valeur du pont thermique saisie
+audit_pont_thermique;l;X;Numérique; ; ;longueur du pont thermique(m)
+audit_pont_thermique;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_pont_thermique;pourcentage_valeur_pont_thermique;X;Numérique; ; ;pourcentage de prise en compte de la valeur du pont thermique (dans le cas des pont thermiques refend/mur et plancher intermediaire/mur cette valeur est à 0,5 au lieu de 1)
+audit_pont_thermique;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_pont_thermique;reference_1; ;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels. Pour les ponts thermique il est laissé la possibilité d'avoir 2 références complémentaires correspondant aux référence de chacun des deux objets concernés par le pont thermique
+audit_pont_thermique;reference_2; ;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels. Pour les ponts thermique il est laissé la possibilité d'avoir 2 références complémentaires correspondant aux référence de chacun des deux objets concernés par le pont thermique
+audit_pont_thermique;tv_pont_thermique_id; ; ;audit_tv_pont_thermique; ;id de la ligne de la table utilisée pour le calcul de la valeur du pont thermique k
+audit_pont_thermique;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_porte;b;X;Numérique; ; ;coefficient de transmission thermique de la porte final : soit saisi directement soit issu des tables de valeurs forfaitaires
+audit_porte;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_porte;enum_cfg_isolation_lnc_id; ; ;audit_enum_cfg_isolation_lnc; ;configuration de l'adjacence avec local non chauffé : local chauffé (non) isolé/local non chauffé (non) isolé/orientation véranda qui permet de calculer le b
+audit_porte;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_porte;enum_methode_saisie_uporte_id;X; ;audit_enum_methode_saisie_uporte; ;méthode de saisie du U de la porte
+audit_porte;enum_type_adjacence_id;X; ;audit_enum_type_adjacence; ;type d'adjacence de la paroi
+audit_porte;enum_type_porte_id;X; ;audit_enum_type_porte;lib;type de porte
+audit_porte;enum_type_pose_id;X; ;audit_enum_type_pose; ;type de pose de la porte
+audit_porte;id;X; ; ; ;Identifiant technique de la porte
+audit_porte;largeur_dormant; ;Numérique; ; ;largeur du dormant de la porte (cm)
+audit_porte;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_porte;nb_porte; ;Numérique; ; ;nombre de portes
+audit_porte;presence_joint;X; ; ; ;y a-t-il présence de joints sur la porte (utilisé pour le calcul de la perméabilité) 0 : non 1 : oui
+audit_porte;presence_retour_isolation; ;Booléen; ; ;y a-t-il un retour d'isolant de la paroi opaque sur la porte 0 : non 1 : oui
+audit_porte;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_porte;reference_lnc; ;Texte; ; ;reference projet de l'objet local non chauffé qui peut être associé à la paroi . Dans le cas d'un espace tampon solarisé cette référence est celle de l'espace tampon.
+audit_porte;reference_paroi; ;Texte; ; ;reference projet de l'objet paroi qui est associé à l'objet porte. La codification et utilisation des références peut différer entre logiciels mais il devrait être attendu que reference_paroi est la référence d'une paroi de type mur,plancher_haut ou plancher_bas
+audit_porte;surface_aiu; ;Numérique; ; ;surface aiu : surface des parois du local non chauffé qui donnent sur des locaux chauffés.
+audit_porte;surface_aue; ;Numérique; ; ;surface aue : surface des parois du local non chauffé en contact avec l'extérieur ou le sol
+audit_porte;surface_porte;X;Numérique; ; ;surface totale de portes déclaré (nb_porte x surface unitaire de porte dans le cas de plusieurs portes)
+audit_porte;tv_coef_reduction_deperdition_id; ; ;audit_tv_coef_reduction_deperdition; ;id de la ligne de la table utilisée pour le calcul du coefficient de reduction des deperditions
+audit_porte;tv_uporte_id; ; ;audit_tv_uporte; ;id de la ligne de la table utilisée pour le calcul du coefficient de transfert thermique de la porte
+audit_porte;uporte;X;Numérique; ; ;coefficient de transmission thermique de la porte final : soit saisi directement soit issu des tables de valeurs forfaitaires
+audit_porte;uporte_saisi; ;Numérique; ; ;coefficient de transmission thermique de la porte saisi directement (nécessite une justification)
+audit_porte;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_production_elec_enr;conso_elec_ac;X;Numérique; ; ;éléctricité photovoltaique autoconsommée (kWh)
+audit_production_elec_enr;presence_production_pv;X;Numérique; ; ;est ce qu'il y a de la production de photovoltaique renouvelable 0 : non 1 : oui
+audit_production_elec_enr;enum_type_enr_id;X; ;audit_enum_type_enr;lib;enumérateur listant les systèmes de production d'éléctricité d'origine renouvelables présents dans le bâtiment
+audit_production_elec_enr;production_pv;X;Numérique; ; ;production d'éléctricité photovoltaique (kWh)
+audit_production_elec_enr;description;Parfois;Texte; ; ;description textuelle de l'objet
+audit_production_elec_enr;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_production_elec_enr;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_production_elec_enr;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_production_elec_enr;taux_autoproduction; ;Numérique; ; ;taux d'autoproduction Tap de la production d'éléctricité d'origne renouvelable
+audit_production_elec_enr;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_production_electricite;production_pv;X;Numérique; ; ;production d'éléctricité photovoltaique(kWhep/an)
+audit_production_electricite;conso_elec_ac;X;Numérique; ; ;éléctricité photovoltaique autoconsommée(kWhep/an)
+audit_production_electricite;conso_elec_ac_autre_usage;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour les autres usages de l'éléctricité (kWhep/an)
+audit_production_electricite;conso_elec_ac_auxiliaire;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour l'usage auxiliaire (les consommations finales sont déduites de cette valeur) (kWhep/an)
+audit_production_electricite;conso_elec_ac_ch;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour l'usage chauffage (les consommations finales sont déduites de cette valeur) (kWhep/an)
+audit_production_electricite;conso_elec_ac_eclairage;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour l'usage eclairage (les consommations finales sont déduites de cette valeur) (kWhep/an)
+audit_production_electricite;conso_elec_ac_ecs;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour l'usage ecs (les consommations finales sont déduites de cette valeur) (kWhep/an)
+audit_production_electricite;conso_elec_ac_fr;X;Numérique; ; ;éléctricité photovoltaique autoconsommée pour l'usage climatisation (les consommations finales sont déduites de cette valeur) (kWhep/an)
+audit_production_electricite;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_production_electricite;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_qualite_isolation;qualite_isol_enveloppe;X;Numérique;audit_enum_qualite_composant; ;qualité d'isolation de l'enveloppe
+audit_qualite_isolation;qualite_isol_menuiserie;X;Numérique;audit_enum_qualite_composant; ;qualité d'isolation des menuiseries
+audit_qualite_isolation;qualite_isol_mur; ;Numérique;audit_enum_qualite_composant; ;qualité d'isolation des murs
+audit_qualite_isolation;qualite_isol_plancher_bas; ;Numérique;audit_enum_qualite_composant; ;qualité de l'isolation des planchers
+audit_qualite_isolation;qualite_isol_plancher_haut_comble_amenage; ;Numérique;audit_enum_qualite_composant; ;qualité d'isolation de la toiture/planchers hauts partie comble aménagé
+audit_qualite_isolation;qualite_isol_plancher_haut_comble_perdu; ;Numérique;audit_enum_qualite_composant; ;qualité d'isolation de la toiture/planchers hauts partie comble perdue
+audit_qualite_isolation;qualite_isol_plancher_haut_toit_terrasse; ;Numérique;audit_enum_qualite_composant; ;qualité d'isolation de la toiture/planchers hauts partie toit terrasse
+audit_qualite_isolation;ubat;X;Numérique; ; ;Ubat(W/m²K)
+audit_qualite_isolation;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_qualite_isolation;ubat_base;X;Numérique; ; ;coefficient moyen de déperdition thermique du bâtiment de base (Ubat base), tel que défini dans methode BBC réno (W/m²K)
+audit_qualite_isolation;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_recommandation_scenario;enum_scenario_id; ; ;audit_enum_scenario; ;indique le type de scénario de rénovation
+audit_recommandation_scenario;expertise_auditeur_id;X; ;audit_expertise_auditeur; ;Identifiant technique de l'expertise auditeur
+audit_recommandation_scenario;id;X; ; ; ;Identifiant technique de la recommandation du scénario
+audit_recommandation_scenario;recommandation; ;Texte; ; ;Recommandations de l'auditeur pour le scénario donné (trame p.15)
+audit_recommandation_scenario;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_sortie_par_energie;conso_5_usages;X;Numérique; ; ;consommation totale en énergie finale pour l'énergie considérée (kWhef/an)
+audit_sortie_par_energie;conso_ch;X;Numérique; ; ;consommation de chauffage en énergie finale pour l'énergie considérée (kWhef/an)
+audit_sortie_par_energie;conso_ecs;X;Numérique; ; ;consommation d'ECS en énergie finale pour l'énergie considérée (kWhef/an)
+audit_sortie_par_energie;cout_5_usages;X;Numérique; ; ;coût totale pour l'énergie considérée (€)
+audit_sortie_par_energie;cout_ch;X;Numérique; ; ;coût lié au chauffage pour l'énergie considérée (€)
+audit_sortie_par_energie;cout_ecs;X;Numérique; ; ;coût lié à l'ECS pour l'énergie considérée (€)
+audit_sortie_par_energie;emission_ges_5_usages;X;Numérique; ; ;estimation GES totale pour l'énergie considérée (kgCO2/an)
+audit_sortie_par_energie;emission_ges_ch;X;Numérique; ; ;estimation GES de chauffage pour l'énergie considérée (kgCO2/an)
+audit_sortie_par_energie;emission_ges_ecs;X;Numérique; ; ;estimation GES d'ECS pour l'énergie considérée (kgCO2/an)
+audit_sortie_par_energie;enum_type_energie_id;X; ;audit_enum_type_energie;lib;type d'énergie
+audit_sortie_par_energie;id;X; ; ; ;Identifiant technique de la sortie par énergie
+audit_sortie_par_energie;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_sortie_par_energie;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_t_adresse;ban_label; ;Texte; ; ;label de l'adresse au format ban
+audit_t_adresse;label_brut; ;Texte; ; ;libellé complet de l'adresse postale du bien saisi par le diagnostiqueur (FORMAT ATTENDU : Numéro de l’adresse dans la voie + Indice de répétition associé au numéro (par exemple bis, a…) + Nom de la voie en minuscules accentuées + Code postal du bureau de distribution de la voie + Nom officiel de la commune actuelle
+audit_t_adresse;ban_postcode; ;Texte; ; ;code postal de la commune de l'adresse géocodée ban
+audit_t_adresse;ban_citycode; ;Texte; ; ;code insee de la commune de l'adresse géocodée ban
+audit_t_adresse;code_postal_brut; ;Texte; ; ;code postal de l'adresse brute saisie par le diagnostiqueur
+audit_t_adresse;ban_x; ;Numérique; ; ;coordonnée x du géolocalisant ban dans le referentiel epsg 2154 lambert 93
+audit_t_adresse;ban_y; ;Numérique; ; ;coordonnée y du géolocalisant ban dans le referentiel epsg 2154 lambert 93
+audit_t_adresse;ban_id; ; ; ; ;identifiant de la BAN referençant l'adresse
+audit_t_adresse;ban_city; ;Texte; ; ;nom de la commune de l'adresse géocodée ban
+audit_t_adresse;nom_commune_brut; ;Texte; ; ;nom de commune brute saisie par le diagnostiqueur
+audit_t_adresse;ban_street; ;Texte; ; ;Nom de la voie en minuscules accentuées avec les noms alternatifs éventuels (champ BAN)
+audit_t_adresse;ban_departement; ;Texte; ; ;Département de l'adresse géocodée ban
+audit_t_adresse;adresse_brut; ;Texte; ; ;libéllé l'adresse postale du bien saisi par le diagnostiqueur sans le code postal ni la commune (FORMAT ATTENDU : Numéro de l’adresse dans la voie + Indice de répétition associé au numéro (par exemple bis, a…) + Nom de la voie en minuscules accentuées)
+audit_t_adresse;compl_etage_appartement; ;Numérique; ; ;complement d'adresses : etage du logement (cas de l'appartement) sous format entier 0 =RDC
+audit_t_adresse;ban_region; ;Texte; ; ;Région de l'adresse géocodée ban
+audit_t_adresse;ban_housenumber; ;Texte; ; ;Numéro éventuel de l’adresse dans la voie (champ BAN)
+audit_t_adresse;ban_score; ;Numérique; ; ;score de match entre le label brut et le résultat de géocodage de la BAN
+audit_t_adresse;ban_date_appel; ;Date; ; ;date d'appel à la ban
+audit_t_adresse;ban_epci; ;Texte; ; ;EPCI de l'adresse géocodée ban
+audit_t_adresse;ban_erreur; ;Booléen; ; ;Booléen qui indique si la ban renvoie un message d'erreur
+audit_t_adresse;ban_type; ;Texte; ; ;type de résultat ban : housenumber/street/locality/municipality
+audit_t_adresse;compl_nom_residence; ;Texte; ; ;complement d'adresses : nom de la residence
+audit_t_adresse;compl_ref_batiment; ;Texte; ; ;complement d'adresse : référence du bâtiment ( ex. A,B ,1,2,3,4)
+audit_t_adresse;compl_ref_cage_escalier; ;Texte; ; ;"complement d'adresses : reference de cage d'escalire&gt;"
+audit_t_adresse;compl_ref_logement; ;Texte; ; ;complement d'adresses : reference du logement dans le bâtiment (appartement ex. 10, A13, 3eme gauche)
+audit_t_adresse;enum_statut_geocodage_ban_id; ; ;audit_enum_statut_geocodage_ban; ;statut de l'appareillement à la BAN de l'adresse
+audit_t_adresse;id;X; ; ; ;Identifiant technique d'une adresse qui peut correspondre à l'adresse du bien, du propriétaire ou du propriétaire de l'installation commune
+audit_t_adresse;label_brut_avec_complement; ;Texte; ; ;libellé complet d'adresse complète qui est l'adresse postale du bien précédé par l'ensemble des compléments d'adresses nécessaires à la bonne localisation du bien saisi par le diagnostiqueur (FORMAT ATTENDU : Compléments d'adresses + Numéro de l’adresse dans la voie + Indice de répétition associé au numéro (par exemple bis, a…) + Nom de la voie en minuscules accentuées + Code postal du bureau de distribution de la voie + Nom officiel de la commune actuelle)
+audit_t_adresse;migre_en_utc;Parfois;Booléen; ; ;Indique si les dates de la table ont été migrées au format UTC
+audit_t_adresse;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_t_adresse;traite_par_batch; ;Booléen; ; ;Indicateur de traitement par batch de reprise de l'adresse
+audit_travaux;cout; ;Numérique; ; ;coût des travaux correspondants (€TTC)
+audit_travaux;enum_lot_travaux_audit_id; ; ;audit_enum_lot_travaux_audit;lib;lot concerné par les travaux
+audit_travaux;enum_type_travaux_id; ; ;audit_enum_type_travaux;lib;type de travaux proposé par l'auditeur
+audit_travaux;etape_travaux_id;X; ;audit_etape_travaux; ;Identifiant technique de l'étape de travaux
+audit_travaux;id;X; ; ; ;Identifiant technique des travaux
+audit_travaux;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_travaux;cout_min; ;Numérique; ; ;coût minimal des travaux correspondants (€TTC)
+audit_travaux;cout_max; ;Numérique; ; ;coût maximal des travaux correspondants (€TTC)
+audit_travaux_induits;cout; ;Numérique; ; ;coût des travaux correspondants (€TTC)
+audit_travaux_induits;description; ;Texte; ; ;descriptif des critères de performances minimales à respecter vis-à-vis des dispositions législatives et règlementaires, et, le cas échéant, pour bénéficier des aides financières associées
+audit_travaux_induits;etape_travaux_id;X; ;audit_etape_travaux; ;Identifiant technique de l'étape de travaux
+audit_travaux_induits;id;X; ; ; ;Identifiant technique des travaux induits
+audit_travaux_induits;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_travaux_induits;cout_min; ;Numérique; ; ;coût minimal des travaux correspondants (€TTC)
+audit_travaux_induits;cout_max; ;Numérique; ; ;coût maximal des travaux correspondants (€TTC)
+audit_travaux_reference;reference; ;Texte; ; ;Référence des travaux
+audit_travaux_reference;travaux_id;X; ;audit_travaux; ;Identifiant technique des travaux
+audit_travaux_reference;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement
+audit_ventilation;enum_etat_composant_id;X; ;audit_enum_etat_composant;lib;indique si le composant a été changé par rapport au logement initial
+audit_ventilation;surface_ventile;X;Numérique; ; ;surface ventilée. Dans le cas d'une seule ventilation c'est la surface habitable totale. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la surface de l'installation à l'immeuble qu'il faut renseigner
+audit_ventilation;enum_type_ventilation_id;X; ;audit_enum_type_ventilation;lib;code du type de ventilation
+audit_ventilation;ventilation_post_2012;X;Booléen; ; ;est ce que le système de ventilation est postérieur à 2012 0 : non 1 : oui
+audit_ventilation;cle_repartition_ventilation; ;Numérique; ; ;clé de répartition pour passer des consommations bâtiments au consommation logement dans le cas DPE appartement calculé à partir du DPE immeuble UNIQUEMENT. Voir section 8.5.4 du document guide pour plus de détail. Pour la ventilation il s'agit du rapport surface habitable logement / surface habitable immeuble
+audit_ventilation;conso_auxiliaire_ventilation;X;Numérique; ; ;Consommation des auxilliaires de ventilation. Dans le cas d'un DPE immeuble ou d'un DPE appartement à partir de l'immeuble c'est la consommation de l'installation à l'immeuble qu'il faut saisir.
+audit_ventilation;description; ;Texte; ; ;description textuelle de l'objet
+audit_ventilation;enum_methode_saisie_q4pa_conv_id;X; ;audit_enum_methode_saisie_q4pa_conv; ;code de la methode de saisie du q4paconv
+audit_ventilation;hperm;X;Numérique; ; ;déperdition thermique par renouvellement d'air due au vent
+audit_ventilation;hvent;X;Numérique; ; ;déperdition thermique par renouvellement d'air due au système de ventilation
+audit_ventilation;id;X; ; ; ;Identifiant technique de la ventilation
+audit_ventilation;logement_id;X; ;audit_logement; ;Identifiant technique du logement
+audit_ventilation;plusieurs_facade_exposee;X;Booléen; ; ;est ce qu'il y a plusieurs facades exposées au vent 0 : non 1 : oui
+audit_ventilation;pvent_moy;Parfois;Numérique; ; ;puissance de la ventilation moyenne soit saisie soit calculée avec la méthode proposée
+audit_ventilation;q4pa_conv;X;Numérique; ; ;q4pa conv final soit issue d'une saisie de mesure à l'étanchéité à l'air soit d'une valeur forfaitaire. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+audit_ventilation;q4pa_conv_saisi; ;Numérique; ; ;q4paconv saisi directement quand la valeur est donnée par une mesure d'étanchéité à l'air. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+audit_ventilation;ref_produit_ventilation; ;Texte; ; ;référence produit et marque du système de ventilation
+audit_ventilation;reference;X;Texte; ; ;reference projet de l'objet (cette référence permet de faire d'éventuels liens entre objets). La codification et utilisation des références peut différer entre logiciels
+audit_ventilation;tv_debits_ventilation_id;X; ;audit_tv_debits_ventilation; ;id de la ligne de la table utilisée pour le calcul des débits de ventilations
+audit_ventilation;tv_q4pa_conv_id; ; ;audit_tv_q4pa_conv; ;id de la ligne de la table utilisée pour le calcul du q4pa conventionnel. valeur conventionnelle de la perméabilité sous 4Pa (m3/(h.m2))
+audit_ventilation;enum_etat_ventilation_id;X; ;audit_enum_etat_ventilation; ;indique si systeme de ventilation est en bon état de fonctionnement
+audit_ventilation;date_derniere_modification;X;Date; ; ;Date de dernière modification de l'enregistrement

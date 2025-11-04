@@ -1,0 +1,82 @@
+﻿xml.source;xml.value;json.path;json.value
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;1;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;2;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;3;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;4;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;5;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;6;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;7;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;8;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;9;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;10;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;11;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;12;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;13;/enveloppe/porte/isolation;isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;15;/enveloppe/porte/isolation;isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;16;/enveloppe/porte/isolation;non_isole
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;1;/enveloppe/porte/materiau;bois
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;2;/enveloppe/porte/materiau;bois
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;3;/enveloppe/porte/materiau;bois
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;4;/enveloppe/porte/materiau;bois
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;5;/enveloppe/porte/materiau;pvc
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;6;/enveloppe/porte/materiau;pvc
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;7;/enveloppe/porte/materiau;pvc
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;8;/enveloppe/porte/materiau;pvc
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;9;/enveloppe/porte/materiau;metal
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;10;/enveloppe/porte/materiau;metal
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;11;/enveloppe/porte/materiau;metal
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;12;/enveloppe/porte/materiau;metal
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;13;/enveloppe/porte/materiau;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/materiau;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;15;/enveloppe/porte/materiau;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;16;/enveloppe/porte/materiau;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_pose_id;1;/enveloppe/porte/materiau;nu_exterieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_pose_id;2;/enveloppe/porte/position/type_pose;nu_interieur
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_pose_id;3;/enveloppe/porte/position/type_pose;tunnel
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_pose_id;4;/enveloppe/porte/position/type_pose;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;1;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;2;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;3;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;4;/enveloppe/porte/vitrage/type;double_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;5;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;6;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;7;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;8;/enveloppe/porte/vitrage/type;double_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;9;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;10;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;11;/enveloppe/porte/vitrage/type;simple_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;12;/enveloppe/porte/vitrage/type;double_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;13;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;15;/enveloppe/porte/vitrage/type;double_vitrage
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;16;/enveloppe/porte/vitrage/type;
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;1;/enveloppe/porte/vitrage/surface;0
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;2;/enveloppe/porte/vitrage/surface;0.15 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;3;/enveloppe/porte/vitrage/surface;0.45 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;4;/enveloppe/porte/vitrage/surface;0.3 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;5;/enveloppe/porte/vitrage/surface;0
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;6;/enveloppe/porte/vitrage/surface;0.15 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;7;/enveloppe/porte/vitrage/surface;0.45 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;8;/enveloppe/porte/vitrage/surface;0.3 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;9;/enveloppe/porte/vitrage/surface;0
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;10;/enveloppe/porte/vitrage/surface;0.3 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;11;/enveloppe/porte/vitrage/surface;0.15 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;12;/enveloppe/porte/vitrage/surface;0.45 * surface
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;13;/enveloppe/porte/vitrage/surface;0
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/vitrage/surface;0
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;1;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;2;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;3;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;4;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;5;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;6;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;7;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;8;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;9;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;10;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;11;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;12;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;13;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/position/presence_sas;false
+logement/enveloppe/porte_collection/porte/donnee_entree/enum_type_porte_id;14;/enveloppe/porte/position/presence_sas;true
